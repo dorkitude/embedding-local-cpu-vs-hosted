@@ -1,0 +1,55 @@
+{
+  "id": "r20261012a-openai-small-n20000-c128-d256",
+  "run": "r20261012a",
+  "model": "openai-small",
+  "dimension_mode": "api",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 128,
+  "chunks": 24762,
+  "dimension": 256,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-openai-small-n20000-c128-d256",
+  "started": "2026-10-12T21:46:43.286136385Z",
+  "finished": "2026-10-12T21:47:29.590030396Z",
+  "embedding_seconds_including_cache": 12.826287082,
+  "ingest_seconds": 25.079690473,
+  "metrics": {
+    "micro_recall100": 0.9957007738607051,
+    "mrr10": 0.7898717643085602,
+    "ndcg10": 0.7815759508602421,
+    "query_seconds": 0.07892651095369209,
+    "recall10": 0.9374874708103745,
+    "recall100": 0.9961514392991239,
+    "recall5": 0.7464644207134823
+  },
+  "metadata": {
+    "approx_logical_bytes": 0,
+    "approx_row_count": 0,
+    "created_at": "2026-10-12T21:46:56.976726715Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "up-to-date"
+    },
+    "last_write_at": "2026-10-12T21:47:20.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[256]f32"
+      }
+    },
+    "updated_at": "2026-10-12T21:47:20.000000000Z"
+  },
+  "verified_row_count": 24762
+}

@@ -9,7 +9,7 @@ related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[MODEL_CARD]]"]
 
 Owner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-local), [execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).
 
-48 of 96 settled-state primary evaluations passed. Run ID: r20261012a. Original fresh-ingest observations are retained separately under results/fresh-ingest. All reported cells use 799 native MIRACL English dev queries and the turbopuffer ANN operator with service-reported exhaustive fallback. Primary corpus: 100,000 passages; chunk sweep: a nested 20,000-passage corpus. No GPU hardware was measured.
+64 of 96 settled-state primary evaluations passed. Run ID: r20261012a. Original fresh-ingest observations are retained separately under results/fresh-ingest. All reported cells use 799 native MIRACL English dev queries and the turbopuffer ANN operator with service-reported exhaustive fallback. Primary corpus: 100,000 passages; chunk sweep: a nested 20,000-passage corpus. No GPU hardware was measured.
 
 ## Primary results: 100k passages, 256-word chunks, native dimensions
 
@@ -18,7 +18,7 @@ Owner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-loc
 | google/embeddinggemma-2 | 768 | pending | | | | |
 | text-embedding-3-large | 3072 | 0.8059 [0.7905, 0.8209] | 0.8270 | 0.7663 | 0.9389 | 0.9908 |
 | accounts/fireworks/models/qwen3-embedding-8b | 4096 | 0.8474 [0.8332, 0.8606] | 0.8622 | 0.8204 | 0.9598 | 0.9911 |
-| text-embedding-3-small | 1536 | pending | | | | |
+| text-embedding-3-small | 1536 | 0.7719 [0.7555, 0.7879] | 0.7886 | 0.7427 | 0.9210 | 0.9860 |
 | google/gemini-embedding-2 | 3072 | 0.8424 [0.8270, 0.8578] | 0.8680 | 0.8110 | 0.9367 | 0.9728 |
 | baai/bge-m3 | 1024 | pending | | | | |
 
@@ -29,7 +29,7 @@ Owner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-loc
 | gemma2 | pending | pending | pending | pending |
 | openai-large | 0.7272 | 0.7725 | 0.7945 | 0.8059 |
 | qwen8b | 0.8015 | 0.8254 | 0.8362 | 0.8474 |
-| openai-small | pending | pending | pending | pending |
+| openai-small | 0.6932 | 0.7557 | 0.7687 | 0.7719 |
 | gemini2 | 0.7445 | 0.8005 | 0.8363 | 0.8424 |
 | bge | pending | pending | pending | pending |
 
@@ -42,7 +42,7 @@ BGE reduced dimensions are exploratory prefixes, not validated MRL. Gemini's 128
 | gemma2 | pending | pending | pending |
 | openai-large | 0.8155 | 0.8176 | 0.8164 |
 | qwen8b | 0.8580 | 0.8567 | 0.8562 |
-| openai-small | pending | pending | pending |
+| openai-small | 0.7894 | 0.7860 | 0.7845 |
 | gemini2 | 0.8631 | 0.8632 | 0.8621 |
 | bge | pending | pending | pending |
 
@@ -50,16 +50,18 @@ The primary 100k corpus produces 101,192 chunks at target 256 (median 53 words).
 
 ## Timing, spend and storage
 
-Successful embedding usage totals an estimated $10.0768. Turbopuffer metered writes/queries/returns add $18.6875. Retaining the study namespaces is approximately $2.8818/month (conservative logical-byte estimate). These are list-price estimates, not an invoice; see [machine-readable costs](results/costs.json), request receipts and the pre-run budget.
+Successful embedding usage totals an estimated $10.3127. Turbopuffer metered writes/queries/returns add $11.3018. Retaining the study namespaces is approximately $3.4301/month (conservative logical-byte estimate). These are list-price estimates, not an invoice; see [machine-readable costs](results/costs.json), request receipts and the pre-run budget.
 
 | Model | Embedding requests | Prompt tokens | Observed request p50 seconds | p95 seconds | Successful usage USD |
 |---|---:|---:|---:|---:|---:|
-| gemma2 | 2249 | 4940036 | 1.564 | 3.525 | 0.0000 |
+| gemma2 | 2586 | 6425384 | 1.749 | 3.682 | 0.0000 |
 | openai-large | 6943 | 44570848 | 0.455 | 1.132 | 5.7942 |
 | qwen8b | 3480 | 11807587 | 0.586 | 3.412 | 1.1808 |
-| openai-small | 6245 | 37233144 | 0.350 | 0.693 | 0.7447 |
+| openai-small | 6943 | 44570848 | 0.367 | 0.730 | 0.8914 |
 | gemini2 | 3472 | 11622057 | 1.153 | 1.420 | 2.3244 |
-| bge | 1822 | 3274388 | 0.925 | 1.665 | 0.0327 |
+| bge | 3480 | 12187537 | 0.972 | 1.754 | 0.1219 |
+
+The local sidecar processed 6425384 model tokens in 5158.9 summed successful HTTP seconds: 1245.5 model tokens/s, including tokenization and HTTP serialization. This includes smoke/preflight work; warm inference dominates. Historical request receipts omit input counts, so a full-run HTTP inputs/s figure cannot be recovered from those receipts. Input-count rates in costs.json cover only requests that explicitly record input counts. CPU lane concurrency is one; API request-summed rates are not aggregate parallel throughput.
 
 Study embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.
 
@@ -76,10 +78,21 @@ Primary queries use the strong-consistency ANN operator after the recorded settl
 | gemini2 / 20000 / 256 / 128 | 0 | 0 | 799 | 100.00% |
 | openai-large / 100000 / 256 / 3072 | 799 | 0 | 0 | 0.00% |
 | openai-large / 20000 / 256 / 128 | 0 | 0 | 799 | 100.00% |
+| openai-small / 100000 / 256 / 1536 | 799 | 0 | 0 | 0.00% |
+| openai-small / 20000 / 256 / 128 | 0 | 0 | 799 | 100.00% |
 | qwen8b / 100000 / 256 / 4096 | 799 | 0 | 0 | 0.00% |
 | qwen8b / 20000 / 256 / 128 | 0 | 0 | 799 | 100.00% |
 
 All96 cell-level execution summaries are in results/search-execution.json. The fully-exhaustive category is based on the service counter reaching the logical chunk count; it is not an inferred claim about undocumented internal algorithms. No local database replaces turbopuffer.
+
+## Exact-search and index-state sensitivity
+
+These are end-to-end turbopuffer configurations: model representation and search approximation both affect scores. Eight fixed sorted queries per cell diagnose exact cosine versus settled ANN. A post-hoc, hash-selected common64-query sample additionally covers each model's primary128d and native configuration; it was specified before computing those exact results. Neither diagnostic replaces the799-query primary evaluation.
+
+| Primary configuration | Exact audit queries | Exact nDCG@10 | ANN on same queries | Top10 overlap | Settled minus fresh nDCG (all799) |
+|---|---:|---:|---:|---:|---:|
+
+All cell-level differences are in results/search-audit-summary.json. Exact top10 overlap describes ranking agreement, not relevance recall. The64-query diagnostic is too small to establish population-wide ANN accuracy; conclusions apply to the measured model/dimension/index configuration. Fresh-versus-settled differences use identical vectors and demonstrate indexing-state sensitivity.
 
 ## Method, uncertainty and audit
 

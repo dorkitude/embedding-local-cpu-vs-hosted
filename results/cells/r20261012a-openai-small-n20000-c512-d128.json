@@ -1,0 +1,98 @@
+{
+  "evaluation_phase": "settled-v1",
+  "index_probe": {
+    "metadata": {
+      "approx_logical_bytes": 10695203,
+      "approx_row_count": 20027,
+      "created_at": "2026-10-12T21:41:57.485811219Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T21:42:17.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T21:42:27.624342492Z"
+    },
+    "performance": {
+      "approx_namespace_size": 20027,
+      "cache_hit_ratio": 1,
+      "cache_temperature": "hot",
+      "exhaustive_search_count": 20027,
+      "last_included_write_at": "2026-10-12T21:42:17.000000000Z",
+      "query_execution_ms": 19,
+      "server_total_ms": 20
+    },
+    "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+    "stable_samples": 3,
+    "utc": "2026-10-12T22:10:45.203719671Z"
+  },
+  "id": "r20261012a-openai-small-n20000-c512-d128",
+  "run": "r20261012a",
+  "model": "openai-small",
+  "dimension_mode": "api",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 512,
+  "chunks": 20027,
+  "dimension": 128,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-openai-small-n20000-c512-d128",
+  "started": "2026-10-12T21:41:55.825992172Z",
+  "finished": "2026-10-12T22:10:53.825401773Z",
+  "embedding_seconds_including_cache": 1.045578922,
+  "ingest_seconds": 20.837712225,
+  "metrics": {
+    "micro_recall100": 0.9871023215821152,
+    "mrr10": 0.7681208653674232,
+    "ndcg10": 0.754267485658341,
+    "query_seconds": 0.08062089741426783,
+    "recall10": 0.909517262740041,
+    "recall100": 0.9896800564197309,
+    "recall5": 0.731601596151033
+  },
+  "metadata": {
+    "approx_logical_bytes": 10695203,
+    "approx_row_count": 20027,
+    "created_at": "2026-10-12T21:41:57.485811219Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "up-to-date"
+    },
+    "last_write_at": "2026-10-12T21:42:17.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[128]f32"
+      }
+    },
+    "updated_at": "2026-10-12T21:42:27.624342492Z"
+  },
+  "verified_row_count": 20027
+}
