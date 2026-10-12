@@ -16,6 +16,7 @@ started = time.perf_counter()
 model = SentenceTransformer(
     "google/embeddinggemma-2",
     revision="914f7f89142e33e77833254d9c9b90c3cef7303b",
+    token=os.environ.get("HF_TOKEN", False),  # environment override; no cached-token lookup
     device="cpu",
     config_kwargs={"vision_config": None, "audio_config": None},
     model_kwargs={"dtype": torch.bfloat16},
