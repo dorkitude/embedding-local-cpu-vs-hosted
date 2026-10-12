@@ -1,0 +1,57 @@
+{
+  "id": "r20261012a-qwen8b-n20000-c128-d4096",
+  "run": "r20261012a",
+  "model": "qwen8b",
+  "dimension_mode": "mrl",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 128,
+  "chunks": 24762,
+  "dimension": 4096,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-qwen8b-n20000-c128-d4096",
+  "started": "2026-10-12T21:42:24.165759808Z",
+  "finished": "2026-10-12T21:46:40.119746147Z",
+  "embedding_seconds_including_cache": 0.078440395,
+  "ingest_seconds": 243.950388465,
+  "metrics": {
+    "micro_recall100": 0.999140154772141,
+    "mrr10": 0.8653738800484736,
+    "ndcg10": 0.8584758434066623,
+    "query_seconds": 0.09753124397747179,
+    "recall10": 0.9765150160644527,
+    "recall100": 0.9993742177722152,
+    "recall5": 0.8286435786435796
+  },
+  "metadata": {
+    "approx_logical_bytes": 393744080,
+    "approx_row_count": 24000,
+    "created_at": "2026-10-12T21:42:31.685228703Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "updating",
+      "unindexed_bytes": 324763648,
+      "unindexed_rows": 19762
+    },
+    "last_write_at": "2026-10-12T21:46:28.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[4096]f32"
+      }
+    },
+    "updated_at": "2026-10-12T21:46:28.000000000Z"
+  },
+  "verified_row_count": 24762
+}

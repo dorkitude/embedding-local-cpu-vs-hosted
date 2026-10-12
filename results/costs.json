@@ -1,14 +1,14 @@
 {
   "embedding_by_model": {
     "bge": {
-      "Requests": 2,
+      "Requests": 1822,
       "Errors": 0,
-      "Tokens": 44,
-      "EstimatedUSD": 4.4e-7,
-      "ReservedUSD": 0.00000268,
-      "Seconds": 1.281013424,
-      "P50": 0.694418404,
-      "P95": 0.694418404
+      "Tokens": 3274388,
+      "EstimatedUSD": 0.032743880000000045,
+      "ReservedUSD": 0.1463189200000001,
+      "Seconds": 1860.6899852550005,
+      "P50": 0.925004344,
+      "P95": 1.66481097
     },
     "gemini2": {
       "Requests": 3472,
@@ -21,14 +21,14 @@
       "P95": 1.420115444
     },
     "gemma2": {
-      "Requests": 1915,
+      "Requests": 2249,
       "Errors": 3,
-      "Tokens": 3732006,
+      "Tokens": 4940036,
       "EstimatedUSD": 0,
       "ReservedUSD": 0,
-      "Seconds": 3137.723540542999,
-      "P50": 1.366480925,
-      "P95": 2.915190135
+      "Seconds": 4127.759555478003,
+      "P50": 1.563563862,
+      "P95": 3.525221977
     },
     "openai-large": {
       "Requests": 6943,
@@ -41,14 +41,14 @@
       "P95": 1.132047668
     },
     "openai-small": {
-      "Requests": 1738,
+      "Requests": 6245,
       "Errors": 0,
-      "Tokens": 11142739,
-      "EstimatedUSD": 0.22285477999999978,
-      "ReservedUSD": 1.0579241200000007,
-      "Seconds": 520.378119637,
-      "P50": 0.279767093,
-      "P95": 0.432470579
+      "Tokens": 37233144,
+      "EstimatedUSD": 0.7446628799999983,
+      "ReservedUSD": 3.5361302600000095,
+      "Seconds": 2469.1182759460085,
+      "P50": 0.349909961,
+      "P95": 0.692589558
     },
     "qwen8b": {
       "Requests": 3480,
@@ -61,17 +61,17 @@
       "P95": 3.41245472
     }
   },
-  "embedding_success_estimate_usd": 9.522235560000011,
+  "embedding_success_estimate_usd": 10.076787100000011,
   "limitations": "List-price estimate; excludes account minimums, taxes, unknown failed-call provider billing and manual discovery calls (\u003c$0.01). Conservative reservation counts every retry separately. Storage billed over retention time, not fixed experiment expense.",
-  "retained_storage_conservative_gb": 2.683731456,
-  "retained_storage_usd_per_month": 0.88563138048,
-  "total_usage_estimate_excluding_storage_usd": 23.102080112673697,
+  "retained_storage_conservative_gb": 8.73277696,
+  "retained_storage_usd_per_month": 2.8818163968000006,
+  "total_usage_estimate_excluding_storage_usd": 28.7642983620745,
   "turbopuffer_billing_bytes": {
-    "billable_logical_bytes_queried": 62589105823686,
-    "billable_logical_bytes_returned": 630516497,
-    "billable_logical_bytes_written": 6742864811
+    "billable_logical_bytes_queried": 111446212724486,
+    "billable_logical_bytes_returned": 1120335627,
+    "billable_logical_bytes_written": 9260024134
   },
-  "turbopuffer_query_usd": 0.062589105823686,
-  "turbopuffer_return_usd": 0.03152582485,
-  "turbopuffer_write_usd": 13.485729622
+  "turbopuffer_query_usd": 0.111446212724486,
+  "turbopuffer_return_usd": 0.05601678135,
+  "turbopuffer_write_usd": 18.520048268
 }

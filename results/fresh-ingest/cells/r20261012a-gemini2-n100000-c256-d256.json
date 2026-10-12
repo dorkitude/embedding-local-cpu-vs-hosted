@@ -1,0 +1,57 @@
+{
+  "id": "r20261012a-gemini2-n100000-c256-d256",
+  "run": "r20261012a",
+  "model": "gemini2",
+  "dimension_mode": "mrl",
+  "status": "passed",
+  "documents": 100000,
+  "chunk_size": 256,
+  "chunks": 101192,
+  "dimension": 256,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-gemini2-n100000-c256-d256",
+  "started": "2026-10-12T21:22:40.39135514Z",
+  "finished": "2026-10-12T21:24:34.395315151Z",
+  "embedding_seconds_including_cache": 0.467183156,
+  "ingest_seconds": 102.588561962,
+  "metrics": {
+    "micro_recall100": 0.9376612209802235,
+    "mrr10": 0.8458658640761273,
+    "ndcg10": 0.8082327947015212,
+    "query_seconds": 0.07930490809762197,
+    "recall10": 0.9031769961369465,
+    "recall100": 0.9410505917389521,
+    "recall5": 0.7724741605217199
+  },
+  "metadata": {
+    "approx_logical_bytes": 95210208,
+    "approx_row_count": 91000,
+    "created_at": "2026-10-12T21:22:41.636269141Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "updating",
+      "unindexed_bytes": 108701696,
+      "unindexed_rows": 101192
+    },
+    "last_write_at": "2026-10-12T21:24:23.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[256]f32"
+      }
+    },
+    "updated_at": "2026-10-12T21:24:23.000000000Z"
+  },
+  "verified_row_count": 101192
+}
