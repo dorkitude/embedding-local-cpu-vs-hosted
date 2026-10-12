@@ -1,0 +1,114 @@
+[
+  {
+    "threads": 1,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 3.630086435005069,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 3.606501711998135,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 16.90838298300514,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 15.660252249974292,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 2.2372720610001124,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 2.0636847669957206,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 9.548108007002156,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 9.668767775991,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 1.3231636559939943,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 1.2222458850010298,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 5.437801110034343,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 5.457482984988019,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 0.7767185709672049,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 0.814118318958208,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 3.242767573974561,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 3.1671568200108595,
+    "dtype": "bfloat16"
+  }
+]

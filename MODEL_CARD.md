@@ -14,13 +14,13 @@ Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-gpu-vs-local/iss
 | OpenAI text-embedding-3-large | OpenAI API | 3072 | API dimensions=128/256/512/native | plain query; title + newline + passage |
 | Qwen3-Embedding-8B | Fireworks | 4096 | supported MRL prefix + L2 | official retrieval Instruct / Query; title + passage document |
 | OpenAI text-embedding-3-small | OpenAI API | 1536 | API dimensions=128/256/512/native | as large |
-| Google Gemini Embedding 2 | OpenRouter | 3072 | MRL prefix + L2 | input_type=search_query/search_document; title + passage |
+| Google Gemini Embedding 2 | OpenRouter | 3072 | MRL prefix + L2 | query: task: search result / query; document: title / text |
 | BAAI BGE-M3 | OpenRouter | 1024 | exploratory prefix + L2, NOT validated MRL | no special instruction required; title + passage |
 
 Local revision 914f7f89142e33e77833254d9c9b90c3cef7303b is pinned. Python runtime
 dependencies pinned by sidecar/uv.lock. Text-only configuration disables vision
 and audio encoders; processor nevertheless needs Pillow and torchvision.
-Use float32 unless a separately recorded precision experiment justifies a change.
+Full run uses bfloat16 (AVX512_BF16 CPU), eight threads and batch8, selected by a fixed-input precision/throughput benchmark before full local retrieval. The separate pilot used float32.
 Full model is 740M parameters; text-only is 270M, not 740M text parameters.
 Latest official documentation retrieved 2026-10-12 confirms EmbeddingGemma 2.
 

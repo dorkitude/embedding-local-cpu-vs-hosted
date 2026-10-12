@@ -1,0 +1,14 @@
+Research owner: Kyle Wild.
+MIRACL: Xinyu Zhang et al. (2023), MIRACL: A Multilingual Retrieval Dataset
+Covering 18 Diverse Languages, TACL 11:1114–1131, doi:10.1162/tacl_a_00595.
+MIRACL contributions: Apache License 2.0; see receipts/miracl-LICENSE.
+Underlying Wikipedia text and titles: Wikipedia contributors, CC BY-SA 3.0.
+License: https://creativecommons.org/licenses/by-sa/3.0/
+Full legal text: receipts/CC-BY-SA-3.0.txt.
+Attribution: results/manifests/attribution.jsonl.gz contains article and history
+URLs for every selected document; contributors are credited through those pages.
+Source: English Wikipedia dump 2019-02-01, as extracted by MIRACL/WikiExtractor.
+Changes: deterministic passage selection, overlapping whitespace subdivision.
+Derived corpus/chunk text, if republished, remains CC BY-SA 3.0. This repository
+does not include that raw text. The manifest and source recipe accompany any
+future compliant export. Dataset metadata does not override the text license.

@@ -42,7 +42,7 @@ func (m Model) Endpoint() string {
 func (m Model) Format(text, title string, query bool) string {
 	if query {
 		switch m.ID {
-		case "gemma2":
+		case "gemma2", "gemini2":
 			return "task: search result | query: " + text
 		case "qwen8b":
 			return "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: " + text
@@ -50,7 +50,7 @@ func (m Model) Format(text, title string, query bool) string {
 			return text
 		}
 	}
-	if m.ID == "gemma2" {
+	if m.ID == "gemma2" || m.ID == "gemini2" {
 		return "title: " + title + " | text: " + text
 	}
 	return title + "\n" + text
@@ -171,13 +171,7 @@ func Embed(m Model, texts []string, dim int) ([][]float32, error) {
 }
 func EmbedRole(m Model, texts []string, dim int, query bool) ([][]float32, error) {
 	p := map[string]any{"model": m.Name, "input": texts, "encoding_format": "float"}
-	if m.ID == "gemini2" {
-		if query {
-			p["input_type"] = "search_query"
-		} else {
-			p["input_type"] = "search_document"
-		}
-	}
+
 	if m.Mode == "api" {
 		p["dimensions"] = dim
 	}
@@ -285,7 +279,11 @@ func NewCache(m Model, dim int) (*Cache, error) {
 	return c, nil
 }
 func (c *Cache) Key(s string) string {
-	return Hash([]byte(c.m.Name + "|" + c.m.Revision + fmt.Sprint(c.query) + "|format-v2|" + fmt.Sprint(c.dim) + "|" + s))
+	precision := ""
+	if c.m.ID == "gemma2" {
+		precision = "|bf16-torch2.14.1-st6.1.0-b8-t8|"
+	}
+	return Hash([]byte(precision + c.m.Name + "|" + c.m.Revision + fmt.Sprint(c.query) + "|format-v2|" + fmt.Sprint(c.dim) + "|" + s))
 }
 func (c *Cache) Get(texts []string, query bool) ([][]float32, error) {
 	c.query = query

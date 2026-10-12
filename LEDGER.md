@@ -30,3 +30,15 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   <=$4 monthly retained storage and < $1 queries. Total estimate < $92.
   Hard conservative embedding reservation limit $120, leaving $30 for storage.
   Existing account plan minimums are not incremental study usage.
+- 2026-10-12T20:55Z BEFORE Google full run: choose supported CPU bfloat16,
+  8 PyTorch threads, inference batch8, HTTP batch32, based on fixed synthetic
+  225-token input (not retrieval labels). ~10–12 docs/s BF16 vs ~5–7 FP32.
+  Cosine to FP32 >0.99995, all finite. Native AVX512_BF16 is present.
+  CPU thread sweep 1/2/4/8 favors8. Float32 pilot remains a separate smoke run;
+  cache keys add runtime/precision/batch tag so its vectors cannot leak into full run.
+- 2026-10-12T20:55Z BEFORE Gemini full run: official current Gemini2 documentation
+  requires task instructions in TEXT, not the old task_type field. Corrected to
+  task: search result | query and title: ... | text, identical to Google Gemma.
+  OpenRouter input_type removed to avoid undocumented adapter behavior. Hosted
+  Gemini2 has not run its matrix yet. 128/256/512 are exploratory MRL sizes below
+  Google's recommended 768/1536/3072 (not claimed recommended dimensions).

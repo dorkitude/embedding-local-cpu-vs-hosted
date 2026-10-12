@@ -1,0 +1,3 @@
+
+HTTP_STATUS=403
+Access to model google/embeddinggemma-300m is restricted and you are not in the authorized list. Visit https://huggingface.co/google/embeddinggemma-300m to ask for access.
