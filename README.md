@@ -25,7 +25,7 @@ observations are separate from the settled primary evaluation.
 
 Models: local EmbeddingGemma 2, OpenAI text-embedding-3-large and 3-small,
 Fireworks Qwen3-Embedding-8B, and OpenRouter Gemini Embedding 2 and BGE-M3.
-The VM has eight CPU cores and no GPU. Hosted API observations do not identify
+The VM has eight vCPUs and no GPU. Hosted API observations do not identify
 or control provider GPU hardware. Scores describe the sampled corpus and
 end-to-end retrieval configurations, not official full-corpus MIRACL rankings.
 
