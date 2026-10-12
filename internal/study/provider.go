@@ -74,26 +74,28 @@ func Journal(path string, x any) error {
 // Conservative byte-as-token reservation charged on EACH attempt, including failed calls.
 func Reserve(cost float64) error {
 	os.MkdirAll("data", 0755)
-	f, e := os.OpenFile("data/budget.json", os.O_CREATE|os.O_RDWR, 0644)
+	lock, e := os.OpenFile("data/budget.lock", os.O_CREATE|os.O_RDWR, 0644)
 	if e != nil {
 		return e
 	}
-	defer f.Close()
-	if e = syscall.Flock(int(f.Fd()), syscall.LOCK_EX); e != nil {
+	defer lock.Close()
+	if e = syscall.Flock(int(lock.Fd()), syscall.LOCK_EX); e != nil {
 		return e
 	}
-	defer syscall.Flock(int(f.Fd()), syscall.LOCK_UN)
+	defer syscall.Flock(int(lock.Fd()), syscall.LOCK_UN)
 	var used float64
-	json.NewDecoder(f).Decode(&used)
-	if used+cost > 120 {
-		return fmt.Errorf("embedding budget cap: %.4f + %.4f > $120 ($30 reserved for storage/query)", used, cost)
-	}
-	f.Seek(0, 0)
-	f.Truncate(0)
-	if e = json.NewEncoder(f).Encode(used + cost); e != nil {
+	b, e := os.ReadFile("data/budget.json")
+	if e == nil {
+		if e = json.Unmarshal(b, &used); e != nil {
+			return fmt.Errorf("invalid budget ledger: %w", e)
+		}
+	} else if !os.IsNotExist(e) {
 		return e
 	}
-	return f.Sync()
+	if used+cost > 120 {
+		return fmt.Errorf("embedding budget cap: %.4f + %.4f > 120 USD", used, cost)
+	}
+	return Save("data/budget.json", used+cost)
 }
 func Request(method, u, key string, payload any, out any, charge float64, tag string) error {
 	var b []byte

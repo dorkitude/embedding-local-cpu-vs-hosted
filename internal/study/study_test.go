@@ -109,3 +109,18 @@ func TestIntegrationLive(t *testing.T) {
 		t.Fatal(e)
 	}
 }
+func TestBudgetFailsClosed(t *testing.T) {
+	old, _ := os.Getwd()
+	os.Chdir(t.TempDir())
+	defer os.Chdir(old)
+	if e := Reserve(119); e != nil {
+		t.Fatal(e)
+	}
+	if e := Reserve(2); e == nil {
+		t.Fatal("overspend accepted")
+	}
+	os.WriteFile("data/budget.json", []byte("broken"), 0644)
+	if e := Reserve(.01); e == nil {
+		t.Fatal("corrupt ledger accepted")
+	}
+}
