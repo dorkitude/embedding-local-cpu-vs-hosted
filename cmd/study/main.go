@@ -23,6 +23,10 @@ func main() {
 	m.Flags().StringVar(&run, "run", "r1", "Frozen run ID")
 	m.Flags().BoolVar(&pilot, "pilot", false, "1000 documents / 20 queries smoke only")
 	r.AddCommand(m)
+	var requeryModel string
+	rq := &cobra.Command{Use: "requery-settled", RunE: func(*cobra.Command, []string) error { return s.Requery(requeryModel) }}
+	rq.Flags().StringVar(&requeryModel, "model", "", "Model ID, blank for all completed lanes")
+	r.AddCommand(rq)
 	if e := r.Execute(); e != nil {
 		fmt.Fprintln(os.Stderr, e)
 		os.Exit(1)

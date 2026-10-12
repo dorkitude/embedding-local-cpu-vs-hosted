@@ -23,11 +23,12 @@ type Metrics struct {
 	Relevant  int     `json:"relevant"`
 }
 type Record struct {
-	QID       string   `json:"qid"`
-	Metrics   Metrics  `json:"metrics"`
-	Docs      []string `json:"ranked_docs"`
-	Seconds   float64  `json:"query_seconds"`
-	Overfetch int      `json:"overfetch"`
+	Performance map[string]any `json:"performance,omitempty"`
+	QID         string         `json:"qid"`
+	Metrics     Metrics        `json:"metrics"`
+	Docs        []string       `json:"ranked_docs"`
+	Seconds     float64        `json:"query_seconds"`
+	Overfetch   int            `json:"overfetch"`
 }
 
 func LoadData() ([]Doc, []Query, map[string]map[string]int, error) {

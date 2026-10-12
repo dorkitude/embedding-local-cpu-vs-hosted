@@ -62,3 +62,15 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
 - 2026-10-12: Captured official historical Wikimedia Terms oldid=98524, applicable
   2014–2023, confirming CC BY-SA 3.0 for the 2019 source dump. This supplements the
   initial license review with historical primary-source evidence.
+- 2026-10-12: Retrieval audit amendment BEFORE second-pass queries. API receipts
+  showed fresh queries scanning substantial unindexed tails. An older20k/128d
+  namespace still reports20,421 exhaustive rows after30minutes despite current
+  metadata saying up-to-date. Therefore zero exhaustive fallback is not a
+  defensible universal readiness assumption. No undocumented force-index API
+  will be used. Primary settled-v1 pass uses the SAME cached vectors/namespaces,
+  strong ANN operator, metadata up-to-date, last-write age>=60s and zero or three
+  stable exhaustive counts5s apart (maximum150s wait). Every primary query
+  records full performance counters. Persistent exhaustive/mixed execution is
+  labeled explicitly. Original fresh-ingest cells/rankings/exact audits remain
+  under results/fresh-ingest; this is an indexing-state correction, not tuning
+  based on relevance scores. Additional query cost remains well within budget.

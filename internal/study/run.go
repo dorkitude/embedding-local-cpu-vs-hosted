@@ -12,6 +12,8 @@ import (
 )
 
 type Cell struct {
+	Phase         string             `json:"evaluation_phase,omitempty"`
+	IndexProbe    map[string]any     `json:"index_probe,omitempty"`
 	ID            string             `json:"id"`
 	Run           string             `json:"run"`
 	Model         string             `json:"model"`
@@ -78,33 +80,34 @@ func Ingest(c *Cell, chunks []Chunk, vectors [][]float32) error {
 	c.Count = count.Aggregations.Count
 	return TP("GET", "/v1/namespaces/"+c.Namespace+"/metadata", nil, &c.Metadata)
 }
-func Search(ns string, v []float32) ([]string, int, error) {
+func Search(ns string, v []float32) ([]string, int, map[string]any, error) {
 	for k := 500; ; k = min(k*2, 10000) {
 		var response struct {
-			Rows []struct {
+			Performance map[string]any `json:"performance"`
+			Rows        []struct {
 				DocID string `json:"docid"`
 			} `json:"rows"`
 		}
 		e := TP("POST", "/v2/namespaces/"+ns+"/query", map[string]any{"rank_by": []any{"vector", "ANN", v}, "top_k": k, "include_attributes": []string{"docid"}, "consistency": map[string]any{"level": "strong"}}, &response)
 		if e != nil {
-			return nil, k, e
+			return nil, k, nil, e
 		}
 		seen := map[string]bool{}
 		ds := []string{}
 		for _, r := range response.Rows {
 			if r.DocID == "" {
-				return nil, k, fmt.Errorf("missing docid")
+				return nil, k, nil, fmt.Errorf("missing docid")
 			}
 			if !seen[r.DocID] {
 				seen[r.DocID] = true
 				ds = append(ds, r.DocID)
 				if len(ds) == 100 {
-					return ds, k, nil
+					return ds, k, response.Performance, nil
 				}
 			}
 		}
 		if k == 10000 {
-			return nil, k, fmt.Errorf("overfetch exhausted with %d unique docs", len(ds))
+			return nil, k, nil, fmt.Errorf("overfetch exhausted with %d unique docs", len(ds))
 		}
 	}
 }
@@ -147,12 +150,12 @@ func Evaluate(c *Cell, chunks []Chunk, vs, qv [][]float32, qs []Query, rels map[
 			defer wg.Done()
 			for i := range jobs {
 				t := time.Now()
-				docs, k, e := Search(c.Namespace, qv[i])
+				docs, k, performance, e := Search(c.Namespace, qv[i])
 				if e != nil {
 					errs <- e
 					return
 				}
-				rs[i] = Record{qs[i].ID, Score(docs, rels[qs[i].ID]), docs, time.Since(t).Seconds(), k}
+				rs[i] = Record{QID: qs[i].ID, Metrics: Score(docs, rels[qs[i].ID]), Docs: docs, Seconds: time.Since(t).Seconds(), Overfetch: k, Performance: performance}
 			}
 		}()
 	}
