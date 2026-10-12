@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "Every selected doc appears exactly once in source",
+    "Title and UTF-8 text checksum match attribution manifest",
+    "Every omitted source doc has hash above selected threshold",
+    "Both samples include every positive and negative judged doc",
+    "Secondary sample equals smallest-hash nested distractors"
+  ],
+  "judged_unique": 7921,
+  "primary_max_distractor_hash": "00b791e57d1ed3226a6766708125a9580d2236412d6d7780cb2bc2bdaa160c09",
+  "secondary": 20000,
+  "secondary_max_distractor_hash": "0018201d2095e8c6d50fd95ecc5bc1b6f821fec06054db380e897c0d5ce87437",
+  "selected": 100000,
+  "source_passages": 32893221,
+  "status": "passed",
+  "utc": "2026-10-12T21:18:56.976254151Z"
+}
