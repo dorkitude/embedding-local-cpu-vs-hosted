@@ -23,11 +23,11 @@ go test ./...
 go vet ./...
 LIVE_INTEGRATION=1 go test ./internal/study -run TestIntegrationLive -count=1
 # Full inference has ended; benchmark runs alone with explicit original FP32 load.
-uv run --project sidecar sidecar/benchmark.py
+uv run --frozen --project sidecar sidecar/benchmark.py
 .local/study audit
 .local/study report
 go run ./cmd/verify
 .local/study report
 jq -n --arg utc "$(date -u +%FT%TZ)" --arg run "$run" \
-  '{status:"passed",utc:$utc,run_id:$run,commands:["go test ./...","go vet ./...","LIVE_INTEGRATION=1 go test ./internal/study -run TestIntegrationLive -count=1","study exact-expanded","study sentinel","study refresh-metadata","uv run --project sidecar sidecar/benchmark.py","study audit","study report","go run ./cmd/verify"],sampling_audit:"results/independent-sampling-audit.json"}' > results/validation.json
+  '{status:"passed",utc:$utc,run_id:$run,commands:["go test ./...","go vet ./...","LIVE_INTEGRATION=1 go test ./internal/study -run TestIntegrationLive -count=1","study exact-expanded","study sentinel","study refresh-metadata","uv run --frozen --project sidecar sidecar/benchmark.py","study audit","study report","go run ./cmd/verify"],sampling_audit:"results/independent-sampling-audit.json"}' > results/validation.json
 date -u

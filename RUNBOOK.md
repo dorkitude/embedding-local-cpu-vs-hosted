@@ -84,7 +84,7 @@ The report summarizes both fresh-versus-settled changes and exact-versus-ANN
 differences. Do not interpret a configuration difference as a pure model effect.
 
 To reproduce the isolated CPU benchmark, wait until the inference/matrix lanes
-are idle, then run `uv run --project sidecar sidecar/benchmark.py` synchronously
+are idle, then run `uv run --frozen --project sidecar sidecar/benchmark.py` synchronously
 under the agent's persistent service (or a dedicated systemd service). It loads
 the pinned checkpoint directly in FP32, then converts to BF16. Confirmation
 receipts use `results/cpu-benchmark-confirmation*.json`; the original pre-run
