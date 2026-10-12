@@ -154,6 +154,9 @@ func Request(method, u, key string, payload any, out any, charge float64, tag st
 		if err == nil {
 			err = fmt.Errorf("HTTP %d: %.1600s", status, string(raw))
 		}
+		if key != "" {
+			err = fmt.Errorf("%s", strings.ReplaceAll(err.Error(), key, "[REDACTED]"))
+		}
 		rec["error"] = err.Error()
 		Journal("results/requests.jsonl", rec)
 		if attempt == 3 || (status >= 400 && status < 500 && status != 429) {
