@@ -79,10 +79,7 @@ func Ingest(c *Cell, chunks []Chunk, vectors [][]float32) error {
 	return TP("GET", "/v1/namespaces/"+c.Namespace+"/metadata", nil, &c.Metadata)
 }
 func Search(ns string, v []float32) ([]string, int, error) {
-	for k := 500; k <= 10000; k *= 2 {
-		if k > 8000 {
-			k = 10000
-		}
+	for k := 500; ; k = min(k*2, 10000) {
 		var response struct {
 			Rows []struct {
 				DocID string `json:"docid"`
@@ -110,7 +107,6 @@ func Search(ns string, v []float32) ([]string, int, error) {
 			return nil, k, fmt.Errorf("overfetch exhausted with %d unique docs", len(ds))
 		}
 	}
-	return nil, 0, fmt.Errorf("unreachable")
 }
 func Exact(chunks []Chunk, vs [][]float32, q []float32) []string {
 	scores := map[string]float64{}

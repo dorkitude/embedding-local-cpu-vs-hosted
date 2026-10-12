@@ -1,0 +1,8 @@
+[Unit]
+Description=Licensed embedding study fireworks matrix
+[Service]
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+ExecStart=/bin/bash configs/run-fireworks.sh
+Restart=no
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/fireworks.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/fireworks.log

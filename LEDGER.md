@@ -46,3 +46,11 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   hand-entered 20:55 to 20:52, using commit 21b8151 at 20:52:57Z as evidence.
   The full local cell started at 20:53:08Z; decisions preceded it. Other primary
   timestamps are captured directly in request/cell/manifests, not inferred.
+- 2026-10-12T21:00Z: Scheduling-only revision: split hosted jobs by provider
+  (OpenAI large/small; Fireworks Qwen; OpenRouter Gemini/BGE), concurrent with
+  local CPU. Existing OpenAI job stopped and resumed through checkpoints to
+  deploy the atomic shared budget lock before starting simultaneous paid lanes.
+  Up to4 requests per hosted lane. Memory estimate <20GiB of31GiB. The fixed
+  corpus, prompts, dimensions and evaluation are unchanged; observed timings
+  include shared VM contention. OpenRouter smoke ID pilot2 uses corrected Gemini
+  prompts. No quality metrics motivated this scheduling revision.
