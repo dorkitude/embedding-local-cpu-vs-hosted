@@ -89,6 +89,8 @@ func Report() error {
 		Requests, Errors                   int
 		Tokens                             float64
 		SuccessfulInputs                   int
+		RequestsWithInputCounts            int
+		InputCountedSeconds                float64
 		SuccessfulSeconds                  float64
 		InputsPerSecond, TokensPerSecond   float64
 		EstimatedUSD, ReservedUSD, Seconds float64
@@ -133,6 +135,10 @@ func Report() error {
 			}
 			c.Tokens += r.Usage.Tokens
 			c.SuccessfulInputs += r.InputCount
+			if r.InputCount > 0 {
+				c.RequestsWithInputCounts++
+				c.InputCountedSeconds += r.Seconds
+			}
 			c.SuccessfulSeconds += r.Seconds
 			price := 0.0
 			for _, m := range Models {
@@ -166,8 +172,10 @@ func Report() error {
 		c.P50 = c.Latencies[len(c.Latencies)/2]
 		c.P95 = c.Latencies[int(math.Ceil(float64(len(c.Latencies))*.95))-1]
 		if c.SuccessfulSeconds > 0 {
-			c.InputsPerSecond = float64(c.SuccessfulInputs) / c.SuccessfulSeconds
 			c.TokensPerSecond = c.Tokens / c.SuccessfulSeconds
+		}
+		if c.InputCountedSeconds > 0 {
+			c.InputsPerSecond = float64(c.SuccessfulInputs) / c.InputCountedSeconds
 		}
 		total += c.EstimatedUSD
 	}
@@ -252,7 +260,7 @@ func Report() error {
 		}
 	}
 	if c := costs["gemma2"]; c != nil {
-		fmt.Fprintf(&out, "\nThe local sidecar completed %d inputs in %.1f summed successful HTTP seconds: %.2f inputs/s and %.1f model tokens/s, including tokenization and HTTP serialization. This includes the smoke/preflight inputs; warm inference dominates. Inputs are chunks or queries, not original documents. CPU lane concurrency is one; API request-summed rates are not aggregate parallel throughput.\n", c.SuccessfulInputs, c.SuccessfulSeconds, c.InputsPerSecond, c.TokensPerSecond)
+		fmt.Fprintf(&out, "\nThe local sidecar processed %.0f model tokens in %.1f summed successful HTTP seconds: %.1f model tokens/s, including tokenization and HTTP serialization. This includes smoke/preflight work; warm inference dominates. Historical request receipts omit input counts, so a full-run HTTP inputs/s figure cannot be recovered from those receipts. Input-count rates in costs.json cover only requests that explicitly record input counts. CPU lane concurrency is one; API request-summed rates are not aggregate parallel throughput.\n", c.Tokens, c.SuccessfulSeconds, c.TokensPerSecond)
 	}
 	out.WriteString("\nStudy embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.\n\nObserved API latency includes network, batching, queues and serialization, and differs in batch sizes; it is not controlled GPU execution or a direct latency ranking. Cache hits are excluded from request timings. Local CPU measurements include exact tokenization and serialization at the sidecar; standalone batch/precision/thread experiments are in results/cpu-benchmark.json and results/cpu-thread-scaling.json. Cold model initialization uses locally cached files, not cold physical disk. Parallel hosted work shares the VM, so CPU throughput is contextual.\n\n")
 	searchSection, e := SearchStats(cells, records)
