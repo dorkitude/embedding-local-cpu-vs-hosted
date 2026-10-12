@@ -61,6 +61,12 @@ func Report() error {
 		if b, ok := records[ref]; ok && ref != c.ID {
 			pairs = append(pairs, map[string]any{"a": c.ID, "b": ref, "kind": "dimension-minus-native", "bootstrap": Bootstrap(rs, b)})
 		}
+		if c.Dimension != native && c.Model != "openai-large" {
+			ref = fmt.Sprintf("%s-openai-large-n%d-c%d-d%d", c.Run, c.Documents, c.ChunkSize, c.Dimension)
+			if b, ok := records[ref]; ok {
+				pairs = append(pairs, map[string]any{"a": c.ID, "b": ref, "kind": "model-minus-openai-large-same-dimension", "bootstrap": Bootstrap(rs, b)})
+			}
+		}
 		if c.Dimension == native && c.Model != "openai-large" {
 			ref = fmt.Sprintf("%s-openai-large-n%d-c%d-d3072", c.Run, c.Documents, c.ChunkSize)
 			if b, ok := records[ref]; ok {

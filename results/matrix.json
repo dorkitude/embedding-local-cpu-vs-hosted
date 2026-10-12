@@ -1,0 +1,518 @@
+[
+  {
+    "id": "r20261012a-gemini2-n100000-c256-d128",
+    "run": "r20261012a",
+    "model": "gemini2",
+    "dimension_mode": "mrl",
+    "status": "running",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemini2-n100000-c256-d128",
+    "started": "2026-10-12T20:59:57.794929997Z",
+    "finished": "0001-01-01T00:00:00Z",
+    "embedding_seconds_including_cache": 0,
+    "ingest_seconds": 0,
+    "verified_row_count": 0
+  },
+  {
+    "id": "r20261012a-gemma2-n100000-c256-d128",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "running",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n100000-c256-d128",
+    "started": "2026-10-12T20:53:08.227535277Z",
+    "finished": "0001-01-01T00:00:00Z",
+    "embedding_seconds_including_cache": 0,
+    "ingest_seconds": 0,
+    "verified_row_count": 0
+  },
+  {
+    "id": "r20261012a-openai-large-n100000-c256-d128",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n100000-c256-d128",
+    "started": "2026-10-12T20:46:57.479771848Z",
+    "finished": "2026-10-12T20:51:26.155437152Z",
+    "embedding_seconds_including_cache": 156.298352773,
+    "ingest_seconds": 102.336157674,
+    "metrics": {
+      "micro_recall100": 0.9277730008598453,
+      "mrr10": 0.7829812066670638,
+      "ndcg10": 0.7386587034106493,
+      "query_seconds": 0.08745991546182734,
+      "recall10": 0.8626504180008564,
+      "recall100": 0.941207263047063,
+      "recall5": 0.7199624530663332
+    },
+    "metadata": {
+      "approx_logical_bytes": 49152472,
+      "approx_row_count": 92000,
+      "created_at": "2026-10-12T20:49:34.407201491Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "updating",
+        "unindexed_bytes": 56887296,
+        "unindexed_rows": 101192
+      },
+      "last_write_at": "2026-10-12T20:51:15.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T20:51:15.000000000Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "id": "r20261012a-openai-large-n100000-c256-d256",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n100000-c256-d256",
+    "started": "2026-10-12T20:53:16.229196942Z",
+    "finished": "2026-10-12T20:59:14.767981081Z",
+    "embedding_seconds_including_cache": 174.675552922,
+    "ingest_seconds": 170.196859694,
+    "metrics": {
+      "micro_recall100": 0.9892519346517626,
+      "mrr10": 0.8076693088582951,
+      "ndcg10": 0.7851799963755672,
+      "query_seconds": 0.10919363124530673,
+      "recall10": 0.9226074440091963,
+      "recall100": 0.9907622172015164,
+      "recall5": 0.7509123959061383
+    },
+    "metadata": {
+      "approx_logical_bytes": 98349026,
+      "approx_row_count": 94000,
+      "created_at": "2026-10-12T20:56:11.953893745Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "updating",
+        "unindexed_bytes": 108701696,
+        "unindexed_rows": 101192
+      },
+      "last_write_at": "2026-10-12T20:59:01.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T20:59:01.000000000Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "id": "r20261012a-openai-large-n100000-c256-d512",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "running",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 512,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n100000-c256-d512",
+    "started": "2026-10-12T21:01:12.22220127Z",
+    "finished": "0001-01-01T00:00:00Z",
+    "embedding_seconds_including_cache": 0,
+    "ingest_seconds": 0,
+    "verified_row_count": 0
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c128-d128",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c128-d128",
+    "started": "2026-10-12T20:51:26.265515965Z",
+    "finished": "2026-10-12T20:52:13.632063593Z",
+    "embedding_seconds_including_cache": 13.951349174,
+    "ingest_seconds": 25.398937785,
+    "metrics": {
+      "micro_recall100": 0.9901117798796216,
+      "mrr10": 0.7967702683910444,
+      "ndcg10": 0.7749769764104758,
+      "query_seconds": 0.07779231885607005,
+      "recall10": 0.9171712656693882,
+      "recall100": 0.9925978450696848,
+      "recall5": 0.75021315424945
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T20:51:40.762837860Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T20:52:05.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T20:52:05.000000000Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c128-d256",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c128-d256",
+    "started": "2026-10-12T20:59:44.701407458Z",
+    "finished": "2026-10-12T21:00:10.633632923Z",
+    "embedding_seconds_including_cache": 0.17765741,
+    "ingest_seconds": 16.336482775,
+    "metrics": {
+      "micro_recall100": 0.9957007738607051,
+      "mrr10": 0.8077800623795616,
+      "ndcg10": 0.7979617468158301,
+      "query_seconds": 0.08653190326533154,
+      "recall10": 0.9467018206379911,
+      "recall100": 0.9965686274509804,
+      "recall5": 0.7573013796105165
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T20:59:32.296592271Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T21:00:00.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T21:00:00.000000000Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c256-d128",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c256-d128",
+    "started": "2026-10-12T20:52:13.701387201Z",
+    "finished": "2026-10-12T20:52:45.991803596Z",
+    "embedding_seconds_including_cache": 0.080256132,
+    "ingest_seconds": 24.39915641,
+    "metrics": {
+      "micro_recall100": 0.9901117798796216,
+      "mrr10": 0.7965850169855175,
+      "ndcg10": 0.7743609799238397,
+      "query_seconds": 0.07577163853566952,
+      "recall10": 0.9172984087251922,
+      "recall100": 0.9923987325426625,
+      "recall5": 0.750151117829466
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T20:52:16.785896609Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T20:52:37.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T20:52:37.000000000Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c256-d256",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c256-d256",
+    "started": "2026-10-12T21:00:10.739037768Z",
+    "finished": "2026-10-12T21:00:39.76811694Z",
+    "embedding_seconds_including_cache": 0.118608713,
+    "ingest_seconds": 21.005899894,
+    "metrics": {
+      "micro_recall100": 0.9961306964746346,
+      "mrr10": 0.810321930190516,
+      "ndcg10": 0.7987885395848238,
+      "query_seconds": 0.07369445627284112,
+      "recall10": 0.9446879396503932,
+      "recall100": 0.9971944096787652,
+      "recall5": 0.7607228642585342
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T21:00:11.822589728Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T21:00:31.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T21:00:31.000000000Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c512-d128",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c512-d128",
+    "started": "2026-10-12T20:52:46.065528851Z",
+    "finished": "2026-10-12T20:53:15.769586443Z",
+    "embedding_seconds_including_cache": 1.2679166130000001,
+    "ingest_seconds": 21.014928712,
+    "metrics": {
+      "micro_recall100": 0.9896818572656921,
+      "mrr10": 0.7944295448675924,
+      "ndcg10": 0.7735147583544857,
+      "query_seconds": 0.0704258161464331,
+      "recall10": 0.916225639191847,
+      "recall100": 0.992259669825377,
+      "recall5": 0.7522996368115268
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T20:52:47.854595123Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T20:53:08.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T20:53:08.000000000Z"
+    },
+    "verified_row_count": 20027
+  },
+  {
+    "id": "r20261012a-openai-large-n20000-c512-d256",
+    "run": "r20261012a",
+    "model": "openai-large",
+    "dimension_mode": "api",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-openai-large-n20000-c512-d256",
+    "started": "2026-10-12T21:00:39.871091406Z",
+    "finished": "2026-10-12T21:01:11.550606207Z",
+    "embedding_seconds_including_cache": 1.698936932,
+    "ingest_seconds": 21.955445414,
+    "metrics": {
+      "micro_recall100": 0.9961306964746346,
+      "mrr10": 0.8085732165206511,
+      "ndcg10": 0.7980720756152193,
+      "query_seconds": 0.07478684667459325,
+      "recall10": 0.9441873138681653,
+      "recall100": 0.9971944096787652,
+      "recall5": 0.7632677119848587
+    },
+    "metadata": {
+      "approx_logical_bytes": 0,
+      "approx_row_count": 0,
+      "created_at": "2026-10-12T21:00:42.452765441Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T21:01:03.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T21:01:03.000000000Z"
+    },
+    "verified_row_count": 20027
+  },
+  {
+    "id": "r20261012a-qwen8b-n100000-c256-d128",
+    "run": "r20261012a",
+    "model": "qwen8b",
+    "dimension_mode": "mrl",
+    "status": "running",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-qwen8b-n100000-c256-d128",
+    "started": "2026-10-12T21:00:05.455527691Z",
+    "finished": "0001-01-01T00:00:00Z",
+    "embedding_seconds_including_cache": 0,
+    "ingest_seconds": 0,
+    "verified_row_count": 0
+  }
+]

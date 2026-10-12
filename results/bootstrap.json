@@ -1,0 +1,161 @@
+{
+  "absolute_ndcg95": {
+    "r20261012a-openai-large-n100000-c256-d128": {
+      "ci95": [
+        0.7201524313611264,
+        0.7562914311333958
+      ],
+      "difference": 0.7386587034106493,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n100000-c256-d256": {
+      "ci95": [
+        0.7695022610630403,
+        0.8002819226972508
+      ],
+      "difference": 0.7851799963755672,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c128-d128": {
+      "ci95": [
+        0.7587585245051652,
+        0.7908024060206218
+      ],
+      "difference": 0.7749769764104758,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c128-d256": {
+      "ci95": [
+        0.7831884950033743,
+        0.8127494655261575
+      ],
+      "difference": 0.7979617468158301,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c256-d128": {
+      "ci95": [
+        0.7582401937532283,
+        0.7903762852309539
+      ],
+      "difference": 0.7743609799238397,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c256-d256": {
+      "ci95": [
+        0.783463600594285,
+        0.8133396508028158
+      ],
+      "difference": 0.7987885395848238,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c512-d128": {
+      "ci95": [
+        0.7571736131744906,
+        0.7897751328582029
+      ],
+      "difference": 0.7735147583544857,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c512-d256": {
+      "ci95": [
+        0.7828775138105089,
+        0.8127278183891958
+      ],
+      "difference": 0.7980720756152193,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    }
+  },
+  "paired": [
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d128",
+      "b": "r20261012a-openai-large-n20000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.0040490070924519735,
+          0.005051382563894531
+        ],
+        "difference": 0.0006159964866362471,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d256",
+      "b": "r20261012a-openai-large-n20000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.004281064995280117,
+          0.0025426873316445426
+        ],
+        "difference": -0.0008267927689934916,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d128",
+      "b": "r20261012a-openai-large-n20000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.002406693526158,
+          0.0005062481226563743
+        ],
+        "difference": -0.0008462215693542636,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d256",
+      "b": "r20261012a-openai-large-n20000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.002019346529150145,
+          0.00046375039694801013
+        ],
+        "difference": -0.0007164639696047114,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    }
+  ],
+  "samples": 2000,
+  "seed": 20261012,
+  "warning": "unadjusted exploratory intervals; multiple comparisons; no test-set tuning"
+}

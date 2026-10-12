@@ -1,0 +1,77 @@
+{
+  "embedding_by_model": {
+    "bge": {
+      "Requests": 2,
+      "Errors": 0,
+      "Tokens": 44,
+      "EstimatedUSD": 4.4e-7,
+      "ReservedUSD": 0.00000268,
+      "Seconds": 1.281013424,
+      "P50": 0.694418404,
+      "P95": 0.694418404
+    },
+    "gemini2": {
+      "Requests": 615,
+      "Errors": 1,
+      "Tokens": 703227,
+      "EstimatedUSD": 0.14064540000000003,
+      "ReservedUSD": 0.6837850000000004,
+      "Seconds": 758.6598235700001,
+      "P50": 1.146659285,
+      "P95": 1.770447417
+    },
+    "gemma2": {
+      "Requests": 734,
+      "Errors": 3,
+      "Tokens": 921603,
+      "EstimatedUSD": 0,
+      "ReservedUSD": 0,
+      "Seconds": 792.4124575649989,
+      "P50": 0.798632784,
+      "P95": 2.164946162
+    },
+    "openai-large": {
+      "Requests": 4386,
+      "Errors": 0,
+      "Tokens": 25296676,
+      "EstimatedUSD": 3.2885678800000036,
+      "ReservedUSD": 15.62221999,
+      "Seconds": 1835.6552549600058,
+      "P50": 0.393423805,
+      "P95": 0.617945618
+    },
+    "openai-small": {
+      "Requests": 2,
+      "Errors": 0,
+      "Tokens": 36,
+      "EstimatedUSD": 7.2e-7,
+      "ReservedUSD": 0.00000536,
+      "Seconds": 0.370320611,
+      "P50": 0.19902259,
+      "P95": 0.19902259
+    },
+    "qwen8b": {
+      "Requests": 725,
+      "Errors": 2,
+      "Tokens": 852627,
+      "EstimatedUSD": 0.08526270000000001,
+      "ReservedUSD": 0.5700080999999996,
+      "Seconds": 733.5450536310002,
+      "P50": 0.588048479,
+      "P95": 3.265240912
+    }
+  },
+  "embedding_success_estimate_usd": 3.5144771400000034,
+  "limitations": "List-price estimate; excludes account minimums, taxes, unknown failed-call provider billing and manual discovery calls (\u003c$0.01). Conservative reservation counts every retry separately. Storage billed over retention time, not fixed experiment expense.",
+  "retained_storage_conservative_gb": 0.276892928,
+  "retained_storage_usd_per_month": 0.09137466624,
+  "total_usage_estimate_excluding_storage_usd": 4.057343726150003,
+  "turbopuffer_billing_bytes": {
+    "billable_logical_bytes_queried": 8300800000000,
+    "billable_logical_bytes_returned": 84249883,
+    "billable_logical_bytes_written": 265176646
+  },
+  "turbopuffer_query_usd": 0.0083008,
+  "turbopuffer_return_usd": 0.00421249415,
+  "turbopuffer_write_usd": 0.530353292
+}
