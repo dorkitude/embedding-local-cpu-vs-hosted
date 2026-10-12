@@ -2,12 +2,13 @@
 import json
 import os
 import time
+
+os.environ.setdefault("HF_ENDPOINT", "https://huggingface.int.exe.xyz")
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
 import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
 
-os.environ.setdefault("HF_ENDPOINT", "https://huggingface.int.exe.xyz")
-os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
 torch.set_num_threads(8)
 torch.set_num_interop_threads(1)
 started = time.perf_counter()
