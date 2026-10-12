@@ -52,6 +52,7 @@ func verify() error {
 	rel := map[string]map[string]bool{}
 	queries := map[string]bool{}
 	selected := map[string]bool{}
+	secondary := map[string]bool{}
 	if e := read("results/manifests/qrels.tsv", func(b []byte) error {
 		f := strings.Fields(string(b))
 		if len(f) != 4 {
@@ -77,9 +78,10 @@ func verify() error {
 	}
 	if e := read("results/manifests/attribution.jsonl.gz", func(b []byte) error {
 		var a struct {
-			ID      string `json:"docid"`
-			URL     string `json:"source_url"`
-			License string `json:"license"`
+			ID        string `json:"docid"`
+			URL       string `json:"source_url"`
+			License   string `json:"license"`
+			Secondary bool   `json:"secondary"`
 		}
 		if e := json.Unmarshal(b, &a); e != nil {
 			return e
@@ -88,16 +90,19 @@ func verify() error {
 			return fmt.Errorf("attribution invalid")
 		}
 		selected[a.ID] = true
+		if a.Secondary {
+			secondary[a.ID] = true
+		}
 		return nil
 	}); e != nil {
 		return e
 	}
-	if len(selected) != 100000 || len(queries) != 799 {
+	if len(selected) != 100000 || len(secondary) != 20000 || len(queries) != 799 {
 		return fmt.Errorf("counts %d %d", len(selected), len(queries))
 	}
 	for _, rs := range rel {
 		for id := range rs {
-			if !selected[id] {
+			if !selected[id] || !secondary[id] {
 				return fmt.Errorf("judged doc absent")
 			}
 		}
@@ -107,6 +112,14 @@ func verify() error {
 		runID = "r20261012a"
 	}
 	files, _ := filepath.Glob("results/cells/" + runID + "-*.json")
+	expected := map[string]int{}
+	for model, native := range map[string]int{"gemma2": 768, "openai-large": 3072, "qwen8b": 4096, "openai-small": 1536, "gemini2": 3072, "bge": 1024} {
+		for _, dim := range []int{128, 256, 512, native} {
+			for _, treatment := range [][3]int{{100000, 256, 101192}, {20000, 128, 24762}, {20000, 256, 20421}, {20000, 512, 20027}} {
+				expected[fmt.Sprintf("%s-%s-n%d-c%d-d%d", runID, model, treatment[0], treatment[1], dim)] = treatment[2]
+			}
+		}
+	}
 	sort.Strings(files)
 	results := []map[string]any{}
 	independentValues := map[string][]float64{}
@@ -119,6 +132,7 @@ func verify() error {
 			Count      int `json:"verified_row_count"`
 			Chunks     int
 			Dimension  int
+			Documents  int
 			Metrics    map[string]float64
 			Metadata   struct {
 				Schema struct{ Vector struct{ Type string } }
@@ -131,6 +145,10 @@ func verify() error {
 		if cell.Status != "passed" {
 			return fmt.Errorf("cell not passed %s", path)
 		}
+		if expected[cell.ID] == 0 || cell.Chunks != expected[cell.ID] || cell.Queries != 799 || filepath.Base(path) != cell.ID+".json" {
+			return fmt.Errorf("unexpected cell design: %s", cell.ID)
+		}
+		delete(expected, cell.ID)
 		if cell.Phase != "settled-v1" || cell.IndexProbe == nil {
 			return fmt.Errorf("primary settled phase missing: %s", cell.ID)
 		}
@@ -177,7 +195,7 @@ func verify() error {
 				return fmt.Errorf("rank length")
 			}
 			for i, d := range row.Docs {
-				if seen[d] || !selected[d] {
+				if seen[d] || !selected[d] || (cell.Documents == 20000 && !secondary[d]) {
 					return fmt.Errorf("duplicate or foreign document")
 				}
 				seen[d] = true
@@ -225,6 +243,9 @@ func verify() error {
 			}
 		}
 		sums["micro_recall100"] = float64(totalHits) / float64(totalRelevant)
+		if math.Abs(sums["micro_recall100"]-cell.Metrics["micro_recall100"]) > 1e-10 {
+			return fmt.Errorf("micro recall mismatch: %s", cell.ID)
+		}
 		ids := make([]string, 0, len(queryValues))
 		for id := range queryValues {
 			ids = append(ids, id)
@@ -237,6 +258,9 @@ func verify() error {
 	}
 	status := "partial"
 	if len(files) == 96 {
+		if len(expected) != 0 {
+			return fmt.Errorf("missing design cells")
+		}
 		if e := verifyBootstrap(independentValues); e != nil {
 			return e
 		}

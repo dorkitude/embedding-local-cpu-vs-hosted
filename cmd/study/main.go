@@ -17,6 +17,7 @@ func main() {
 		r.AddCommand(&cobra.Command{Use: c.name, RunE: func(*cobra.Command, []string) error { return f() }})
 	}
 	var model, run string
+	r.AddCommand(&cobra.Command{Use: "exact-expanded", RunE: func(*cobra.Command, []string) error { return s.ExpandedExact() }})
 	var pilot bool
 	m := &cobra.Command{Use: "matrix", RunE: func(*cobra.Command, []string) error { return s.Matrix(model, run, pilot) }}
 	m.Flags().StringVar(&model, "model", "", "Model ID or hosted")

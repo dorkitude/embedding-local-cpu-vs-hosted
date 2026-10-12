@@ -88,6 +88,9 @@ func Report() error {
 	type Spend struct {
 		Requests, Errors                   int
 		Tokens                             float64
+		SuccessfulInputs                   int
+		SuccessfulSeconds                  float64
+		InputsPerSecond, TokensPerSecond   float64
 		EstimatedUSD, ReservedUSD, Seconds float64
 		Latencies                          []float64 `json:"-"`
 		P50, P95                           float64
@@ -98,11 +101,12 @@ func Report() error {
 	total := 0.0
 	e = ScanJournal("results/requests.jsonl", func(b []byte) error {
 		var r struct {
-			Tag      string  `json:"tag"`
-			Seconds  float64 `json:"seconds"`
-			Status   int     `json:"http_status"`
-			Reserved float64 `json:"reserved_usd"`
-			Usage    struct {
+			Tag        string  `json:"tag"`
+			Seconds    float64 `json:"seconds"`
+			Status     int     `json:"http_status"`
+			Reserved   float64 `json:"reserved_usd"`
+			InputCount int     `json:"input_count"`
+			Usage      struct {
 				Tokens float64  `json:"prompt_tokens"`
 				Cost   *float64 `json:"cost"`
 			} `json:"usage"`
@@ -128,6 +132,8 @@ func Report() error {
 				return nil
 			}
 			c.Tokens += r.Usage.Tokens
+			c.SuccessfulInputs += r.InputCount
+			c.SuccessfulSeconds += r.Seconds
 			price := 0.0
 			for _, m := range Models {
 				if m.ID == id {
@@ -159,6 +165,10 @@ func Report() error {
 		sort.Float64s(c.Latencies)
 		c.P50 = c.Latencies[len(c.Latencies)/2]
 		c.P95 = c.Latencies[int(math.Ceil(float64(len(c.Latencies))*.95))-1]
+		if c.SuccessfulSeconds > 0 {
+			c.InputsPerSecond = float64(c.SuccessfulInputs) / c.SuccessfulSeconds
+			c.TokensPerSecond = c.Tokens / c.SuccessfulSeconds
+		}
 		total += c.EstimatedUSD
 	}
 	// Billing bytes include attribute discounts, but NOT batch-write discounts.
@@ -241,12 +251,20 @@ func Report() error {
 			fmt.Fprintf(&out, "| %s | %d | %.0f | %.3f | %.3f | %.4f |\n", m.ID, c.Requests, c.Tokens, c.P50, c.P95, c.EstimatedUSD)
 		}
 	}
+	if c := costs["gemma2"]; c != nil {
+		fmt.Fprintf(&out, "\nThe local sidecar completed %d inputs in %.1f summed successful HTTP seconds: %.2f inputs/s and %.1f model tokens/s, including tokenization and HTTP serialization. This includes the smoke/preflight inputs; warm inference dominates. Inputs are chunks or queries, not original documents. CPU lane concurrency is one; API request-summed rates are not aggregate parallel throughput.\n", c.SuccessfulInputs, c.SuccessfulSeconds, c.InputsPerSecond, c.TokensPerSecond)
+	}
 	out.WriteString("\nStudy embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.\n\nObserved API latency includes network, batching, queues and serialization, and differs in batch sizes; it is not controlled GPU execution or a direct latency ranking. Cache hits are excluded from request timings. Local CPU measurements include exact tokenization and serialization at the sidecar; standalone batch/precision/thread experiments are in results/cpu-benchmark.json and results/cpu-thread-scaling.json. Cold model initialization uses locally cached files, not cold physical disk. Parallel hosted work shares the VM, so CPU throughput is contextual.\n\n")
 	searchSection, e := SearchStats(cells, records)
 	if e != nil {
 		return e
 	}
 	out.WriteString(searchSection)
+	auditSection, e := AuditSummary(cells)
+	if e != nil {
+		return e
+	}
+	out.WriteString(auditSection)
 	out.WriteString("\n## Method, uncertainty and audit\n\n")
 	out.WriteString("The deterministic SHA-256 sample scans all 32,893,221 English passages, retaining all 7,921 unique dev-judged documents (positive and negative), then hash-selected distractors. This deliberately enriches judged/hard documents and removes most original distractors. It is not the official full-corpus MIRACL benchmark. Unjudged documents count as nonrelevant; incomplete judgments can penalize useful results. All 799 dev queries are included; no evaluation-score-based tuning was performed. The smoke pilot lacks complete qrels coverage and is excluded.\n\n")
 	out.WriteString("Chunks map to original passage IDs. ANN retrieves at least 500 chunks, increases overfetch until 100 unique passages are obtained, and ranks each passage by its best chunk. Metrics measure passage retrieval, not answer-bearing chunk relevance. Every query retains its top 100 doc IDs. Recall is macro-averaged; micro Recall@100 is also retained. Binary MIRACL nDCG normalizes by the ideal top min(10, number relevant).\n\n")

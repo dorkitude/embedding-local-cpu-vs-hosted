@@ -72,6 +72,9 @@ func verifyBootstrap(values map[string][]float64) error {
 	if len(data.Absolute) != 96 {
 		return fmt.Errorf("absolute bootstrap count %d", len(data.Absolute))
 	}
+	if len(data.Pairs) != 200 {
+		return fmt.Errorf("paired bootstrap count %d", len(data.Pairs))
+	}
 	for id, ci := range data.Absolute {
 		if e := verify(values[id], make([]float64, 799), ci); e != nil {
 			return fmt.Errorf("%s: %w", id, e)
