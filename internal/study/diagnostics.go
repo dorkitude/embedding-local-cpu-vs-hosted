@@ -79,3 +79,57 @@ func RefreshMetadata() error {
 	}
 	return Save("results/final-storage-metadata.json", all)
 }
+
+// Sentinel re-embeds fixed queries after the run and compares with the actual
+// cached run vectors. It detects gross provider alias/runtime drift without
+// pretending hosted weights are pinned. It performs one bounded call per model.
+func Sentinel() error {
+	_, qs, _, e := LoadData()
+	if e != nil {
+		return e
+	}
+	all := []map[string]any{}
+	for _, m := range Models {
+		c, e := NewCache(m, m.Native)
+		if e != nil {
+			return e
+		}
+		c.query = true
+		indexes := []int{0, 400}
+		texts := []string{}
+		old := [][]float32{}
+		for _, i := range indexes {
+			s := m.Format(qs[i].Text, "", true)
+			v, ok := c.values[c.Key(s)]
+			if !ok {
+				return fmt.Errorf("sentinel native cache absent: %s", m.ID)
+			}
+			texts = append(texts, s)
+			old = append(old, v)
+		}
+		fresh, e := EmbedRole(m, texts, m.Native, true)
+		if e != nil {
+			return e
+		}
+		comparisons := []map[string]any{}
+		for i, v := range fresh {
+			a, e := Normalize(old[i], m.Native)
+			if e != nil {
+				return e
+			}
+			b, e := Normalize(v, m.Native)
+			if e != nil {
+				return e
+			}
+			var cosine float64
+			for j, x := range a {
+				cosine += float64(x) * float64(b[j])
+			}
+			ab, _ := json.Marshal(old[i])
+			bb, _ := json.Marshal(v)
+			comparisons = append(comparisons, map[string]any{"qid": qs[indexes[i]].ID, "cosine_to_cached_run": cosine, "cached_vector_sha256": Hash(ab), "fresh_vector_sha256": Hash(bb), "dimension": len(v)})
+		}
+		all = append(all, map[string]any{"model": m.ID, "utc": time.Now().UTC(), "comparisons": comparisons})
+	}
+	return Save("results/end-to-end-sentinel.json", all)
+}
