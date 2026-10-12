@@ -45,3 +45,12 @@ the fixed six-model matrix, given CPU budget.
 
 Observed network/API latencies include provider queueing, network, serialization
 and shared-host effects; they are not pure model/GPU execution benchmarks.
+
+Final official OpenAI API review confirms 8192 tokens per input, at most2048
+inputs and300,000 summed tokens per request, with dimensions supported for the
+text-embedding-3 family. The64-input batches on this frozen corpus are below
+that total even under the conservative observed maximum3559-byte input bound.
+The larger6000-byte general ceiling alone would not prove a64-input batch safe;
+the frozen input diagnostics supply the tighter bound here. Full native sizes
+are1536/3072. Receipts: openai-create-embeddings.md and openai-embedding-guide.md.
+All four dimension settings were actually requested and verified in this study.

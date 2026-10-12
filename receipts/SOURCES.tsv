@@ -26,3 +26,5 @@ retrieved_utc	file	url
 2026-10-12	wikimedia-terms-2014-2023.html	https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=98524
 2026-10-12	turbopuffer-performance.md	https://turbopuffer.com/docs/performance.md
 2026-10-12	turbopuffer-architecture.html	https://turbopuffer.com/architecture
+2026-10-12	openai-create-embeddings.md	https://developers.openai.com/api/reference/resources/embeddings/methods/create.md
+2026-10-12	openai-embedding-guide.md	https://developers.openai.com/api/docs/guides/embeddings.md
