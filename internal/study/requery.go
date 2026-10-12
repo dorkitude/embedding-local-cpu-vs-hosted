@@ -71,7 +71,7 @@ func Requery(modelID string) error {
 		if modelID != "" && modelID != m.ID {
 			continue
 		}
-		files, _ := filepath.Glob("results/cells/r20261012a-" + m.ID + "-*.json")
+		files, _ := filepath.Glob("results/cells/" + RunID() + "-" + m.ID + "-*.json")
 		cells := []Cell{}
 		for _, p := range files {
 			b, e := os.ReadFile(p)

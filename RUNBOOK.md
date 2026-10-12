@@ -67,3 +67,11 @@ shards), .local/study diagnostics, .local/study refresh-metadata, and
 .local/study sentinel. The sentinel makes one bounded real embedding request per
 model, comparing two fixed query vectors with the cached run. Its cosine/hash
 receipts do not substitute for immutable hosted model revisions.
+
+For a separate repetition, export STUDY_RUN_ID to a new unique identifier and
+pass the same value to matrix --run. Report, requery-settled, refresh-metadata
+and the independent verifier honor STUDY_RUN_ID (default r20261012a).
+The committed systemd scripts are the exact commands for the original run;
+copy/update their run ID for a new study repetition rather than overwriting the
+original namespace. Corpus preparation remains fixed to this study's frozen
+100k/20k design.

@@ -102,7 +102,11 @@ func verify() error {
 			}
 		}
 	}
-	files, _ := filepath.Glob("results/cells/r20261012a-*.json")
+	runID := os.Getenv("STUDY_RUN_ID")
+	if runID == "" {
+		runID = "r20261012a"
+	}
+	files, _ := filepath.Glob("results/cells/" + runID + "-*.json")
 	sort.Strings(files)
 	results := []map[string]any{}
 	independentValues := map[string][]float64{}

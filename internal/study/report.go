@@ -12,7 +12,7 @@ import (
 )
 
 func Report() error {
-	files, e := filepath.Glob("results/cells/r20261012a-*.json")
+	files, e := filepath.Glob("results/cells/" + RunID() + "-*.json")
 	if e != nil {
 		return e
 	}
@@ -183,7 +183,7 @@ func Report() error {
 	fmt.Fprintf(&out, "---\ntitle: Local CPU versus hosted embedding retrieval\ntype: research-report\nstatus: %s\ncreated: 2026-10-12\nupdated: %s\nrelated: [\"[[STUDY_PLAN]]\", \"[[CORPUS_CARD]]\", \"[[MODEL_CARD]]\"]\n---\n\nOwner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-local), [execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).\n\n%d of 96 settled-state primary evaluations passed. Run ID: r20261012a. Original fresh-ingest observations are retained separately under results/fresh-ingest. All reported cells use 799 native MIRACL English dev queries and the turbopuffer ANN operator with service-reported exhaustive fallback. Primary corpus: 100,000 passages; chunk sweep: a nested 20,000-passage corpus. No GPU hardware was measured.\n\n", status, time.Now().UTC().Format("2006-01-02"), passed)
 	out.WriteString("## Primary results: 100k passages, 256-word chunks, native dimensions\n\n| Model | Native dimensions | nDCG@10 (95% bootstrap CI) | MRR@10 | Recall@5 | Recall@10 | Recall@100 |\n|---|---:|---:|---:|---:|---:|---:|\n")
 	for _, m := range Models {
-		id := fmt.Sprintf("r20261012a-%s-n100000-c256-d%d", m.ID, m.Native)
+		id := fmt.Sprintf("%s-%s-n100000-c256-d%d", RunID(), m.ID, m.Native)
 		c, ok := by[id]
 		if !ok || c.Status != "passed" || c.Phase != "settled-v1" {
 			fmt.Fprintf(&out, "| %s | %d | pending | | | | |\n", m.Name, m.Native)
@@ -196,7 +196,7 @@ func Report() error {
 	for _, m := range Models {
 		fmt.Fprintf(&out, "| %s", m.ID)
 		for _, d := range []int{128, 256, 512, m.Native} {
-			id := fmt.Sprintf("r20261012a-%s-n100000-c256-d%d", m.ID, d)
+			id := fmt.Sprintf("%s-%s-n100000-c256-d%d", RunID(), m.ID, d)
 			if c, ok := by[id]; ok && c.Status == "passed" && c.Phase == "settled-v1" {
 				fmt.Fprintf(&out, " | %.4f", c.Metrics["ndcg10"])
 			} else {
@@ -209,7 +209,7 @@ func Report() error {
 	for _, m := range Models {
 		fmt.Fprintf(&out, "| %s", m.ID)
 		for _, size := range []int{128, 256, 512} {
-			id := fmt.Sprintf("r20261012a-%s-n20000-c%d-d%d", m.ID, size, m.Native)
+			id := fmt.Sprintf("%s-%s-n20000-c%d-d%d", RunID(), m.ID, size, m.Native)
 			if c, ok := by[id]; ok && c.Status == "passed" && c.Phase == "settled-v1" {
 				fmt.Fprintf(&out, " | %.4f", c.Metrics["ndcg10"])
 			} else {
@@ -238,5 +238,5 @@ func Report() error {
 	out.WriteString("Eight fixed queries per cell have exhaustive local float64 dot-product cosine audits over all normalized chunk vectors, followed by identical doc deduplication. Exact and ANN rankings/metrics are preserved under results/exact. This diagnoses ANN effects but does not exhaustively guarantee ANN accuracy for all 799 queries. Namespace row counts are exact Count aggregations; provider metadata counts/bytes are approximate and may lag ingestion. Vector dimensions are checked against returned vectors and namespace schema.\n\n")
 	out.WriteString("Reproduction: [RUNBOOK](RUNBOOK.md). Frozen corpus/chunk manifests, full attribution and license receipts accompany the recipe. Raw corpus text, weights, caches and vectors stay uncommitted. Training-set overlap with this public benchmark is not independently verifiable. Hosted providers do not expose immutable weight revisions; model names and returned model IDs/timestamps are recorded, so perfect future hosted reproducibility is unavailable. Original EmbeddingGemma 300M remains HTTP 403 gated and is not measured. Local Qwen0.6B was deferred to bound CPU time.\n\n")
 	out.WriteString("Final audit artifacts: results/audit.json, results/independent-audit.json, results/bootstrap.json and COMPLETION.json. The independent verifier separately recomputes headline metrics from ranked document IDs and qrels; it does not import the evaluator. Future GPU work requires a controlled GPU host, pinned runtime/weights and matched batching.\n")
-	return Atomic("RESULTS.md", []byte(out.String()))
+	return Atomic("RESULTS.md", []byte(strings.ReplaceAll(out.String(), "r20261012a", RunID())))
 }

@@ -51,7 +51,7 @@ func Diagnostics() error {
 	return Save("results/token-overflow-audit.json", map[string]any{"utc": time.Now().UTC(), "unit": "whitespace-delimited words; not model tokens", "text_changed_after_freeze": false, "maximum_title_text_bytes": 6000, "query_max_utf8_bytes": qMax, "positive_judgments": positive, "negative_judgments": negative, "queries": len(qs), "treatments": rows, "note": "Common byte ceiling subdivides instead of discarding text. Raw UTF-8 bytes plus prefix room conservatively bound byte/subword tokenizer lengths; local model additionally checks exact tokens. No provider truncation is requested."})
 }
 func RefreshMetadata() error {
-	files, e := filepath.Glob("results/cells/r20261012a-*.json")
+	files, e := filepath.Glob("results/cells/" + RunID() + "-*.json")
 	if e != nil {
 		return e
 	}
@@ -68,7 +68,7 @@ func RefreshMetadata() error {
 		if c.Status != "passed" {
 			continue
 		}
-		if !strings.HasPrefix(c.Namespace, "egvl-r20261012a-") {
+		if !strings.HasPrefix(c.Namespace, "egvl-"+RunID()+"-") {
 			return fmt.Errorf("foreign namespace")
 		}
 		var metadata map[string]any

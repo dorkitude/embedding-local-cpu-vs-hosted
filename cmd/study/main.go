@@ -20,7 +20,7 @@ func main() {
 	var pilot bool
 	m := &cobra.Command{Use: "matrix", RunE: func(*cobra.Command, []string) error { return s.Matrix(model, run, pilot) }}
 	m.Flags().StringVar(&model, "model", "", "Model ID or hosted")
-	m.Flags().StringVar(&run, "run", "r1", "Frozen run ID")
+	m.Flags().StringVar(&run, "run", s.RunID(), "Frozen run ID")
 	m.Flags().BoolVar(&pilot, "pilot", false, "1000 documents / 20 queries smoke only")
 	r.AddCommand(m)
 	var requeryModel string
