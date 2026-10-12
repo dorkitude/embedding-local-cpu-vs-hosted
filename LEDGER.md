@@ -74,3 +74,19 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   labeled explicitly. Original fresh-ingest cells/rankings/exact audits remain
   under results/fresh-ingest; this is an indexing-state correction, not tuning
   based on relevance scores. Additional query cost remains well within budget.
+- 2026-10-12T22:06Z: Supervisor review found material ANN/exact differences on
+  the eight diagnostic queries. Before additional exact calculations, freeze a
+  post-hoc diagnostic sample: smallest SHA256("exact-audit-20261012:"+qid),
+  64 common queries, primary100k/256 only, each model at128 and native dimensions.
+  Use cached vectors and existing settled ANN rankings, no new embeddings or
+  provider searches. This diagnoses the end-to-end configuration differences;
+  it does not change primary metrics or tune any model. Eight-query audits for
+  all96cells and all fresh-versus-settled deltas will also be summarized.
+- 2026-10-12: Fix settled-service restart eligibility for interrupted/error
+  settled cells. Correct CPU benchmark reproduction to load checkpoint FP32
+  explicitly rather than import the now-BF16 production sidecar. Original
+  benchmark predates the production BF16 switch in commit21b8151, but its
+  imported runtime is not self-contained; retain it and run a separately named
+  confirmation after the full CPU lane ends, without changing retrieval inputs.
+- 2026-10-12: Cost accounting now applies per-request batch-write discounts;
+  API billable bytes exclude that discount. Retain gross write ceilings as well.

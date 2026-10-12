@@ -94,8 +94,9 @@ func Report() error {
 	}
 	costs := map[string]*Spend{}
 	tpBilling := map[string]float64{}
+	tpWrite, tpWriteGross := 0.0, 0.0
 	total := 0.0
-	e = Scan("results/requests.jsonl", func(b []byte) error {
+	e = ScanJournal("results/requests.jsonl", func(b []byte) error {
 		var r struct {
 			Tag      string  `json:"tag"`
 			Seconds  float64 `json:"seconds"`
@@ -142,6 +143,9 @@ func Report() error {
 				c.EstimatedUSD += r.Usage.Tokens * price / 1e6
 			}
 		} else if strings.HasPrefix(r.Tag, "tp:") {
+			discounted, gross := WriteCost(r.Billing["billable_logical_bytes_written"])
+			tpWrite += discounted
+			tpWriteGross += gross
 			for k, v := range r.Billing {
 				tpBilling[k] += v
 			}
@@ -157,8 +161,8 @@ func Report() error {
 		c.P95 = c.Latencies[int(math.Ceil(float64(len(c.Latencies))*.95))-1]
 		total += c.EstimatedUSD
 	}
-	// API billing already applies write discounts. Decimal GB/TB units from official calculator.
-	tpWrite := tpBilling["billable_logical_bytes_written"] / 1e9 * 2
+	// Billing bytes include attribute discounts, but NOT batch-write discounts.
+	// Apply the official calculator's batch discount per request, not to the sum.
 	tpQuery := tpBilling["billable_logical_bytes_queried"] / 1e12 * .001
 	tpReturned := tpBilling["billable_logical_bytes_returned"] / 1e9 * .05
 	var storage float64
@@ -168,6 +172,9 @@ func Report() error {
 		}
 	}
 	spend := map[string]any{"embedding_by_model": costs, "embedding_success_estimate_usd": total, "turbopuffer_billing_bytes": tpBilling, "turbopuffer_write_usd": tpWrite, "turbopuffer_query_usd": tpQuery, "turbopuffer_return_usd": tpReturned, "retained_storage_conservative_gb": storage / 1e9, "retained_storage_usd_per_month": storage / 1e9 * .33, "total_usage_estimate_excluding_storage_usd": total + tpWrite + tpQuery + tpReturned, "limitations": "List-price estimate; excludes account minimums, taxes, unknown failed-call provider billing and manual discovery calls (<$0.01). Conservative reservation counts every retry separately. Storage billed over retention time, not fixed experiment expense."}
+	spend["turbopuffer_write_gross_ceiling_usd"] = tpWriteGross
+	spend["total_usage_gross_ceiling_excluding_storage_usd"] = total + tpWriteGross + tpQuery + tpReturned
+	spend["write_discount_method"] = "Per-request billable bytes, minimum 10KB; discount=min(0.5,max(0,(log10(KB)-1)*0.2)); decimal units. API bytes already include unfiltered-attribute discounts. No copy operations."
 	Save("results/costs.json", spend)
 	var out strings.Builder
 	passed := 0
