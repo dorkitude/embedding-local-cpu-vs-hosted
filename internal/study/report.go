@@ -262,6 +262,11 @@ func Report() error {
 	if c := costs["gemma2"]; c != nil {
 		fmt.Fprintf(&out, "\nThe local sidecar processed %.0f model tokens in %.1f summed successful HTTP seconds: %.1f model tokens/s, including tokenization and HTTP serialization. This includes smoke/preflight work; warm inference dominates. Historical request receipts omit input counts, so a full-run HTTP inputs/s figure cannot be recovered from those receipts. Input-count rates in costs.json cover only requests that explicitly record input counts. CPU lane concurrency is one; API request-summed rates are not aggregate parallel throughput.\n", c.Tokens, c.SuccessfulSeconds, c.TokensPerSecond)
 	}
+	localTiming, e := LocalTiming(cells)
+	if e != nil {
+		return e
+	}
+	out.WriteString(localTiming)
 	out.WriteString("\nStudy embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.\n\nObserved API latency includes network, batching, queues and serialization, and differs in batch sizes; it is not controlled GPU execution or a direct latency ranking. Cache hits are excluded from request timings. Local CPU measurements include exact tokenization and serialization at the sidecar; standalone batch/precision/thread experiments are in results/cpu-benchmark.json and results/cpu-thread-scaling.json. Cold model initialization uses locally cached files, not cold physical disk. Parallel hosted work shares the VM, so CPU throughput is contextual.\n\n")
 	searchSection, e := SearchStats(cells, records)
 	if e != nil {
