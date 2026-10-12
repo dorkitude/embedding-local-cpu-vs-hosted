@@ -75,3 +75,23 @@ The committed systemd scripts are the exact commands for the original run;
 copy/update their run ID for a new study repetition rather than overwriting the
 original namespace. Corpus preparation remains fixed to this study's frozen
 100k/20k design.
+
+After all96 settled cells finish, run `.local/study exact-expanded` for the
+frozen64-query exact diagnostic at128/native dimensions. It reads cached vectors
+only. Then run `.local/study report`, `go run ./cmd/verify`, and
+`.local/study report` again so the report includes the independent audit status.
+The report summarizes both fresh-versus-settled changes and exact-versus-ANN
+differences. Do not interpret a configuration difference as a pure model effect.
+
+To reproduce the isolated CPU benchmark, wait until the inference/matrix lanes
+are idle, then run `uv run --project sidecar sidecar/benchmark.py` synchronously
+under the agent's persistent service (or a dedicated systemd service). It loads
+the pinned checkpoint directly in FP32, then converts to BF16. Confirmation
+receipts use `results/cpu-benchmark-confirmation*.json`; the original pre-run
+benchmark is preserved. Set BENCHMARK_OUTPUT_PREFIX to a new path for repetitions.
+
+Compress journals only with all writers stopped: `gzip -n results/requests.jsonl`.
+The accounting reader combines an archived `.gz` prefix and any later live
+`.jsonl` suffix. Do not create a duplicate archive while retaining its raw copy.
+Query logs use raw-or-gzip fallback, and should be compressed only after their
+settled pass archives the fresh results. Never compress actively written files.
