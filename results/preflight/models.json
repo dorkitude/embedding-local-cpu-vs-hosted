@@ -1,0 +1,122 @@
+[
+  {
+    "model": {
+      "ID": "gemma2",
+      "Provider": "local",
+      "Name": "google/embeddinggemma-2",
+      "Base": "http://127.0.0.1:8765/v1",
+      "KeyEnv": "",
+      "Revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "Mode": "mrl",
+      "Native": 768,
+      "Price": 0,
+      "Batch": 32,
+      "Workers": 1
+    },
+    "returned_dimension": 768,
+    "rows": 2,
+    "seconds": 0.150090884,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:48.530770398Z"
+  },
+  {
+    "model": {
+      "ID": "openai-large",
+      "Provider": "openai",
+      "Name": "text-embedding-3-large",
+      "Base": "https://openai.int.exe.xyz/v1",
+      "KeyEnv": "OPENAI_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "api",
+      "Native": 3072,
+      "Price": 0.13,
+      "Batch": 64,
+      "Workers": 4
+    },
+    "returned_dimension": 3072,
+    "rows": 2,
+    "seconds": 0.315646415,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:48.846430403Z"
+  },
+  {
+    "model": {
+      "ID": "qwen8b",
+      "Provider": "fireworks",
+      "Name": "accounts/fireworks/models/qwen3-embedding-8b",
+      "Base": "https://fireworks.int.exe.xyz/inference/v1",
+      "KeyEnv": "FIREWORKS_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "mrl",
+      "Native": 4096,
+      "Price": 0.15,
+      "Batch": 32,
+      "Workers": 4
+    },
+    "returned_dimension": 4096,
+    "rows": 2,
+    "seconds": 0.309664521,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:49.156127644Z"
+  },
+  {
+    "model": {
+      "ID": "openai-small",
+      "Provider": "openai",
+      "Name": "text-embedding-3-small",
+      "Base": "https://openai.int.exe.xyz/v1",
+      "KeyEnv": "OPENAI_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "api",
+      "Native": 1536,
+      "Price": 0.02,
+      "Batch": 64,
+      "Workers": 4
+    },
+    "returned_dimension": 1536,
+    "rows": 2,
+    "seconds": 0.203842806,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:49.359984911Z"
+  },
+  {
+    "model": {
+      "ID": "gemini2",
+      "Provider": "openrouter",
+      "Name": "google/gemini-embedding-2",
+      "Base": "https://openrouter.int.exe.xyz/api/v1",
+      "KeyEnv": "OPENROUTER_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "mrl",
+      "Native": 3072,
+      "Price": 0.2,
+      "Batch": 32,
+      "Workers": 4
+    },
+    "returned_dimension": 3072,
+    "rows": 2,
+    "seconds": 0.516917527,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:49.876919825Z"
+  },
+  {
+    "model": {
+      "ID": "bge",
+      "Provider": "openrouter",
+      "Name": "baai/bge-m3",
+      "Base": "https://openrouter.int.exe.xyz/api/v1",
+      "KeyEnv": "OPENROUTER_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "exploratory-prefix",
+      "Native": 1024,
+      "Price": 0.01,
+      "Batch": 32,
+      "Workers": 4
+    },
+    "returned_dimension": 1024,
+    "rows": 2,
+    "seconds": 0.596013396,
+    "status": "passed",
+    "utc": "2026-10-12T20:44:50.472958639Z"
+  }
+]

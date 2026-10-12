@@ -1,0 +1,12 @@
+[Unit]
+Description=Embedding study pinned Google Gemma 2 CPU sidecar
+[Service]
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+ExecStart=/usr/local/bin/uv run --frozen --project sidecar sidecar/server.py
+Environment=HF_ENDPOINT=https://huggingface.int.exe.xyz
+Environment=HF_HUB_DISABLE_XET=1
+Restart=no
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/sidecar.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/sidecar.log
+[Install]
+WantedBy=default.target

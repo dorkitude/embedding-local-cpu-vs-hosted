@@ -1,0 +1,22 @@
+[project]
+name = "embedding-study-sidecar"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "sentence-transformers",
+    "transformers",
+    "torch",
+    "fastapi",
+    "uvicorn",
+    "sentencepiece",
+    "protobuf",
+    "pillow>=12.3.0",
+    "torchvision>=0.29.1",
+]
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

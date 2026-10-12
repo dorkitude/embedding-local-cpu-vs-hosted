@@ -1,0 +1,58 @@
+{
+  "embedding_conservative_usd": 50.791126680000005,
+  "estimated_before_run": true,
+  "models": [
+    {
+      "conservative_cost_usd": 0,
+      "embedding_passes": 1,
+      "model": "gemma2",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 54570954,
+      "usd_per_million_tokens": 0
+    },
+    {
+      "conservative_cost_usd": 27.50588776,
+      "embedding_passes": 4,
+      "model": "openai-large",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 52895938,
+      "usd_per_million_tokens": 0.13
+    },
+    {
+      "conservative_cost_usd": 7.9454169,
+      "embedding_passes": 1,
+      "model": "qwen8b",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 52969446,
+      "usd_per_million_tokens": 0.15
+    },
+    {
+      "conservative_cost_usd": 4.23167504,
+      "embedding_passes": 4,
+      "model": "openai-small",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 52895938,
+      "usd_per_million_tokens": 0.02
+    },
+    {
+      "conservative_cost_usd": 10.579187600000001,
+      "embedding_passes": 1,
+      "model": "gemini2",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 52895938,
+      "usd_per_million_tokens": 0.2
+    },
+    {
+      "conservative_cost_usd": 0.52895938,
+      "embedding_passes": 1,
+      "model": "bge",
+      "unique_document_inputs": 110123,
+      "upper_bound_byte_tokens": 52895938,
+      "usd_per_million_tokens": 0.01
+    }
+  ],
+  "note": "bytes as upper token bound; all 4 OpenAI dimension calls charged separately; cache sharing across chunks; actual usage recorded; $120 hard embedding reservation cap",
+  "retry_factor": 1.2,
+  "storage_query_allowance_usd": 30,
+  "upper_budget_usd": 150
+}

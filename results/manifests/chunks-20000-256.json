@@ -1,0 +1,8 @@
+{
+  "chunks": 20421,
+  "documents": 20000,
+  "input_sha256": "c1d81a218658df10a1a8926a2c5e4c097afb0667c93c07ff461faa1be33cf83e",
+  "max_text_title_bytes": 6000,
+  "overlap": 0.125,
+  "words_per_chunk": 256
+}
