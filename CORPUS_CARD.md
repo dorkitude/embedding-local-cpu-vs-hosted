@@ -44,3 +44,9 @@ the sampled corpus with judged/hard documents and removes many full-corpus
 distractors: scores are NOT official MIRACL full-corpus results. Unjudged documents
 are treated as nonrelevant; false-negative relevance remains possible. Relevance
 is document/passage level, never proof of an answer-bearing chunk.
+
+Additional historical primary receipt captured during audit:
+receipts/wikimedia-terms-2014-2023.html (official oldid=98524, linked by current
+Wikimedia Terms). This is the Terms version applicable to the 2019 dump and
+explicitly specifies CC BY-SA 3.0. It independently confirms the historical
+license conclusion rather than relying on present-day 4.0 terms or HF metadata.

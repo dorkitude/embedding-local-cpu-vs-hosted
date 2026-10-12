@@ -54,3 +54,11 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   corpus, prompts, dimensions and evaluation are unchanged; observed timings
   include shared VM contention. OpenRouter smoke ID pilot2 uses corrected Gemini
   prompts. No quality metrics motivated this scheduling revision.
+- 2026-10-12: Post-freeze diagnostics (no input changes) show 2,326 positive and
+  6,024 negative judgments; all799 queries retained. No byte-ceiling contractions.
+  Primary 256-word treatment has101,192 chunks, median53 words. Secondary chunk
+  counts128/256/512 are24,762/20,421/20,027. These distributions limit conclusions
+  about longer-document chunking.
+- 2026-10-12: Captured official historical Wikimedia Terms oldid98524, applicable
+  2014–2023, confirming CC BY-SA3.0 for the2019 source dump. This supplements the
+  initial license review with historical primary-source evidence.

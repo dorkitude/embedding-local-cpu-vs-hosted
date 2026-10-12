@@ -1,0 +1,61 @@
+{
+  "maximum_title_text_bytes": 6000,
+  "negative_judgments": 6024,
+  "note": "Common byte ceiling subdivides instead of discarding text. Raw UTF-8 bytes plus prefix room conservatively bound byte/subword tokenizer lengths; local model additionally checks exact tokens. No provider truncation is requested.",
+  "positive_judgments": 2326,
+  "queries": 799,
+  "query_max_utf8_bytes": 122,
+  "text_changed_after_freeze": false,
+  "treatments": [
+    {
+      "byte_ceiling_constrained_chunks": 0,
+      "chunks": 101192,
+      "documents": 100000,
+      "extra_chunks_beyond_first": 1192,
+      "target_words": 256,
+      "title_text_max_utf8_bytes": 2003,
+      "words_max": 256,
+      "words_median": 53,
+      "words_min": 1,
+      "words_p95": 173
+    },
+    {
+      "byte_ceiling_constrained_chunks": 0,
+      "chunks": 24762,
+      "documents": 20000,
+      "extra_chunks_beyond_first": 4762,
+      "target_words": 128,
+      "title_text_max_utf8_bytes": 1112,
+      "words_max": 128,
+      "words_median": 68,
+      "words_min": 1,
+      "words_p95": 128
+    },
+    {
+      "byte_ceiling_constrained_chunks": 0,
+      "chunks": 20421,
+      "documents": 20000,
+      "extra_chunks_beyond_first": 421,
+      "target_words": 256,
+      "title_text_max_utf8_bytes": 1997,
+      "words_max": 256,
+      "words_median": 72,
+      "words_min": 1,
+      "words_p95": 204
+    },
+    {
+      "byte_ceiling_constrained_chunks": 0,
+      "chunks": 20027,
+      "documents": 20000,
+      "extra_chunks_beyond_first": 27,
+      "target_words": 512,
+      "title_text_max_utf8_bytes": 3559,
+      "words_max": 512,
+      "words_median": 72,
+      "words_min": 1,
+      "words_p95": 202
+    }
+  ],
+  "unit": "whitespace-delimited words; not model tokens",
+  "utc": "2026-10-12T21:05:56.291148547Z"
+}
