@@ -242,7 +242,7 @@ func verify() error {
 		}
 		status = "passed"
 	}
-	out := map[string]any{"status": status, "cells": len(files), "expected": 96, "corpus": len(selected), "queries": len(queries), "checks": "Independent metric calculation from ranked doc IDs; attribution; judged-document inclusion; query set; uniqueness; exact namespace rowcounts; dimensions", "results": results}
+	out := map[string]any{"run_id": runID, "status": status, "cells": len(files), "expected": 96, "corpus": len(selected), "queries": len(queries), "checks": "Independent metric calculation from ranked doc IDs; attribution; judged-document inclusion; query set; uniqueness; exact namespace rowcounts; dimensions", "results": results}
 	b, _ := json.MarshalIndent(out, "", "  ")
 	if e := os.WriteFile("results/independent-audit.json", append(b, '\n'), 0644); e != nil {
 		return e

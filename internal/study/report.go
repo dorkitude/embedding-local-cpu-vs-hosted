@@ -179,6 +179,14 @@ func Report() error {
 	status := "partial"
 	if passed == 96 {
 		status = "complete-pending-independent-audit"
+		var audit struct {
+			Status string
+			Cells  int
+			Run    string `json:"run_id"`
+		}
+		if b, e := os.ReadFile("results/independent-audit.json"); e == nil && json.Unmarshal(b, &audit) == nil && audit.Status == "passed" && audit.Cells == 96 && audit.Run == RunID() {
+			status = "complete"
+		}
 	}
 	fmt.Fprintf(&out, "---\ntitle: Local CPU versus hosted embedding retrieval\ntype: research-report\nstatus: %s\ncreated: 2026-10-12\nupdated: %s\nrelated: [\"[[STUDY_PLAN]]\", \"[[CORPUS_CARD]]\", \"[[MODEL_CARD]]\"]\n---\n\nOwner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-local), [execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).\n\n%d of 96 settled-state primary evaluations passed. Run ID: r20261012a. Original fresh-ingest observations are retained separately under results/fresh-ingest. All reported cells use 799 native MIRACL English dev queries and the turbopuffer ANN operator with service-reported exhaustive fallback. Primary corpus: 100,000 passages; chunk sweep: a nested 20,000-passage corpus. No GPU hardware was measured.\n\n", status, time.Now().UTC().Format("2006-01-02"), passed)
 	out.WriteString("## Primary results: 100k passages, 256-word chunks, native dimensions\n\n| Model | Native dimensions | nDCG@10 (95% bootstrap CI) | MRR@10 | Recall@5 | Recall@10 | Recall@100 |\n|---|---:|---:|---:|---:|---:|---:|\n")
@@ -226,12 +234,13 @@ func Report() error {
 			fmt.Fprintf(&out, "| %s | %d | %.0f | %.3f | %.3f | %.4f |\n", m.ID, c.Requests, c.Tokens, c.P50, c.P95, c.EstimatedUSD)
 		}
 	}
-	out.WriteString("\nStudy embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.\n\nObserved API latency includes network, batching, queues and serialization, and differs in batch sizes; it is not controlled GPU execution or a direct latency ranking. Cache hits are excluded from request timings. Local CPU measurements include exact tokenization and serialization at the sidecar; standalone batch/precision/thread experiments are in results/cpu-benchmark.json and results/cpu-thread-scaling.json. Cold model initialization uses locally cached files, not cold physical disk. Parallel hosted work shares the VM, so CPU throughput is contextual.\n\n## Method, uncertainty and audit\n\n")
+	out.WriteString("\nStudy embedding totals include FOUR paid embedding passes for each OpenAI model because dimensions are requested explicitly; other models reuse one native embedding pass. These totals are experiment costs, not per-document deployment prices. Source token prices are OpenAI large $0.13/M, small $0.02/M, Qwen $0.10/M, Gemini $0.20/M and BGE $0.01/M. Local CPU has no API token charge but VM time is not free and is not priced here.\n\nObserved API latency includes network, batching, queues and serialization, and differs in batch sizes; it is not controlled GPU execution or a direct latency ranking. Cache hits are excluded from request timings. Local CPU measurements include exact tokenization and serialization at the sidecar; standalone batch/precision/thread experiments are in results/cpu-benchmark.json and results/cpu-thread-scaling.json. Cold model initialization uses locally cached files, not cold physical disk. Parallel hosted work shares the VM, so CPU throughput is contextual.\n\n")
 	searchSection, e := SearchStats(cells, records)
 	if e != nil {
 		return e
 	}
 	out.WriteString(searchSection)
+	out.WriteString("\n## Method, uncertainty and audit\n\n")
 	out.WriteString("The deterministic SHA-256 sample scans all 32,893,221 English passages, retaining all 7,921 unique dev-judged documents (positive and negative), then hash-selected distractors. This deliberately enriches judged/hard documents and removes most original distractors. It is not the official full-corpus MIRACL benchmark. Unjudged documents count as nonrelevant; incomplete judgments can penalize useful results. All 799 dev queries are included; no evaluation-score-based tuning was performed. The smoke pilot lacks complete qrels coverage and is excluded.\n\n")
 	out.WriteString("Chunks map to original passage IDs. ANN retrieves at least 500 chunks, increases overfetch until 100 unique passages are obtained, and ranks each passage by its best chunk. Metrics measure passage retrieval, not answer-bearing chunk relevance. Every query retains its top 100 doc IDs. Recall is macro-averaged; micro Recall@100 is also retained. Binary MIRACL nDCG normalizes by the ideal top min(10, number relevant).\n\n")
 	out.WriteString("All confidence intervals use 2,000 paired bootstrap samples, fixed seed 20261012 and the same sorted query order. results/bootstrap.json includes reduced-minus-native, model-native-minus-OpenAI-large-native, and chunk-minus-256 comparisons within the same corpus. Intervals are exploratory and unadjusted for multiple comparisons. They cover query sampling uncertainty, not provider drift or corpus-sampling variation.\n\n")
