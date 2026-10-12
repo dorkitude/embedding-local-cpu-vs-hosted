@@ -1,0 +1,204 @@
+{
+  "status": "complete",
+  "repo_url": "https://github.com/dorkitude/embedding-gpu-vs-local",
+  "private": true,
+  "owner": "Kyle Wild",
+  "commit": "9fe34fc44a0345a187337ff51bab46e015321235",
+  "commit_scope": "Audited code/results snapshot. This completion manifest is committed immediately after that snapshot; a file cannot contain its own commit hash.",
+  "completed_utc": "2026-10-12T23:46:25Z",
+  "run_ids": [
+    "r20261012a"
+  ],
+  "primary_evaluation_phase": "settled-v1",
+  "archived_evaluation_phase": "fresh-ingest",
+  "pilot_run_ids": [
+    "pilot1",
+    "pilot2"
+  ],
+  "corpus": {
+    "source_passages": 32893221,
+    "primary_passages": 100000,
+    "secondary_passages": 20000,
+    "unique_judged_passages": 7921,
+    "queries": 799,
+    "license": "Wikipedia CC-BY-SA-3.0 plus Apache-2.0 MIRACL contributions; attribution and share-alike obligations retained"
+  },
+  "primary_query_records": 76704,
+  "expected_cells": 96,
+  "completed_cells": 96,
+  "failed_cells": 0,
+  "blocked_cells": 0,
+  "actual_model_coverage": [
+    {
+      "id": "gemma2",
+      "name": "google/embeddinggemma-2",
+      "provider": "local",
+      "native_dimensions": 768,
+      "dimensions": [
+        128,
+        256,
+        512,
+        768
+      ],
+      "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.8002430352526038
+    },
+    {
+      "id": "openai-large",
+      "name": "text-embedding-3-large",
+      "provider": "openai",
+      "native_dimensions": 3072,
+      "dimensions": [
+        128,
+        256,
+        512,
+        3072
+      ],
+      "revision": "provider-unpinned",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.8058848769941485
+    },
+    {
+      "id": "qwen8b",
+      "name": "accounts/fireworks/models/qwen3-embedding-8b",
+      "provider": "fireworks",
+      "native_dimensions": 4096,
+      "dimensions": [
+        128,
+        256,
+        512,
+        4096
+      ],
+      "revision": "provider-unpinned",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.847365792125027
+    },
+    {
+      "id": "openai-small",
+      "name": "text-embedding-3-small",
+      "provider": "openai",
+      "native_dimensions": 1536,
+      "dimensions": [
+        128,
+        256,
+        512,
+        1536
+      ],
+      "revision": "provider-unpinned",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.771940195086706
+    },
+    {
+      "id": "gemini2",
+      "name": "google/gemini-embedding-2",
+      "provider": "openrouter",
+      "native_dimensions": 3072,
+      "dimensions": [
+        128,
+        256,
+        512,
+        3072
+      ],
+      "revision": "provider-unpinned",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.8423949227680314
+    },
+    {
+      "id": "bge",
+      "name": "baai/bge-m3",
+      "provider": "openrouter",
+      "native_dimensions": 1024,
+      "dimensions": [
+        128,
+        256,
+        512,
+        1024
+      ],
+      "revision": "provider-unpinned",
+      "completed_cells": 16,
+      "native_primary_ndcg10": 0.7975353244828957
+    }
+  ],
+  "tests": {
+    "status": "passed",
+    "utc": "2026-10-12T23:42:26Z",
+    "run_id": "r20261012a",
+    "commands": [
+      "go test ./...",
+      "go vet ./...",
+      "LIVE_INTEGRATION=1 go test ./internal/study -run TestIntegrationLive -count=1",
+      "study exact-expanded",
+      "study sentinel",
+      "study refresh-metadata",
+      "uv run --frozen --project sidecar sidecar/benchmark.py",
+      "study audit",
+      "study report",
+      "go run ./cmd/verify"
+    ],
+    "sampling_audit": "results/independent-sampling-audit.json"
+  },
+  "audits": {
+    "independent_metrics": "passed",
+    "independently_recomputed_bootstrap_intervals": 296,
+    "expanded_exact_configurations": 12,
+    "expanded_exact_queries_per_configuration": 64,
+    "full_source_sampling": "passed",
+    "compressed_artifact_reverification": "passed",
+    "checksums": "results/SHA256SUMS and receipts/SHA256SUMS"
+  },
+  "local_cpu": {
+    "vcpus": 8,
+    "gpu_measured": false,
+    "model": "google/embeddinggemma-2",
+    "precision": "bfloat16",
+    "inference_batch": 8,
+    "distinct_inputs": 110922,
+    "distinct_inputs_per_embedding_cache_second": 13.020326267612061
+  },
+  "costs": {
+    "estimated_embedding_usd": 10.312689190000011,
+    "estimated_usage_excluding_storage_usd": 23.83717363105636,
+    "usage_with_gross_write_ceiling_usd": 36.01195852097457,
+    "conservative_embedding_reservations_usd": 51.15047833999988,
+    "study_cap_usd": 150,
+    "primary_storage_monthly_list_price_estimate_usd": 4.19028942288,
+    "limitations": "List-price estimates, not invoices; excludes fixed account minimums, taxes, VM time and unknown failed-call billing."
+  },
+  "storage": {
+    "retained_primary_namespaces": 96,
+    "exact_indexed_rows": 3993648,
+    "service_reported_logical_bytes": 12697846736,
+    "retained_for_reproducibility": true
+  },
+  "active_experiment_services": 0,
+  "report_paths": [
+    "README.md",
+    "RESULTS.md",
+    "DISCUSSION.md",
+    "CORPUS_CARD.md",
+    "MODEL_CARD.md",
+    "MODEL_DISCOVERY.md",
+    "RUNBOOK.md",
+    "LEDGER.md",
+    "results/matrix.json",
+    "results/bootstrap.json",
+    "results/costs.json",
+    "results/independent-audit.json",
+    "results/independent-bootstrap-audit.json",
+    "results/independent-expanded-exact-audit.json",
+    "results/end-to-end-sentinel.json",
+    "results/cpu-benchmark-confirmation.json"
+  ],
+  "remaining_limitations": [
+    "Local CPU versus hosted APIs; no controlled GPU hardware experiment.",
+    "Judgment-enriched100k sample and nested20k chunk sweep; not official full-corpus MIRACL results.",
+    "Whitespace word units and mostly short passages limit long-document chunking conclusions.",
+    "ANN/mixed/exhaustive execution varies across configurations; exact diagnostics cover64common queries at128/native and8queries in every cell, not all799exact rankings.",
+    "Hosted weight revisions are not immutable; two-query sentinel checks do not exclude all provider drift.",
+    "BGE prefix dimensions and sub-recommended Gemini dimensions are exploratory.",
+    "Bootstrap intervals are exploratory and unadjusted for multiple comparisons.",
+    "Original EmbeddingGemma300M remains gated; optional local Qwen0.6B was deferred.",
+    "Retained namespaces incur ongoing storage charges."
+  ]
+}
