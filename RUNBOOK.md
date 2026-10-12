@@ -61,3 +61,9 @@ provider may retain exhaustive-search fallback even with up-to-date metadata.
 Per-query counters expose that behavior; do not describe all ANN-operator
 requests as pure approximate search. configs/embedding-study-settled@.service
 waits up to4hours for the initial model lane and runs this second pass once.
+
+The complete audit also runs go run ./cmd/verify-sample (rescans all66 source
+shards), .local/study diagnostics, .local/study refresh-metadata, and
+.local/study sentinel. The sentinel makes one bounded real embedding request per
+model, comparing two fixed query vectors with the cached run. Its cosine/hash
+receipts do not substitute for immutable hosted model revisions.

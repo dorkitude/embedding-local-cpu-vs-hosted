@@ -107,6 +107,8 @@ func verify() error {
 	results := []map[string]any{}
 	for _, path := range files {
 		var cell struct {
+			Phase      string         `json:"evaluation_phase"`
+			IndexProbe map[string]any `json:"index_probe"`
 			ID, Status string
 			Queries    int
 			Count      int `json:"verified_row_count"`
@@ -124,6 +126,9 @@ func verify() error {
 		if cell.Status != "passed" {
 			return fmt.Errorf("cell not passed %s", path)
 		}
+		if cell.Phase != "settled-v1" || cell.IndexProbe == nil {
+			return fmt.Errorf("primary settled phase missing: %s", cell.ID)
+		}
 		if cell.Count != cell.Chunks || cell.Count <= 0 {
 			return fmt.Errorf("row count mismatch %s", cell.ID)
 		}
@@ -135,12 +140,16 @@ func verify() error {
 		totalHits, totalRelevant := 0, 0
 		e := read("results/queries/"+cell.ID+".jsonl", func(b []byte) error {
 			var row struct {
-				QID     string             `json:"qid"`
-				Docs    []string           `json:"ranked_docs"`
-				Metrics map[string]float64 `json:"metrics"`
+				Performance map[string]any     `json:"performance"`
+				QID         string             `json:"qid"`
+				Docs        []string           `json:"ranked_docs"`
+				Metrics     map[string]float64 `json:"metrics"`
 			}
 			if e := json.Unmarshal(b, &row); e != nil {
 				return e
+			}
+			if v, ok := row.Performance["exhaustive_search_count"].(float64); !ok || v < 0 {
+				return fmt.Errorf("missing exhaustive-search receipt: %s", cell.ID)
 			}
 			if seenq[row.QID] || !queries[row.QID] {
 				return fmt.Errorf("unexpected query")
