@@ -46,7 +46,7 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   hand-entered 20:55 to 20:52, using commit 21b8151 at 20:52:57Z as evidence.
   The full local cell started at 20:53:08Z; decisions preceded it. Other primary
   timestamps are captured directly in request/cell/manifests, not inferred.
-- 2026-10-12T21:00Z: Scheduling-only revision: split hosted jobs by provider
+- 2026-10-12: Scheduling-only revision: split hosted jobs by provider
   (OpenAI large/small; Fireworks Qwen; OpenRouter Gemini/BGE), concurrent with
   local CPU. Existing OpenAI job stopped and resumed through checkpoints to
   deploy the atomic shared budget lock before starting simultaneous paid lanes.

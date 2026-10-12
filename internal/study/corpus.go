@@ -19,6 +19,13 @@ import (
 	"time"
 )
 
+func HFBase() string {
+	if b := os.Getenv("HF_ENDPOINT"); b != "" {
+		return strings.TrimRight(b, "/")
+	}
+	return "https://huggingface.int.exe.xyz"
+}
+
 const CorpusRev = "d921ec7e349ce0d28daf30b2da9da5ee698bef0d"
 const QueryRev = "5be20db9509754dadad47689368639fcec739c00"
 
@@ -123,7 +130,7 @@ func Scan(path string, fn func([]byte) error) error {
 }
 func Acquire() error {
 	os.MkdirAll("data/raw", 0755)
-	base := "https://huggingface.int.exe.xyz/datasets/miracl/miracl/resolve/" + QueryRev + "/miracl-v1.0-en/"
+	base := HFBase() + "/datasets/miracl/miracl/resolve/" + QueryRev + "/miracl-v1.0-en/"
 	for _, x := range []struct{ remote, local string }{{"topics/topics.miracl-v1.0-en-dev.tsv", "queries.tsv"}, {"qrels/qrels.miracl-v1.0-en-dev.tsv", "qrels.tsv"}} {
 		if e := Download(base+x.remote, "data/"+x.local); e != nil {
 			return e
@@ -142,7 +149,7 @@ func Acquire() error {
 			defer wg.Done()
 			for i := range jobs {
 				p := fmt.Sprintf("data/raw/docs-%d.jsonl.gz", i)
-				u := fmt.Sprintf("https://huggingface.int.exe.xyz/datasets/miracl/miracl-corpus/resolve/%s/miracl-corpus-v1.0-en/docs-%d.jsonl.gz", CorpusRev, i)
+				u := fmt.Sprintf("%s/datasets/miracl/miracl-corpus/resolve/%s/miracl-corpus-v1.0-en/docs-%d.jsonl.gz", HFBase(), CorpusRev, i)
 				if e := Download(u, p); e != nil {
 					errs <- e
 				} else {

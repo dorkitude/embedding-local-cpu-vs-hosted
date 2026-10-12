@@ -29,7 +29,7 @@ Available integration defaults: OpenAI, Fireworks, OpenRouter, Hugging Face,
 turbopuffer. Never read local secret files. Portable overrides:
 OPENAI_BASE_URL / OPENAI_API_KEY; FIREWORKS_BASE_URL / FIREWORKS_API_KEY;
 OPENROUTER_BASE_URL / OPENROUTER_API_KEY; TURBOPUFFER_BASE_URL / TURBOPUFFER_API_KEY;
-HF_ENDPOINT for sidecar. Dataset downloader currently uses the injected HF route.
+HF_ENDPOINT for sidecar and corpus downloads (default: injected HF route).
 
 Resume uses same run ID, corpus checksum and binary cache. Cache keys include
 model, revision, formatting version, role, requested dimensions and full input.

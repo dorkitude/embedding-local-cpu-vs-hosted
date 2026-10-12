@@ -1,0 +1,1 @@
+{"model":"google/embeddinggemma-2","revision":"914f7f89142e33e77833254d9c9b90c3cef7303b","load_seconds":2.7633163750288077,"threads":8,"dtype":"torch.bfloat16","cuda":false,"max_seq_length":1000000000000000019884624838656,"inference_batch_size":8}

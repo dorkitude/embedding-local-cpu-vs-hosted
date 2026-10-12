@@ -1,0 +1,13 @@
+8759bdf7c77efc7df7723f64856a593c8943b71ee38baf2a88771fbaf78438f9  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/1_Pooling/config.json
+cdb09dfca347a56aa2d691744e38d5ad3c7cbc2834e7181272b9a15328b82524  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/2_Normalize/config.json
+b677a0ee2818c36f091b65fd3d9b4baea9f04d53b02b49cae916c74bf9682037  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/README.md
+4b852efc0b9960283e735363331e6f325b33bc74bdbaa076f595bc4e9b94d85e  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/chat_template.jinja
+b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/config.json
+031e56a498d33c349ab489a21885bcfe25b4fcba841149dc99e1e90d4a7c28f5  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/config_sentence_transformers.json
+197a32965d4b1105faf060417baa899e193fb73cd401f42ec9295234d5553d79  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/model.safetensors
+3d02572a0455b832de67fb8e63a54981bc7e8b46e337c95e917bd8122a533bfd  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/modules.json
+ea2ae257e901064abdd98dceb19f2b0da06af600bed15e0f99f5c85c37ee9d78  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/preprocessor_config.json
+168f6a08522f3ce5dea596d94d003af2fd691742d4f41fe1f9d8cce76bfbf69c  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/processor_config.json
+b1bcd9f2dce3ae863b359e87d0710b5dbc3314a59ecb4e2f97c7778fc8e4b228  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/sentence_bert_config.json
+4d777ef5bdc1aa36227abdfb77c3e49e7b9c892d16e1b6bda41c393504828be4  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/tokenizer.json
+17bd5d6e9364ca49a534e1502076593317c298d4a663623091ed45388f004874  /home/exedev/.cache/huggingface/hub/models--google--embeddinggemma-2/snapshots/914f7f89142e33e77833254d9c9b90c3cef7303b/tokenizer_config.json
