@@ -264,6 +264,9 @@ func verify() error {
 		if e := verifyBootstrap(independentValues); e != nil {
 			return e
 		}
+		if e := verifyExpanded(runID, rel, queries, selected); e != nil {
+			return e
+		}
 		status = "passed"
 	}
 	out := map[string]any{"run_id": runID, "status": status, "cells": len(files), "expected": 96, "corpus": len(selected), "queries": len(queries), "checks": "Independent metric calculation from ranked doc IDs; attribution; judged-document inclusion; query set; uniqueness; exact namespace rowcounts; dimensions", "results": results}
