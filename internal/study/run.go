@@ -328,6 +328,7 @@ func Integration() error {
 	if e := TP("POST", "/v2/namespaces/"+ns, p, &out); e != nil {
 		return e
 	}
+	out = map[string]any{}
 	if e := TP("POST", "/v2/namespaces/"+ns+"/query", map[string]any{"rank_by": []any{"vector", "ANN", []float64{1, 0}}, "top_k": 2, "include_attributes": true}, &out); e != nil {
 		return e
 	}
@@ -335,5 +336,15 @@ func Integration() error {
 	if !ok || len(rows) != 2 || rows[0].(map[string]any)["id"] != "a" {
 		return fmt.Errorf("integration unexpected response")
 	}
-	return Save("results/integration.json", map[string]any{"status": "passed", "utc": time.Now().UTC(), "namespace": ns, "response": out, "cosine_check": math.Abs(1 - 1)})
+	for i, row := range rows {
+		r, ok := row.(map[string]any)
+		if !ok {
+			return fmt.Errorf("integration malformed row")
+		}
+		distance, ok := r["$dist"].(float64)
+		if !ok || math.Abs(distance-float64(i)) > 1e-6 {
+			return fmt.Errorf("integration cosine distance mismatch: row %d", i)
+		}
+	}
+	return Save("results/integration.json", map[string]any{"status": "passed", "utc": time.Now().UTC(), "namespace": ns, "response": out, "checks": "two rows; correct nearest ID; returned cosine distances 0 and 1 within1e-6"})
 }

@@ -1,18 +1,17 @@
 {
-  "cosine_check": 0,
+  "checks": "two rows; correct nearest ID; returned cosine distances 0 and 1 within1e-6",
   "namespace": "egvl-integration-20261012",
   "response": {
     "billing": {
       "billable_logical_bytes_queried": 1280000000,
       "billable_logical_bytes_returned": 30
     },
-    "message": "documents committed successfully",
     "performance": {
-      "approx_namespace_size": 2,
+      "approx_namespace_size": 4,
       "cache_hit_ratio": 1,
       "cache_temperature": "hot",
-      "exhaustive_search_count": 2,
-      "last_included_write_at": "2026-10-12T20:43:49.000000000Z",
+      "exhaustive_search_count": 4,
+      "last_included_write_at": "2026-10-12T22:09:07.000000000Z",
       "query_execution_ms": 21,
       "server_total_ms": 21
     },
@@ -35,11 +34,8 @@
           1
         ]
       }
-    ],
-    "rows_affected": 2,
-    "rows_upserted": 2,
-    "status": "OK"
+    ]
   },
   "status": "passed",
-  "utc": "2026-10-12T20:43:49.564694536Z"
+  "utc": "2026-10-12T22:09:08.045776864Z"
 }

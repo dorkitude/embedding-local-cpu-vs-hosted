@@ -105,6 +105,8 @@ func TestIntegrationLive(t *testing.T) {
 	if os.Getenv("LIVE_INTEGRATION") != "1" {
 		t.Skip("LIVE_INTEGRATION=1 enables actual turbopuffer calls")
 	}
+	// Keep integration receipts and usage accounting in the study root.
+	t.Chdir("../..")
 	if e := Integration(); e != nil {
 		t.Fatal(e)
 	}
