@@ -1,0 +1,2792 @@
+[
+  {
+    "provider": "openai",
+    "response": {
+      "data": [
+        {
+          "created": 1732734466,
+          "id": "omni-moderation-2024-09-26",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1785168034,
+          "id": "gpt-live-transcribe",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1782228658,
+          "id": "gpt-5.6-luna",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1731689265,
+          "id": "omni-moderation-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1706048358,
+          "id": "gpt-3.5-turbo-0125",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1772654062,
+          "id": "gpt-5.4-2026-03-05",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1754426384,
+          "id": "gpt-5-nano",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1773451123,
+          "id": "gpt-5.4-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1742251791,
+          "id": "o1-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1762988221,
+          "id": "gpt-5.1-codex",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1778006032,
+          "id": "gpt-realtime-2",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1759514629,
+          "id": "gpt-5-search-api",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1776839241,
+          "id": "gpt-5.5-2026-04-23",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1681940951,
+          "id": "tts-1",
+          "object": "model",
+          "owned_by": "openai-internal",
+          "shutdown_date": null
+        },
+        {
+          "created": 1776894349,
+          "id": "gpt-5.5-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1756256146,
+          "id": "gpt-audio-2025-08-28",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1765610545,
+          "id": "gpt-4o-mini-transcribe-2025-03-20",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-01-20"
+        },
+        {
+          "created": 1754425928,
+          "id": "gpt-5-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1754425867,
+          "id": "gpt-5-mini-2025-08-07",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1712601677,
+          "id": "gpt-4-turbo-2024-04-09",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1782254706,
+          "id": "gpt-realtime-2.1-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1756271773,
+          "id": "gpt-realtime-2025-08-28",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1687882411,
+          "id": "gpt-4",
+          "object": "model",
+          "owned_by": "openai",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1750865219,
+          "id": "o3-deep-research-2025-06-26",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1744133506,
+          "id": "o4-mini-2025-04-16",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1739331543,
+          "id": "gpt-4o-2024-11-20",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1762800673,
+          "id": "gpt-5.1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1677532384,
+          "id": "whisper-1",
+          "object": "model",
+          "owned_by": "openai-internal",
+          "shutdown_date": "2027-02-26"
+        },
+        {
+          "created": 1759469822,
+          "id": "gpt-5-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1778012060,
+          "id": "gpt-realtime-whisper",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1773451076,
+          "id": "gpt-5.4-mini-2026-03-17",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1692634615,
+          "id": "babbage-002",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-28"
+        },
+        {
+          "created": 1715368132,
+          "id": "gpt-4o-2024-05-13",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1705953180,
+          "id": "text-embedding-3-large",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1699046015,
+          "id": "tts-1-hd",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1771461469,
+          "id": "gpt-realtime-1.5",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1756271701,
+          "id": "gpt-realtime",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-01-20"
+        },
+        {
+          "created": 1765343983,
+          "id": "gpt-5.2-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1754073306,
+          "id": "gpt-5-chat-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1765610407,
+          "id": "gpt-4o-mini-transcribe-2025-12-15",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1749166761,
+          "id": "o3-pro-2025-06-10",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1777704602,
+          "id": "chat-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1777950216,
+          "id": "gpt-realtime-translate",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1772659657,
+          "id": "gpt-5.4-pro-2026-03-05",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1738010200,
+          "id": "o3-mini-2025-01-31",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1771550885,
+          "id": "gpt-audio-1.5",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1764030620,
+          "id": "gpt-image-1.5",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-01"
+        },
+        {
+          "created": 1754075360,
+          "id": "gpt-5-2025-08-07",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1712361441,
+          "id": "gpt-4-turbo",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1748475349,
+          "id": "o3-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1722814719,
+          "id": "gpt-4o-2024-08-06",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1749840121,
+          "id": "o3-deep-research",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1744225308,
+          "id": "o3",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1741390858,
+          "id": "gpt-4o-mini-search-preview-2025-03-11",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1759469707,
+          "id": "gpt-5-pro-2025-10-06",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1782228018,
+          "id": "gpt-5.6-sol",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1744318173,
+          "id": "gpt-4.1-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1721172741,
+          "id": "gpt-4o-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1699053241,
+          "id": "tts-1-1106",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1776894470,
+          "id": "gpt-5.5-pro-2026-04-23",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1759512137,
+          "id": "gpt-audio-mini-2025-10-06",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1765343959,
+          "id": "gpt-5.2-pro-2025-12-11",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1750798887,
+          "id": "gpt-4o-transcribe-diarize",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-02-26"
+        },
+        {
+          "created": 1757527818,
+          "id": "gpt-5-codex",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1686588896,
+          "id": "gpt-4-0613",
+          "object": "model",
+          "owned_by": "openai",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1762800353,
+          "id": "gpt-5.1-2025-11-13",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1771905534,
+          "id": "gpt-4o-search-preview",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1759708615,
+          "id": "sora-2",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-24"
+        },
+        {
+          "created": 1734326976,
+          "id": "o1-2024-12-17",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1744321707,
+          "id": "gpt-4.1-nano",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1776399795,
+          "id": "gpt-image-2",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1683758102,
+          "id": "gpt-3.5-turbo-16k",
+          "object": "model",
+          "owned_by": "openai-internal",
+          "shutdown_date": null
+        },
+        {
+          "created": 1671217299,
+          "id": "text-embedding-ada-002",
+          "object": "model",
+          "owned_by": "openai-internal",
+          "shutdown_date": null
+        },
+        {
+          "created": 1782254687,
+          "id": "gpt-realtime-2.1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1744316542,
+          "id": "gpt-4.1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1776824847,
+          "id": "gpt-5.5",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1754425777,
+          "id": "gpt-5",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1742068596,
+          "id": "gpt-4o-mini-transcribe",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-02-26"
+        },
+        {
+          "created": 1776399994,
+          "id": "gpt-image-2-2026-04-21",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1765344352,
+          "id": "gpt-5.2-chat-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-08-10"
+        },
+        {
+          "created": 1741377021,
+          "id": "computer-use-preview-2025-03-11",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1759708663,
+          "id": "sora-2-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-24"
+        },
+        {
+          "created": 1692901427,
+          "id": "gpt-3.5-turbo-instruct",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-28"
+        },
+        {
+          "created": 1785168027,
+          "id": "gpt-transcribe",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1744321025,
+          "id": "gpt-4.1-nano-2025-04-14",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1772659601,
+          "id": "gpt-5.4-pro",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1742403959,
+          "id": "gpt-4o-mini-tts",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1765612007,
+          "id": "gpt-realtime-mini-2025-12-15",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1763671532,
+          "id": "gpt-5.1-codex-max",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1765610837,
+          "id": "gpt-4o-mini-tts-2025-12-15",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1745517030,
+          "id": "gpt-image-1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1756339249,
+          "id": "gpt-audio",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-01-20"
+        },
+        {
+          "created": 1770537915,
+          "id": "gpt-5.3-codex",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1760043960,
+          "id": "gpt-5-search-api-2025-10-14",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1766164985,
+          "id": "gpt-5.2-codex",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1759517133,
+          "id": "gpt-realtime-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-01-20"
+        },
+        {
+          "created": 1758845821,
+          "id": "gpt-image-1-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-01"
+        },
+        {
+          "created": 1782228459,
+          "id": "gpt-5.6-terra",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1694122472,
+          "id": "gpt-3.5-turbo-instruct-0914",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1754426303,
+          "id": "gpt-5-nano-2025-08-07",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1742068463,
+          "id": "gpt-4o-transcribe",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-02-26"
+        },
+        {
+          "created": 1744225351,
+          "id": "o4-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1734655677,
+          "id": "computer-use-preview",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1763007109,
+          "id": "gpt-5.1-codex-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1721172717,
+          "id": "gpt-4o-mini-2024-07-18",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1744315746,
+          "id": "gpt-4.1-2025-04-14",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1699053533,
+          "id": "tts-1-hd-1106",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1762547951,
+          "id": "gpt-5.1-chat-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1789406102,
+          "id": "gpt-6-luna",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1715367049,
+          "id": "gpt-4o",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1788563147,
+          "id": "gpt-image-2.5-flare",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1749685485,
+          "id": "o4-mini-deep-research",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1772691852,
+          "id": "gpt-5.4",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1771905621,
+          "id": "gpt-4o-search-preview-2025-03-11",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1705948997,
+          "id": "text-embedding-3-small",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1788851010,
+          "id": "gpt-image-2.5-sunburst-2026-09-08",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1698959748,
+          "id": "gpt-3.5-turbo-1106",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-28"
+        },
+        {
+          "created": 1765610731,
+          "id": "gpt-4o-mini-tts-2025-03-20",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1765313051,
+          "id": "gpt-5.2",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1773450837,
+          "id": "gpt-5.4-nano-2026-03-17",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1734375816,
+          "id": "o1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1772236571,
+          "id": "gpt-5.3-chat-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-08-10"
+        },
+        {
+          "created": 1744133301,
+          "id": "o3-2025-04-16",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-11"
+        },
+        {
+          "created": 1765313028,
+          "id": "gpt-5.2-2025-12-11",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1765925279,
+          "id": "chatgpt-image-latest",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-12-01"
+        },
+        {
+          "created": 1677610602,
+          "id": "gpt-3.5-turbo",
+          "object": "model",
+          "owned_by": "openai",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1787853604,
+          "id": "gpt-6-astra",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1692634301,
+          "id": "davinci-002",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-09-28"
+        },
+        {
+          "created": 1773450870,
+          "id": "gpt-5.4-nano",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1737146383,
+          "id": "o3-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1750866121,
+          "id": "o4-mini-deep-research-2025-06-26",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-07-23"
+        },
+        {
+          "created": 1765760008,
+          "id": "gpt-audio-mini-2025-12-15",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1742251504,
+          "id": "o1-pro-2025-03-19",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2026-10-23"
+        },
+        {
+          "created": 1788563162,
+          "id": "gpt-image-2.5-sunburst",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1788851006,
+          "id": "gpt-image-2.5-flare-2026-09-08",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1759512027,
+          "id": "gpt-audio-mini",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": "2027-01-20"
+        },
+        {
+          "created": 1744317547,
+          "id": "gpt-4.1-mini-2025-04-14",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1788889407,
+          "id": "gpt-live-1",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1741391161,
+          "id": "gpt-4o-mini-search-preview",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1789405937,
+          "id": "gpt-6-sol",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        },
+        {
+          "created": 1790552874,
+          "id": "gpt-6.1-sol",
+          "object": "model",
+          "owned_by": "system",
+          "shutdown_date": null
+        }
+      ],
+      "object": "list"
+    },
+    "url": "https://openai.int.exe.xyz/v1/models",
+    "utc": "2026-10-12T20:54:11.694513319Z"
+  },
+  {
+    "provider": "fireworks",
+    "response": {
+      "data": [
+        {
+          "context_length": 1048576,
+          "created": 1781630293,
+          "id": "accounts/fireworks/routers/glm-5p2-fast",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 512000,
+          "created": 1781214748,
+          "id": "accounts/fireworks/models/minimax-m3",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 131072,
+          "created": 1754345600,
+          "id": "accounts/fireworks/models/gpt-oss-120b",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 262144,
+          "created": 1780415326,
+          "id": "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 40960,
+          "created": 1759865045,
+          "id": "accounts/fireworks/models/qwen3-reranker-8b",
+          "kind": "EMBEDDING_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": false
+        },
+        {
+          "context_length": 40960,
+          "created": 1755707090,
+          "id": "accounts/fireworks/models/qwen3-embedding-8b",
+          "kind": "EMBEDDING_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": false
+        },
+        {
+          "context_length": 1048576,
+          "created": 1784483409,
+          "id": "accounts/fireworks/models/kimi-k3",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1784483409,
+          "id": "accounts/fireworks/routers/kimi-k3-fast",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "created": 1785949040,
+          "id": "accounts/fireworks/models/qwen3p8-max",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1787895551,
+          "id": "accounts/fireworks/models/glm-5p3",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1787895551,
+          "id": "accounts/fireworks/routers/glm-5p3-fast",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1787754936,
+          "id": "accounts/fireworks/models/glm-5p3-flash",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1789019014,
+          "id": "accounts/fireworks/models/deepseek-v4p1-flash",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1790110339,
+          "id": "accounts/fireworks/models/ember-1",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 262144,
+          "created": 1786139705,
+          "id": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1784058124,
+          "id": "accounts/fireworks/models/inkling",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "created": 1790634780,
+          "id": "auto",
+          "kind": "ROUTER",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "created": 1790634780,
+          "id": "firerouter/auto",
+          "kind": "ROUTER",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": true,
+          "supports_tools": true
+        },
+        {
+          "context_length": 1048576,
+          "created": 1781630293,
+          "id": "accounts/fireworks/models/glm-5p2",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        },
+        {
+          "context_length": 262144,
+          "created": 1786553734,
+          "id": "accounts/fireworks/models/qwen3p8-2p4t-a95b",
+          "kind": "HF_BASE_MODEL",
+          "object": "model",
+          "owned_by": "fireworks",
+          "supports_chat": true,
+          "supports_image_input": false,
+          "supports_tools": true
+        }
+      ],
+      "object": "list"
+    },
+    "url": "https://fireworks.int.exe.xyz/inference/v1/models",
+    "utc": "2026-10-12T20:54:11.8923361Z"
+  },
+  {
+    "provider": "openrouter",
+    "response": {
+      "data": [
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "liquid/lfm-2.5-embedding-350m-20260818",
+          "context_length": 512,
+          "created": 1787077908,
+          "default_parameters": {},
+          "description": "LFM2.5-Embedding-350M is a text embedding model from Liquid AI. It produces 1,024-dimensional embeddings for retrieval and semantic search. Successful OpenRouter requests and embeddings may be retained and used to train...",
+          "expiration_date": null,
+          "hugging_face_id": "LiquidAI/LFM2.5-Embedding-350M",
+          "id": "liquid/lfm-2.5-embedding-350m:free",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/liquid/lfm-2.5-embedding-350m-20260818/endpoints"
+          },
+          "name": "LiquidAI: LFM2.5-Embedding-350M (free)",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "voyageai/voyage-code-4-20260812",
+          "context_length": 32000,
+          "created": 1786636912,
+          "default_parameters": {},
+          "description": "voyage-code-4 is a code embedding model from Voyage AI, a MongoDB company. It is designed for coding agents and code retrieval, with Matryoshka embeddings at 2048, 1024, 512, and 256...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "voyageai/voyage-code-4",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/voyageai/voyage-code-4-20260812/endpoints"
+          },
+          "name": "VoyageAI by MongoDB: voyage-code-4",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000012"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "instruct_type": null,
+            "modality": "text+image-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "voyageai/voyage-multimodal-3.5-20260727",
+          "context_length": 32000,
+          "created": 1785188629,
+          "default_parameters": {},
+          "description": "voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable of vectorizing not only text, images, and video individually, but also content that interleaves all three modalities. It delivers excellent performance for...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "voyageai/voyage-multimodal-3.5",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/voyageai/voyage-multimodal-3.5-20260727/endpoints"
+          },
+          "name": "VoyageAI by MongoDB: voyage-multimodal-3.5",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000012"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "voyageai/voyage-4-lite-20260727",
+          "context_length": 32000,
+          "created": 1785188627,
+          "default_parameters": {},
+          "description": "voyage-4-lite is a lightweight, general-purpose embedding model optimized for low latency and cost. Enabled by Matryoshka learning and quantization-aware training, voyage-4-lite supports embeddings in 2048, 1024, 512, and 256 dimensions,...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "voyageai/voyage-4-lite",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/voyageai/voyage-4-lite-20260727/endpoints"
+          },
+          "name": "VoyageAI by MongoDB: voyage-4-lite",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000002"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "voyageai/voyage-4-20260727",
+          "context_length": 32000,
+          "created": 1785188626,
+          "default_parameters": {},
+          "description": "voyage-4 is a general-purpose (including multilingual) embedding model optimized for retrieval/search and AI applications. voyage-4 supports embeddings in 2048, 1024, 512, and 256 dimensions, with multiple quantization options. Learn more...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "voyageai/voyage-4",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/voyageai/voyage-4-20260727/endpoints"
+          },
+          "name": "VoyageAI by MongoDB: voyage-4",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000006"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "voyageai/voyage-4-large-20260727",
+          "context_length": 32000,
+          "created": 1785188624,
+          "default_parameters": {},
+          "description": "voyage-4-large is a state-of-the-art general-purpose and multilingual embedding optimized for retrieval quality. Enabled by Matryoshka learning and quantization-aware training, voyage-4-large supports embeddings in 2048, 1024, 512, and 256 dimensions, with...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "voyageai/voyage-4-large",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/voyageai/voyage-4-large-20260727/endpoints"
+          },
+          "name": "VoyageAI by MongoDB: voyage-4-large",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000012"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "nvidia/nemotron-3-embed-1b-20260716",
+          "context_length": 32768,
+          "created": 1784203294,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "presence_penalty": null,
+            "repetition_penalty": null,
+            "temperature": null,
+            "top_k": null,
+            "top_p": null
+          },
+          "description": "NVIDIA Nemotron 3 Embed 1B is an open text embedding model from NVIDIA, optimized for high-throughput, low-latency retrieval. It is suited for enterprise search, RAG, code retrieval, and agentic retrieval...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "nvidia/nemotron-3-embed-1b:free",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/nvidia/nemotron-3-embed-1b-20260716/endpoints"
+          },
+          "name": "NVIDIA: Nemotron 3 Embed 1B (free)",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32768,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image",
+              "file",
+              "audio",
+              "video"
+            ],
+            "instruct_type": null,
+            "modality": "text+image+file+audio+video-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Gemini"
+          },
+          "canonical_slug": "google/gemini-embedding-2",
+          "context_length": 8192,
+          "created": 1779290135,
+          "default_parameters": {},
+          "description": "Gemini Embedding 2 is Google's first multimodal embedding model. We currently support mapping text and images into a unified vector space for semantic search and retrieval-augmented generation (RAG). It supports...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "google/gemini-embedding-2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/google/gemini-embedding-2/endpoints"
+          },
+          "name": "Google: Gemini Embedding 2",
+          "per_request_limits": null,
+          "pricing": {
+            "audio": "0.0000065",
+            "completion": "0",
+            "image": "0.00000045",
+            "prompt": "0.0000002"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image",
+              "file",
+              "audio",
+              "video"
+            ],
+            "instruct_type": null,
+            "modality": "text+image+file+audio+video-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Gemini"
+          },
+          "canonical_slug": "google/gemini-embedding-2-preview",
+          "context_length": 8192,
+          "created": 1776436465,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "presence_penalty": null,
+            "repetition_penalty": null,
+            "temperature": null,
+            "top_k": null,
+            "top_p": null
+          },
+          "description": "Gemini Embedding 2 Preview is Google's first multimodal embedding model. We currently support mapping text and images into a unified vector space for semantic search and retrieval-augmented generation (RAG). It...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "google/gemini-embedding-2-preview",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/google/gemini-embedding-2-preview/endpoints"
+          },
+          "name": "Google: Gemini Embedding 2 Preview",
+          "per_request_limits": null,
+          "pricing": {
+            "audio": "0.0000065",
+            "completion": "0",
+            "image": "0.00000045",
+            "prompt": "0.0000002"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "perplexity/pplx-embed-v1-4B",
+          "context_length": 32000,
+          "created": 1773625372,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "presence_penalty": null,
+            "repetition_penalty": null,
+            "temperature": null,
+            "top_k": null,
+            "top_p": null
+          },
+          "description": "pplx-embed-v1 -4B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 4B parameter model maximizing retrieval...",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "perplexity/pplx-embed-v1-4b",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/perplexity/pplx-embed-v1-4B/endpoints"
+          },
+          "name": "Perplexity: Embed V1 4B",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000003"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "perplexity/pplx-embed-v1-0.6B",
+          "context_length": 32000,
+          "created": 1773624868,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "presence_penalty": null,
+            "repetition_penalty": null,
+            "temperature": null,
+            "top_k": null,
+            "top_p": null
+          },
+          "description": "pplx-embed-v1-0.6B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 0.6B parameter model targeting lightweight, low-latency...",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "perplexity/pplx-embed-v1-0.6b",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/perplexity/pplx-embed-v1-0.6B/endpoints"
+          },
+          "name": "Perplexity: Embed V1 0.6B",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000004"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "instruct_type": null,
+            "modality": "text+image-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "nvidia/llama-nemotron-embed-vl-1b-v2-20260224",
+          "context_length": 131072,
+          "created": 1772045017,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The Llama Nemotron Embed VL 1B V2 embedding model is optimized for multimodal question-answering retrieval. The model can embed 'documents' in the form of image, text, or image and text...",
+          "expiration_date": null,
+          "hugging_face_id": "nvidia/llama-nemotron-embed-vl-1b-v2",
+          "id": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/nvidia/llama-nemotron-embed-vl-1b-v2-20260224/endpoints"
+          },
+          "name": "NVIDIA: Llama Nemotron Embed VL 1B V2 (free)",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 131072,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "thenlper/gte-base-20251117",
+          "context_length": 512,
+          "created": 1763433820,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The gte-base embedding model encodes English sentences and paragraphs into a 768-dimensional dense vector space, delivering efficient and effective semantic embeddings optimized for textual similarity, semantic search, and clustering applications.",
+          "expiration_date": null,
+          "hugging_face_id": "thenlper/gte-base",
+          "id": "thenlper/gte-base",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/thenlper/gte-base-20251117/endpoints"
+          },
+          "name": "Thenlper: GTE-Base",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "thenlper/gte-large-20251117",
+          "context_length": 512,
+          "created": 1763433655,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The gte-large embedding model converts English sentences, paragraphs and moderate-length documents into a 1024-dimensional dense vector space, delivering high-quality semantic embeddings optimized for information retrieval, semantic textual similarity, reranking and...",
+          "expiration_date": null,
+          "hugging_face_id": "thenlper/gte-large",
+          "id": "thenlper/gte-large",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/thenlper/gte-large-20251117/endpoints"
+          },
+          "name": "Thenlper: GTE-Large",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "intfloat/e5-large-v2-20251117",
+          "context_length": 512,
+          "created": 1763433432,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The e5-large-v2 embedding model maps English sentences, paragraphs, and documents into a 1024-dimensional dense vector space, delivering high-accuracy semantic embeddings optimized for retrieval, semantic search, reranking, and similarity-scoring tasks.",
+          "expiration_date": null,
+          "hugging_face_id": "intfloat/e5-large-v2",
+          "id": "intfloat/e5-large-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/intfloat/e5-large-v2-20251117/endpoints"
+          },
+          "name": "Intfloat: E5-Large-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "intfloat/e5-base-v2-20251117",
+          "context_length": 512,
+          "created": 1763433192,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The e5-base-v2 embedding model encodes English sentences and paragraphs into a 768-dimensional dense vector space, producing efficient and high-quality semantic embeddings optimized for tasks such as semantic search, similarity scoring,...",
+          "expiration_date": null,
+          "hugging_face_id": "intfloat/e5-base-v2",
+          "id": "intfloat/e5-base-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/intfloat/e5-base-v2-20251117/endpoints"
+          },
+          "name": "Intfloat: E5-Base-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "intfloat/multilingual-e5-large-20251117",
+          "context_length": 512,
+          "created": 1763433047,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The multilingual-e5-large embedding model encodes sentences, paragraphs, and documents across over 90 languages into a 1024-dimensional dense vector space, delivering robust semantic embeddings optimized for multilingual retrieval, cross-language similarity, and...",
+          "expiration_date": null,
+          "hugging_face_id": "intfloat/multilingual-e5-large",
+          "id": "intfloat/multilingual-e5-large",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/intfloat/multilingual-e5-large-20251117/endpoints"
+          },
+          "name": "Intfloat: Multilingual-E5-Large",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "sentence-transformers/paraphrase-minilm-l6-v2-20251117",
+          "context_length": 512,
+          "created": 1763432454,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The paraphrase-MiniLM-L6-v2 embedding model converts sentences and short paragraphs into a 384-dimensional dense vector space, producing high-quality semantic embeddings optimized for paraphrase detection, semantic similarity scoring, clustering, and lightweight retrieval...",
+          "expiration_date": null,
+          "hugging_face_id": "sentence-transformers/paraphrase-MiniLM-L6-v2",
+          "id": "sentence-transformers/paraphrase-minilm-l6-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/sentence-transformers/paraphrase-minilm-l6-v2-20251117/endpoints"
+          },
+          "name": "Sentence Transformers: paraphrase-MiniLM-L6-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "sentence-transformers/all-minilm-l12-v2-20251117",
+          "context_length": 512,
+          "created": 1763432155,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The all-MiniLM-L12-v2 embedding model maps sentences and short paragraphs into a 384-dimensional dense vector space, producing efficient and high-quality semantic embeddings optimized for tasks such as semantic search, clustering, and...",
+          "expiration_date": null,
+          "hugging_face_id": "sentence-transformers/all-MiniLM-L12-v2",
+          "id": "sentence-transformers/all-minilm-l12-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/sentence-transformers/all-minilm-l12-v2-20251117/endpoints"
+          },
+          "name": "Sentence Transformers: all-MiniLM-L12-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "baai/bge-base-en-v1.5-20251117",
+          "context_length": 512,
+          "created": 1763431837,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The bge-base-en-v1.5 embedding model converts English sentences and paragraphs into 768-dimensional dense vectors, delivering efficient, high-quality semantic embeddings optimized for retrieval, semantic search, and document-matching workflows. This version (v1.5) features...",
+          "expiration_date": null,
+          "hugging_face_id": "BAAI/bge-base-en-v1.5",
+          "id": "baai/bge-base-en-v1.5",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/baai/bge-base-en-v1.5-20251117/endpoints"
+          },
+          "name": "BAAI: bge-base-en-v1.5",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "sentence-transformers/multi-qa-mpnet-base-dot-v1-20251117",
+          "context_length": 512,
+          "created": 1763431339,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The multi-qa-mpnet-base-dot-v1 embedding model transforms sentences and short paragraphs into a 768-dimensional dense vector space, generating high-quality semantic embeddings optimized for question-and-answer retrieval, semantic search, and similarity-scoring across diverse content.",
+          "expiration_date": null,
+          "hugging_face_id": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+          "id": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/sentence-transformers/multi-qa-mpnet-base-dot-v1-20251117/endpoints"
+          },
+          "name": "Sentence Transformers: multi-qa-mpnet-base-dot-v1",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "baai/bge-large-en-v1.5-20251117",
+          "context_length": 512,
+          "created": 1763431087,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The bge-large-en-v1.5 embedding model maps English sentences, paragraphs, and documents into a 1024-dimensional dense vector space, delivering high-fidelity semantic embeddings optimized for semantic search, document retrieval, and downstream NLP tasks...",
+          "expiration_date": null,
+          "hugging_face_id": "BAAI/bge-large-en-v1.5",
+          "id": "baai/bge-large-en-v1.5",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/baai/bge-large-en-v1.5-20251117/endpoints"
+          },
+          "name": "BAAI: bge-large-en-v1.5",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "baai/bge-m3-20251117",
+          "context_length": 8194,
+          "created": 1763424372,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The bge-m3 embedding model encodes sentences, paragraphs, and long documents into a 1024-dimensional dense vector space, delivering high-quality semantic embeddings optimized for multilingual retrieval, semantic search, and large-context applications.",
+          "expiration_date": null,
+          "hugging_face_id": "BAAI/bge-m3",
+          "id": "baai/bge-m3",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/baai/bge-m3-20251117/endpoints"
+          },
+          "name": "BAAI: bge-m3",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8194,
+            "is_moderated": false,
+            "max_completion_tokens": 8194
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "sentence-transformers/all-mpnet-base-v2-20251117",
+          "context_length": 512,
+          "created": 1763421830,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The all-mpnet-base-v2 embedding model encodes sentences and short paragraphs into a 768-dimensional dense vector space, providing high-fidelity semantic embeddings well suited for tasks like information retrieval, clustering, similarity scoring, and...",
+          "expiration_date": null,
+          "hugging_face_id": "sentence-transformers/all-mpnet-base-v2",
+          "id": "sentence-transformers/all-mpnet-base-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/sentence-transformers/all-mpnet-base-v2-20251117/endpoints"
+          },
+          "name": "Sentence Transformers: all-mpnet-base-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "sentence-transformers/all-minilm-l6-v2-20251117",
+          "context_length": 512,
+          "created": 1763421176,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The all-MiniLM-L6-v2 embedding model maps sentences and short paragraphs into a 384-dimensional dense vector space, enabling high-quality semantic representations that are ideal for downstream tasks such as information retrieval, clustering,...",
+          "expiration_date": null,
+          "hugging_face_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "id": "sentence-transformers/all-minilm-l6-v2",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/sentence-transformers/all-minilm-l6-v2-20251117/endpoints"
+          },
+          "name": "Sentence Transformers: all-MiniLM-L6-v2",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.000000005"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 512,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Mistral"
+          },
+          "canonical_slug": "mistralai/mistral-embed-2312",
+          "context_length": 8192,
+          "created": 1761944622,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "Mistral Embed is a specialized embedding model for text data, optimized for semantic search and RAG applications. Developed by Mistral AI in late 2023, it produces 1024-dimensional vectors that effectively...",
+          "expiration_date": null,
+          "hugging_face_id": null,
+          "id": "mistralai/mistral-embed-2312",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/mistralai/mistral-embed-2312/endpoints"
+          },
+          "name": "Mistral: Mistral Embed 2312",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.0000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Gemini"
+          },
+          "canonical_slug": "google/gemini-embedding-001",
+          "context_length": 20000,
+          "created": 1761943410,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "gemini-embedding-001 provides a unified cutting edge experience across domains, including science, legal, finance, and coding. This embedding model has consistently held a top spot on the Massive Text Embedding Benchmark...",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "google/gemini-embedding-001",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/google/gemini-embedding-001/endpoints"
+          },
+          "name": "Google: Gemini Embedding 001",
+          "per_request_limits": null,
+          "pricing": {
+            "audio": "0",
+            "completion": "0",
+            "image": "0",
+            "prompt": "0.00000015"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 20000,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "openai/text-embedding-ada-002",
+          "context_length": 8192,
+          "created": 1761865798,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "text-embedding-ada-002 is OpenAI's legacy text embedding model.",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "openai/text-embedding-ada-002",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/openai/text-embedding-ada-002/endpoints"
+          },
+          "name": "OpenAI: Text Embedding Ada 002",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.0000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": true,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Mistral"
+          },
+          "canonical_slug": "mistralai/codestral-embed-2505",
+          "context_length": 8192,
+          "created": 1761864460,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "Mistral Codestral Embed is specially designed for code, perfect for embedding code databases, repositories, and powering coding assistants with state-of-the-art retrieval.",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "mistralai/codestral-embed-2505",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/mistralai/codestral-embed-2505/endpoints"
+          },
+          "name": "Mistral: Codestral Embed 2505",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000015"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "openai/text-embedding-3-large",
+          "context_length": 8192,
+          "created": 1761862866,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "text-embedding-3-large is OpenAI's most capable embedding model for both english and non-english tasks. Embeddings are a numerical representation of text that can be used to measure the relatedness between two...",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "openai/text-embedding-3-large",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/openai/text-embedding-3-large/endpoints"
+          },
+          "name": "OpenAI: Text Embedding 3 Large",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000013"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "openai/text-embedding-3-small",
+          "context_length": 8192,
+          "created": 1761857455,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "text-embedding-3-small is OpenAI's improved, more performant version of the ada embedding model. Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces...",
+          "expiration_date": null,
+          "hugging_face_id": "",
+          "id": "openai/text-embedding-3-small",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/openai/text-embedding-3-small/endpoints"
+          },
+          "name": "OpenAI: Text Embedding 3 Small",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000002"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 8192,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "qwen/qwen3-embedding-8b",
+          "context_length": 32768,
+          "created": 1761680622,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. This series inherits the exceptional multilingual capabilities, long-text...",
+          "expiration_date": null,
+          "hugging_face_id": "Qwen/Qwen3-Embedding-8B",
+          "id": "qwen/qwen3-embedding-8b",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/qwen/qwen3-embedding-8b/endpoints"
+          },
+          "name": "Qwen: Qwen3 Embedding 8B",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000001"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32000,
+            "is_moderated": false,
+            "max_completion_tokens": 32000
+          }
+        },
+        {
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "instruct_type": null,
+            "modality": "text-\u003eembeddings",
+            "output_modalities": [
+              "embeddings"
+            ],
+            "tokenizer": "Other"
+          },
+          "canonical_slug": "qwen/qwen3-embedding-4b",
+          "context_length": 32768,
+          "created": 1761662922,
+          "default_parameters": {
+            "frequency_penalty": null,
+            "temperature": null,
+            "top_p": null
+          },
+          "description": "The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. This series inherits the exceptional multilingual capabilities, long-text...",
+          "expiration_date": null,
+          "hugging_face_id": "Qwen/Qwen3-Embedding-4B",
+          "id": "qwen/qwen3-embedding-4b",
+          "knowledge_cutoff": null,
+          "links": {
+            "details": "/api/v1/models/qwen/qwen3-embedding-4b/endpoints"
+          },
+          "name": "Qwen: Qwen3 Embedding 4B",
+          "per_request_limits": null,
+          "pricing": {
+            "completion": "0",
+            "prompt": "0.00000002"
+          },
+          "supported_parameters": [],
+          "supported_voices": null,
+          "top_provider": {
+            "context_length": 32768,
+            "is_moderated": false,
+            "max_completion_tokens": null
+          }
+        }
+      ],
+      "links": {
+        "next": null
+      },
+      "total_count": 33
+    },
+    "url": "https://openrouter.int.exe.xyz/api/v1/embeddings/models",
+    "utc": "2026-10-12T20:54:11.987546175Z"
+  },
+  {
+    "provider": "google-embeddinggemma-2",
+    "response": {
+      "_id": "6aa80a7682023d2e774f1c9a",
+      "author": "google",
+      "cardData": {
+        "language": [
+          "multilingual"
+        ],
+        "library_name": "transformers",
+        "license": "apache-2.0",
+        "pipeline_tag": "feature-extraction",
+        "tags": [
+          "embedding",
+          "feature-extraction",
+          "sentence-transformers",
+          "multimodal-embedding",
+          "multimodal",
+          "vision",
+          "audio",
+          "video",
+          "image-feature-extraction",
+          "audio-feature-extraction",
+          "video-feature-extraction",
+          "sentence-similarity"
+        ]
+      },
+      "config": {
+        "architectures": [
+          "EmbeddingGemma2Model"
+        ],
+        "chat_template_jinja": "{%- for msg in messages if msg.get('role') == 'system' -%}{%- if msg.get('content') is string -%}{{ msg['content'] }}{%- else -%}{%- for item in msg['content'] if item.get('type') == 'text' -%}{{ item['text'] }}{%- endfor -%}{%- endif -%}{%- endfor -%}{%- for msg in messages if msg.get('role') != 'system' -%}{%- if msg.get('content') is string -%}{{ msg['content'] }}{%- else -%}{%- set existing_text = msg['content'] | selectattr('type', 'equalto', 'text') | map(attribute='text') | join -%}{%- set has_manual_placeholders = ('\u003c|image|\u003e' in existing_text) or ('\u003c|video|\u003e' in existing_text) or ('\u003c|audio|\u003e' in existing_text) -%}{%- for item in msg['content'] -%}{%- if item.get('type') == 'text' -%}{{ item['text'] }}{%- elif not has_manual_placeholders and item.get('type') == 'image' -%}\u003c|image|\u003e{%- elif not has_manual_placeholders and item.get('type') == 'video' -%}\u003c|video|\u003e{%- elif not has_manual_placeholders and item.get('type') == 'audio' -%}\u003c|audio|\u003e{%- endif -%}{%- endfor -%}{%- endif -%}{%- endfor -%}",
+        "model_type": "embedding_gemma2",
+        "tokenizer_config": {
+          "bos_token": "\u003cbos\u003e",
+          "eos_token": "\u003ceos\u003e",
+          "mask_token": "\u003cmask\u003e",
+          "pad_token": "\u003cpad\u003e",
+          "unk_token": "\u003cunk\u003e"
+        }
+      },
+      "createdAt": "2026-09-14T14:53:42.000Z",
+      "disabled": false,
+      "downloads": 115763,
+      "gated": false,
+      "id": "google/embeddinggemma-2",
+      "lastModified": "2026-10-06T15:29:23.000Z",
+      "library_name": "transformers",
+      "likes": 1918,
+      "mask_token": "\u003cmask\u003e",
+      "model-index": null,
+      "modelId": "google/embeddinggemma-2",
+      "pipeline_tag": "feature-extraction",
+      "private": false,
+      "safetensors": {
+        "parameters": {
+          "BF16": 744371512
+        },
+        "total": 744371512
+      },
+      "sha": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "1_Pooling/config.json"
+        },
+        {
+          "rfilename": "2_Normalize/config.json"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "config_sentence_transformers.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "modules.json"
+        },
+        {
+          "rfilename": "preprocessor_config.json"
+        },
+        {
+          "rfilename": "processor_config.json"
+        },
+        {
+          "rfilename": "sentence_bert_config.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ],
+      "spaces": [
+        "tardellirs/model-pulse",
+        "webml-community/embeddinggemma-2-webgpu",
+        "google/embedding-draw-challenge",
+        "embedl/hfviewer",
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "FINAL-Bench/Decision-AI-Web",
+        "misukisu/embeddinggemma-2-api",
+        "infosave/EmbeddingGemma-2-cmf",
+        "harpreetsahota/EmbeddingGemma-2-in-FiftyOne-test",
+        "emanforhelp/model-pulse",
+        "harpreetsahota/EmbeddingGemma-2-in-FiftyOne",
+        "hakari-bench/leaderboard",
+        "to-be/RAG_met_codex_over_het_welzijn_op_het_werk",
+        "midevibes/cardio",
+        "le3hyo/embeddinggemma-2-search-lab",
+        "developerjeremylive/embeddinggemma-2-webgpu-etheroi",
+        "sherllingford/embeddinggemma-2-api",
+        "dsgsfhsfh/embeddinggemma-2-webgpu",
+        "townbox/tracks",
+        "mrfakename/embeddinggemma-2",
+        "Raghavendraprasadgudipalli/exam-generator-gemma",
+        "linoyts/art-museums-semantic-rooms",
+        "DomX1/Doom-api",
+        "henrybit/embeddinggemma-2",
+        "yunusserhat/elevate-amsterdam",
+        "Ryukijano/sceneseek"
+      ],
+      "tags": [
+        "transformers",
+        "safetensors",
+        "embedding_gemma2",
+        "feature-extraction",
+        "embedding",
+        "sentence-transformers",
+        "multimodal-embedding",
+        "multimodal",
+        "vision",
+        "audio",
+        "video",
+        "image-feature-extraction",
+        "audio-feature-extraction",
+        "video-feature-extraction",
+        "sentence-similarity",
+        "multilingual",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "transformersInfo": {
+        "auto_model": "AutoModel",
+        "pipeline_tag": "feature-extraction",
+        "processor": "AutoProcessor"
+      },
+      "usedStorage": 3015790420
+    },
+    "url": "https://huggingface.int.exe.xyz/api/models/google/embeddinggemma-2",
+    "utc": "2026-10-12T20:54:12.114588714Z"
+  }
+]

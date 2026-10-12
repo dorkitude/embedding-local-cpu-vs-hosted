@@ -1,0 +1,113 @@
+{
+  "run_id": "r20261012a",
+  "seed": 20261012,
+  "bootstrap_samples": 2000,
+  "queries": 799,
+  "corpus_treatments": [
+    {
+      "documents": 100000,
+      "words": 256
+    },
+    {
+      "documents": 20000,
+      "words": 128
+    },
+    {
+      "documents": 20000,
+      "words": 256
+    },
+    {
+      "documents": 20000,
+      "words": 512
+    }
+  ],
+  "dimensions": [
+    128,
+    256,
+    512,
+    "native"
+  ],
+  "overlap": 0.125,
+  "max_title_text_utf8_bytes": 6000,
+  "models": [
+    {
+      "ID": "gemma2",
+      "Provider": "local",
+      "Name": "google/embeddinggemma-2",
+      "Base": "http://127.0.0.1:8765/v1",
+      "KeyEnv": "",
+      "Revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "Mode": "mrl",
+      "Native": 768,
+      "Price": 0,
+      "Batch": 32,
+      "Workers": 1
+    },
+    {
+      "ID": "openai-large",
+      "Provider": "openai",
+      "Name": "text-embedding-3-large",
+      "Base": "https://openai.int.exe.xyz/v1",
+      "KeyEnv": "OPENAI_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "api",
+      "Native": 3072,
+      "Price": 0.13,
+      "Batch": 64,
+      "Workers": 4
+    },
+    {
+      "ID": "qwen8b",
+      "Provider": "fireworks",
+      "Name": "accounts/fireworks/models/qwen3-embedding-8b",
+      "Base": "https://fireworks.int.exe.xyz/inference/v1",
+      "KeyEnv": "FIREWORKS_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "mrl",
+      "Native": 4096,
+      "Price": 0.15,
+      "Batch": 32,
+      "Workers": 4
+    },
+    {
+      "ID": "openai-small",
+      "Provider": "openai",
+      "Name": "text-embedding-3-small",
+      "Base": "https://openai.int.exe.xyz/v1",
+      "KeyEnv": "OPENAI_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "api",
+      "Native": 1536,
+      "Price": 0.02,
+      "Batch": 64,
+      "Workers": 4
+    },
+    {
+      "ID": "gemini2",
+      "Provider": "openrouter",
+      "Name": "google/gemini-embedding-2",
+      "Base": "https://openrouter.int.exe.xyz/api/v1",
+      "KeyEnv": "OPENROUTER_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "mrl",
+      "Native": 3072,
+      "Price": 0.2,
+      "Batch": 32,
+      "Workers": 4
+    },
+    {
+      "ID": "bge",
+      "Provider": "openrouter",
+      "Name": "baai/bge-m3",
+      "Base": "https://openrouter.int.exe.xyz/api/v1",
+      "KeyEnv": "OPENROUTER_API_KEY",
+      "Revision": "provider-unpinned",
+      "Mode": "exploratory-prefix",
+      "Native": 1024,
+      "Price": 0.01,
+      "Batch": 32,
+      "Workers": 4
+    }
+  ],
+  "expected_cells": 96
+}

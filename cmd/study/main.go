@@ -12,7 +12,7 @@ func main() {
 	for _, c := range []struct {
 		name string
 		fn   func() error
-	}{{"acquire", s.Acquire}, {"prepare", s.Prepare}, {"preflight", s.Preflight}, {"estimate", s.Estimate}, {"integration", s.Integration}, {"audit", s.Audit}, {"report", s.Report}} {
+	}{{"discover", s.Discover}, {"acquire", s.Acquire}, {"prepare", s.Prepare}, {"preflight", s.Preflight}, {"estimate", s.Estimate}, {"integration", s.Integration}, {"audit", s.Audit}, {"report", s.Report}} {
 		f := c.fn
 		r.AddCommand(&cobra.Command{Use: c.name, RunE: func(*cobra.Command, []string) error { return f() }})
 	}

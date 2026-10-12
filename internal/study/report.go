@@ -148,7 +148,7 @@ func Report() error {
 	for _, c := range costs {
 		sort.Float64s(c.Latencies)
 		c.P50 = c.Latencies[len(c.Latencies)/2]
-		c.P95 = c.Latencies[int(float64(len(c.Latencies)-1)*.95)]
+		c.P95 = c.Latencies[int(math.Ceil(float64(len(c.Latencies))*.95))-1]
 		total += c.EstimatedUSD
 	}
 	// API billing already applies write discounts. Decimal GB/TB units from official calculator.
@@ -227,6 +227,5 @@ func Report() error {
 	out.WriteString("Eight fixed queries per cell have exhaustive local float64 dot-product cosine audits over all normalized chunk vectors, followed by identical doc deduplication. Exact and ANN rankings/metrics are preserved under results/exact. This diagnoses ANN effects but does not exhaustively guarantee ANN accuracy for all 799 queries. Namespace row counts are exact Count aggregations; provider metadata counts/bytes are approximate and may lag ingestion. Vector dimensions are checked against returned vectors and namespace schema.\n\n")
 	out.WriteString("Reproduction: [RUNBOOK](RUNBOOK.md). Frozen corpus/chunk manifests, full attribution and license receipts accompany the recipe. Raw corpus text, weights, caches and vectors stay uncommitted. Hosted providers do not expose immutable weight revisions; model names and returned model IDs/timestamps are recorded, so perfect future hosted reproducibility is unavailable. Original EmbeddingGemma 300M remains HTTP 403 gated and is not measured. Local Qwen0.6B was deferred to bound CPU time.\n\n")
 	out.WriteString("Final audit artifacts: results/audit.json, results/independent-audit.json, results/bootstrap.json and COMPLETION.json. The independent verifier separately recomputes headline metrics from ranked document IDs and qrels; it does not import the evaluator. Future GPU work requires a controlled GPU host, pinned runtime/weights and matched batching.\n")
-	_ = math.Pi
 	return Atomic("RESULTS.md", []byte(out.String()))
 }

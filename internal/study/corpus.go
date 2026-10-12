@@ -95,6 +95,10 @@ func Download(u, path string) error {
 }
 func Scan(path string, fn func([]byte) error) error {
 	f, e := os.Open(path)
+	if os.IsNotExist(e) {
+		path += ".gz"
+		f, e = os.Open(path)
+	}
 	if e != nil {
 		return e
 	}

@@ -43,3 +43,11 @@ namespace. Primary database is always turbopuffer; exact cosine is an audit only
 Smoke runs have only 1,000 documents/20 queries and are excluded from conclusions.
 Full run has 96 expected cells: 6 models x 4 dimensions x 4 corpus/chunk settings.
 Secondary 20k/256 is necessary for within-subset 128/256/512 comparisons.
+
+Discovery: .local/study discover snapshots actual provider catalogs; preflight
+performs real embedding calls. Catalog listing alone is never treated as access.
+Generate tables/CIs/costs with .local/study report, then run
+go run ./cmd/verify for the independent audit. Query logs may be compressed using
+gzip -n after completion; both audit implementations transparently read .gz.
+Primary full run local precision: bfloat16, batch8, threads8; benchmark scripts
+must not be run concurrently with the final local run if isolated timing matters.

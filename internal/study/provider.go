@@ -128,6 +128,11 @@ func Request(method, u, key string, payload any, out any, charge float64, tag st
 			r.Body.Close()
 		}
 		rec := map[string]any{"utc": time.Now().UTC(), "tag": tag, "attempt": attempt, "http_status": status, "seconds": time.Since(start).Seconds(), "request_bytes": len(b), "response_bytes": len(raw), "reserved_usd": charge}
+		if p, ok := payload.(map[string]any); ok {
+			if inputs, ok := p["input"].([]string); ok {
+				rec["input_count"] = len(inputs)
+			}
+		}
 		if err == nil && status >= 200 && status < 300 {
 			var meta map[string]json.RawMessage
 			json.Unmarshal(raw, &meta)
@@ -174,8 +179,6 @@ func EmbedRole(m Model, texts []string, dim int, query bool) ([][]float32, error
 
 	if m.Mode == "api" {
 		p["dimensions"] = dim
-	}
-	if m.ID == "qwen8b" {
 	}
 	// BGE does not require retrieval instructions. Gemini is explicitly formatted as retrieval task.
 	if m.ID == "gemini2" {
