@@ -152,7 +152,11 @@ func Request(method, u, key string, payload any, out any, charge float64, tag st
 			return nil
 		}
 		if err == nil {
-			err = fmt.Errorf("HTTP %d: %.1600s", status, string(raw))
+			safeBody := string(raw)
+			if key != "" {
+				safeBody = strings.ReplaceAll(safeBody, key, "[REDACTED]")
+			}
+			err = fmt.Errorf("HTTP %d: %.1600s", status, safeBody)
 		}
 		if key != "" {
 			err = fmt.Errorf("%s", strings.ReplaceAll(err.Error(), key, "[REDACTED]"))

@@ -121,7 +121,7 @@
       "relevant": 4
     },
     "qid": "0",
-    "seconds": 0.046402835,
+    "seconds": 0.057670584,
     "top10_overlap": 1
   },
   {
@@ -246,7 +246,7 @@
       "relevant": 2
     },
     "qid": "100",
-    "seconds": 0.034226507,
+    "seconds": 0.04863914,
     "top10_overlap": 1
   },
   {
@@ -371,7 +371,7 @@
       "relevant": 2
     },
     "qid": "1003",
-    "seconds": 0.046450037,
+    "seconds": 0.057482729,
     "top10_overlap": 1
   },
   {
@@ -496,7 +496,7 @@
       "relevant": 7
     },
     "qid": "1007",
-    "seconds": 0.036713893,
+    "seconds": 0.055472554,
     "top10_overlap": 1
   },
   {
@@ -621,7 +621,7 @@
       "relevant": 2
     },
     "qid": "1017",
-    "seconds": 0.041551028,
+    "seconds": 0.072270846,
     "top10_overlap": 1
   },
   {
@@ -746,7 +746,7 @@
       "relevant": 2
     },
     "qid": "1018",
-    "seconds": 0.04028443,
+    "seconds": 0.048574682,
     "top10_overlap": 1
   },
   {
@@ -871,7 +871,7 @@
       "relevant": 4
     },
     "qid": "1023",
-    "seconds": 0.040161494,
+    "seconds": 0.045226268,
     "top10_overlap": 1
   },
   {
@@ -996,7 +996,7 @@
       "relevant": 3
     },
     "qid": "1027",
-    "seconds": 0.040310159,
+    "seconds": 0.047433122,
     "top10_overlap": 1
   }
 ]

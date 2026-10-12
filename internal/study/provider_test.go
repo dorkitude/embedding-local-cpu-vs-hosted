@@ -2,9 +2,11 @@ package study
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -42,5 +44,25 @@ func TestEmbeddingAPIContract(t *testing.T) {
 	response = map[string]any{"data": []any{map[string]any{"index": 0, "embedding": []float64{1, 0}}, map[string]any{"index": 0, "embedding": []float64{0, 1}}}}
 	if _, e = Embed(m, []string{"one", "two"}, 2); e == nil {
 		t.Fatal("duplicate provider index accepted")
+	}
+}
+
+func TestErrorDoesNotPersistCredential(t *testing.T) {
+	old, _ := os.Getwd()
+	os.Chdir(t.TempDir())
+	defer os.Chdir(old)
+	secret := "fixture-credential-never-a-real-key"
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(401)
+		fmt.Fprint(w, strings.Repeat("x", 1590)+secret)
+	}))
+	defer server.Close()
+	e := Request("GET", server.URL, secret, nil, nil, 0, "fixture-redaction")
+	if e == nil {
+		t.Fatal("expected401")
+	}
+	b, _ := os.ReadFile("results/requests.jsonl")
+	if strings.Contains(string(b), "fixture-credential") || strings.Contains(e.Error(), "fixture-credential") {
+		t.Fatal("credential leaked")
 	}
 }

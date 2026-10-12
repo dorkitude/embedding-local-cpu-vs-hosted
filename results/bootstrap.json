@@ -2,10 +2,10 @@
   "absolute_ndcg95": {
     "r20261012a-openai-large-n100000-c256-d128": {
       "ci95": [
-        0.7201524313611264,
-        0.7562914311333958
+        0.7087606966389861,
+        0.7442334593740132
       ],
-      "difference": 0.7386587034106493,
+      "difference": 0.7272494689297667,
       "metric": "ndcg10",
       "queries": 799,
       "samples": 2000,
@@ -13,10 +13,32 @@
     },
     "r20261012a-openai-large-n100000-c256-d256": {
       "ci95": [
-        0.7695022610630403,
-        0.8002819226972508
+        0.7557889693070996,
+        0.788424826783587
       ],
-      "difference": 0.7851799963755672,
+      "difference": 0.7724653653788685,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n100000-c256-d3072": {
+      "ci95": [
+        0.7905019608934748,
+        0.8208502634986876
+      ],
+      "difference": 0.8058848769941485,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n100000-c256-d512": {
+      "ci95": [
+        0.7787927459419561,
+        0.8100375656011131
+      ],
+      "difference": 0.7945214586287843,
       "metric": "ndcg10",
       "queries": 799,
       "samples": 2000,
@@ -44,6 +66,28 @@
       "samples": 2000,
       "seed": 20261012
     },
+    "r20261012a-openai-large-n20000-c128-d3072": {
+      "ci95": [
+        0.8009414887518748,
+        0.8298927482379379
+      ],
+      "difference": 0.8154659536754372,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c128-d512": {
+      "ci95": [
+        0.7936880324489778,
+        0.8240457831573833
+      ],
+      "difference": 0.8091421514752958,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
     "r20261012a-openai-large-n20000-c256-d128": {
       "ci95": [
         0.7582401937532283,
@@ -61,6 +105,28 @@
         0.8133396508028158
       ],
       "difference": 0.7987885395848238,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c256-d3072": {
+      "ci95": [
+        0.8029142846216194,
+        0.8320098991997574
+      ],
+      "difference": 0.8175508182968303,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c256-d512": {
+      "ci95": [
+        0.7933197897674669,
+        0.823630763443591
+      ],
+      "difference": 0.8086841365122514,
       "metric": "ndcg10",
       "queries": 799,
       "samples": 2000,
@@ -87,9 +153,95 @@
       "queries": 799,
       "samples": 2000,
       "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c512-d3072": {
+      "ci95": [
+        0.801954909858347,
+        0.8310351188115236
+      ],
+      "difference": 0.816408103251499,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-openai-large-n20000-c512-d512": {
+      "ci95": [
+        0.7929376318694332,
+        0.8229711991724473
+      ],
+      "difference": 0.8081609471790652,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
     }
   },
   "paired": [
+    {
+      "a": "r20261012a-openai-large-n100000-c256-d128",
+      "b": "r20261012a-openai-large-n100000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.09250607148251468,
+          -0.0652078547947339
+        ],
+        "difference": -0.07863540806438143,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n100000-c256-d256",
+      "b": "r20261012a-openai-large-n100000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.043861907853665734,
+          -0.023423670167202086
+        ],
+        "difference": -0.03341951161527961,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n100000-c256-d512",
+      "b": "r20261012a-openai-large-n100000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.018351576917604417,
+          -0.004190908567192334
+        ],
+        "difference": -0.01136341836536408,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d128",
+      "b": "r20261012a-openai-large-n20000-c128-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.050943030065522935,
+          -0.03078821939494991
+        ],
+        "difference": -0.040488977264961215,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
     {
       "a": "r20261012a-openai-large-n20000-c128-d128",
       "b": "r20261012a-openai-large-n20000-c256-d128",
@@ -108,6 +260,22 @@
     },
     {
       "a": "r20261012a-openai-large-n20000-c128-d256",
+      "b": "r20261012a-openai-large-n20000-c128-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.025030059875429046,
+          -0.009510056181525263
+        ],
+        "difference": -0.017504206859606564,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d256",
       "b": "r20261012a-openai-large-n20000-c256-d256",
       "bootstrap": {
         "ci95": [
@@ -121,6 +289,118 @@
         "seed": 20261012
       },
       "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d3072",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.006604811091565504,
+          0.0019173743448801148
+        ],
+        "difference": -0.002084864621393082,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d512",
+      "b": "r20261012a-openai-large-n20000-c128-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.012143132166699256,
+          -0.00037374394600071657
+        ],
+        "difference": -0.006323802200141658,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c128-d512",
+      "b": "r20261012a-openai-large-n20000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.003369722692310722,
+          0.003968325779818444
+        ],
+        "difference": 0.0004580149630447201,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c256-d128",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.05333136122548293,
+          -0.033060440561282406
+        ],
+        "difference": -0.04318983837299056,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c256-d256",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.026711903467542306,
+          -0.01060338641040823
+        ],
+        "difference": -0.018762278712006156,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c256-d512",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.015299920272207394,
+          -0.0024616645458997396
+        ],
+        "difference": -0.008866681784579463,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d128",
+      "b": "r20261012a-openai-large-n20000-c512-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.05347292251907528,
+          -0.03243780436312923
+        ],
+        "difference": -0.04289334489701366,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
     },
     {
       "a": "r20261012a-openai-large-n20000-c512-d128",
@@ -140,6 +420,22 @@
     },
     {
       "a": "r20261012a-openai-large-n20000-c512-d256",
+      "b": "r20261012a-openai-large-n20000-c512-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.02630374997257052,
+          -0.010441215672260685
+        ],
+        "difference": -0.01833602763627969,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d256",
       "b": "r20261012a-openai-large-n20000-c256-d256",
       "bootstrap": {
         "ci95": [
@@ -147,6 +443,54 @@
           0.00046375039694801013
         ],
         "difference": -0.0007164639696047114,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d3072",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.0029069069942464407,
+          0.0003877681560884037
+        ],
+        "difference": -0.0011427150453311799,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d512",
+      "b": "r20261012a-openai-large-n20000-c512-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.014460261023767572,
+          -0.0018598205986626352
+        ],
+        "difference": -0.008247156072434352,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-openai-large-n20000-c512-d512",
+      "b": "r20261012a-openai-large-n20000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.0013225431659046325,
+          0.00015233545958145741
+        ],
+        "difference": -0.0005231893331860748,
         "metric": "ndcg10",
         "queries": 799,
         "samples": 2000,

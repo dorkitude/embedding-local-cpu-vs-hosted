@@ -121,7 +121,7 @@
       "relevant": 4
     },
     "qid": "0",
-    "seconds": 0.324178068,
+    "seconds": 0.238835859,
     "top10_overlap": 1
   },
   {
@@ -130,8 +130,8 @@
       "mrr10": 0.5,
       "recall5": 0.5,
       "recall10": 0.5,
-      "recall100": 1,
-      "hits100": 2,
+      "recall100": 0.5,
+      "hits100": 1,
       "relevant": 2
     },
     "exact_docs": [
@@ -246,7 +246,7 @@
       "relevant": 2
     },
     "qid": "100",
-    "seconds": 0.288129284,
+    "seconds": 0.186773614,
     "top10_overlap": 1
   },
   {
@@ -371,7 +371,7 @@
       "relevant": 2
     },
     "qid": "1003",
-    "seconds": 0.329974136,
+    "seconds": 0.236568935,
     "top10_overlap": 1
   },
   {
@@ -496,7 +496,7 @@
       "relevant": 7
     },
     "qid": "1007",
-    "seconds": 0.215349651,
+    "seconds": 0.299622114,
     "top10_overlap": 1
   },
   {
@@ -621,17 +621,17 @@
       "relevant": 2
     },
     "qid": "1017",
-    "seconds": 0.321700967,
+    "seconds": 0.172942257,
     "top10_overlap": 1
   },
   {
     "ann_metrics": {
-      "ndcg10": 1,
+      "ndcg10": 0.6131471927654585,
       "mrr10": 1,
-      "recall5": 1,
-      "recall10": 1,
-      "recall100": 1,
-      "hits100": 2,
+      "recall5": 0.5,
+      "recall10": 0.5,
+      "recall100": 0.5,
+      "hits100": 1,
       "relevant": 2
     },
     "exact_docs": [
@@ -746,17 +746,17 @@
       "relevant": 2
     },
     "qid": "1018",
-    "seconds": 0.357413071,
-    "top10_overlap": 1
+    "seconds": 0.367860841,
+    "top10_overlap": 0.2
   },
   {
     "ann_metrics": {
-      "ndcg10": 0.8932547230000344,
+      "ndcg10": 0.787702056960637,
       "mrr10": 1,
-      "recall5": 0.5,
-      "recall10": 1,
-      "recall100": 1,
-      "hits100": 4,
+      "recall5": 0.75,
+      "recall10": 0.75,
+      "recall100": 0.75,
+      "hits100": 3,
       "relevant": 4
     },
     "exact_docs": [
@@ -871,8 +871,8 @@
       "relevant": 4
     },
     "qid": "1023",
-    "seconds": 0.263499312,
-    "top10_overlap": 1
+    "seconds": 0.293755025,
+    "top10_overlap": 0.8
   },
   {
     "ann_metrics": {
@@ -996,7 +996,7 @@
       "relevant": 3
     },
     "qid": "1027",
-    "seconds": 0.342507899,
+    "seconds": 0.169026302,
     "top10_overlap": 1
   }
 ]
