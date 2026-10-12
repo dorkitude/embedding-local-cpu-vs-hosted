@@ -292,7 +292,7 @@ func Audit() error {
 		if e != nil {
 			return e
 		}
-		if len(rs) != len(qs) {
+		if cell.Queries <= 0 || cell.Queries > len(qs) || len(rs) != cell.Queries {
 			return fmt.Errorf("query count %s", cell.ID)
 		}
 		for i, r := range rs {
