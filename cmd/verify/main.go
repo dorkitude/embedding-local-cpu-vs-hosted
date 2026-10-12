@@ -105,6 +105,7 @@ func verify() error {
 	files, _ := filepath.Glob("results/cells/r20261012a-*.json")
 	sort.Strings(files)
 	results := []map[string]any{}
+	independentValues := map[string][]float64{}
 	for _, path := range files {
 		var cell struct {
 			Phase      string         `json:"evaluation_phase"`
@@ -138,6 +139,7 @@ func verify() error {
 		seenq := map[string]bool{}
 		sums := map[string]float64{}
 		totalHits, totalRelevant := 0, 0
+		queryValues := map[string]float64{}
 		e := read("results/queries/"+cell.ID+".jsonl", func(b []byte) error {
 			var row struct {
 				Performance map[string]any     `json:"performance"`
@@ -195,6 +197,7 @@ func verify() error {
 				ideal += math.Log(2) / math.Log(float64(i+2))
 			}
 			vals := map[string]float64{"ndcg10": gain / ideal, "mrr10": rr, "recall5": float64(h5) / float64(nrel), "recall10": float64(h10) / float64(nrel), "recall100": float64(h100) / float64(nrel)}
+			queryValues[row.QID] = gain / ideal
 			for k, v := range vals {
 				if math.Abs(v-row.Metrics[k]) > 1e-10 {
 					return fmt.Errorf("per query mismatch %s %s", cell.ID, k)
@@ -218,10 +221,21 @@ func verify() error {
 			}
 		}
 		sums["micro_recall100"] = float64(totalHits) / float64(totalRelevant)
+		ids := make([]string, 0, len(queryValues))
+		for id := range queryValues {
+			ids = append(ids, id)
+		}
+		sort.Strings(ids)
+		for _, id := range ids {
+			independentValues[cell.ID] = append(independentValues[cell.ID], queryValues[id])
+		}
 		results = append(results, map[string]any{"cell": cell.ID, "queries": len(seenq), "independent_metrics": sums})
 	}
 	status := "partial"
 	if len(files) == 96 {
+		if e := verifyBootstrap(independentValues); e != nil {
+			return e
+		}
 		status = "passed"
 	}
 	out := map[string]any{"status": status, "cells": len(files), "expected": 96, "corpus": len(selected), "queries": len(queries), "checks": "Independent metric calculation from ranked doc IDs; attribution; judged-document inclusion; query set; uniqueness; exact namespace rowcounts; dimensions", "results": results}
