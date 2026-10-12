@@ -1,5 +1,181 @@
 {
   "absolute_ndcg95": {
+    "r20261012a-bge-n100000-c256-d1024": {
+      "ci95": [
+        0.7816403499728428,
+        0.8137368448846967
+      ],
+      "difference": 0.7975353244828957,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n100000-c256-d128": {
+      "ci95": [
+        0.6131342743996794,
+        0.6571569371842345
+      ],
+      "difference": 0.6359032144350525,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n100000-c256-d256": {
+      "ci95": [
+        0.7202844359043917,
+        0.7571560837926923
+      ],
+      "difference": 0.7388906307170675,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n100000-c256-d512": {
+      "ci95": [
+        0.7668996085868816,
+        0.8016911157026638
+      ],
+      "difference": 0.7845232494570019,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c128-d1024": {
+      "ci95": [
+        0.8006826413301321,
+        0.8312152336932919
+      ],
+      "difference": 0.8159865212196082,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c128-d128": {
+      "ci95": [
+        0.7121781589334398,
+        0.7497392803581012
+      ],
+      "difference": 0.73117049238709,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c128-d256": {
+      "ci95": [
+        0.7747935924668794,
+        0.8070087167054495
+      ],
+      "difference": 0.7910563730037563,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c128-d512": {
+      "ci95": [
+        0.799122956232303,
+        0.8294995502579009
+      ],
+      "difference": 0.8145083305184838,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c256-d1024": {
+      "ci95": [
+        0.8028840203121174,
+        0.8331285029227177
+      ],
+      "difference": 0.818004091079844,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c256-d128": {
+      "ci95": [
+        0.7132436955720088,
+        0.7514412261923861
+      ],
+      "difference": 0.7321570556347251,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c256-d256": {
+      "ci95": [
+        0.7735980672816047,
+        0.8062351189674917
+      ],
+      "difference": 0.7899405775128407,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c256-d512": {
+      "ci95": [
+        0.7979457017243198,
+        0.8290088073983861
+      ],
+      "difference": 0.8135541261428832,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c512-d1024": {
+      "ci95": [
+        0.8017898438832677,
+        0.8326109625519029
+      ],
+      "difference": 0.8174474729826227,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c512-d128": {
+      "ci95": [
+        0.7125864208544368,
+        0.7506252173340959
+      ],
+      "difference": 0.7313852108904594,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c512-d256": {
+      "ci95": [
+        0.7735031499213655,
+        0.8059977384619665
+      ],
+      "difference": 0.789935135127441,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
+    "r20261012a-bge-n20000-c512-d512": {
+      "ci95": [
+        0.7977261990715974,
+        0.8284631126814601
+      ],
+      "difference": 0.8131775214180105,
+      "metric": "ndcg10",
+      "queries": 799,
+      "samples": 2000,
+      "seed": 20261012
+    },
     "r20261012a-gemini2-n100000-c256-d128": {
       "ci95": [
         0.7256994500776486,
@@ -706,6 +882,582 @@
     }
   },
   "paired": [
+    {
+      "a": "r20261012a-bge-n100000-c256-d1024",
+      "b": "r20261012a-openai-large-n100000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.022065419631913333,
+          0.004979217355043006
+        ],
+        "difference": -0.00834955251125266,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-native-minus-openai-large-native"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d128",
+      "b": "r20261012a-bge-n100000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.18061501614213754,
+          -0.14329050943766436
+        ],
+        "difference": -0.1616321100478432,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d128",
+      "b": "r20261012a-openai-large-n100000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.11475312090594857,
+          -0.06831491123989446
+        ],
+        "difference": -0.09134625449471451,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d256",
+      "b": "r20261012a-bge-n100000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.07330006259921888,
+          -0.04372734242626135
+        ],
+        "difference": -0.05864469376582864,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d256",
+      "b": "r20261012a-openai-large-n100000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.05192149916000195,
+          -0.01610595536035927
+        ],
+        "difference": -0.033574734661801664,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d512",
+      "b": "r20261012a-bge-n100000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.025001551490074565,
+          -0.0006831406415862768
+        ],
+        "difference": -0.013012075025894056,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n100000-c256-d512",
+      "b": "r20261012a-openai-large-n100000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.02648231813397064,
+          0.005688210467038712
+        ],
+        "difference": -0.009998209171782619,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d1024",
+      "b": "r20261012a-openai-large-n20000-c128-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.0122691984121971,
+          0.01293149193665458
+        ],
+        "difference": 0.0005205675441700952,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-native-minus-openai-large-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d1024",
+      "b": "r20261012a-bge-n20000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.007829320331661128,
+          0.003405399437489808
+        ],
+        "difference": -0.002017569860235694,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d128",
+      "b": "r20261012a-bge-n20000-c128-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.09907585385021012,
+          -0.07148627244210073
+        ],
+        "difference": -0.08481602883251702,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d128",
+      "b": "r20261012a-openai-large-n20000-c128-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.06164796949553719,
+          -0.02682488308686932
+        ],
+        "difference": -0.04380648402338571,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d128",
+      "b": "r20261012a-bge-n20000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.006039163033770941,
+          0.0037559852324170885
+        ],
+        "difference": -0.0009865632476346619,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d256",
+      "b": "r20261012a-bge-n20000-c128-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.03456091417119911,
+          -0.015016525656994914
+        ],
+        "difference": -0.024930148215850847,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d256",
+      "b": "r20261012a-openai-large-n20000-c128-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.020663659370180314,
+          0.007074118798514222
+        ],
+        "difference": -0.0069053738120742015,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d256",
+      "b": "r20261012a-bge-n20000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.0038876914283982617,
+          0.006277591563157685
+        ],
+        "difference": 0.0011157954909153077,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d512",
+      "b": "r20261012a-bge-n20000-c128-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.008924412942072643,
+          0.005850905822683414
+        ],
+        "difference": -0.0014781907011244145,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d512",
+      "b": "r20261012a-openai-large-n20000-c128-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.007691971160119545,
+          0.018077111612862823
+        ],
+        "difference": 0.00536617904318734,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c128-d512",
+      "b": "r20261012a-bge-n20000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.0036844378626803126,
+          0.005397846481437251
+        ],
+        "difference": 0.0009542043755999939,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d1024",
+      "b": "r20261012a-openai-large-n20000-c256-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.011668878268015888,
+          0.012322853808833844
+        ],
+        "difference": 0.0004532727830127054,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-native-minus-openai-large-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d128",
+      "b": "r20261012a-bge-n20000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.09888898178413305,
+          -0.07251855628315752
+        ],
+        "difference": -0.08584703544511811,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d128",
+      "b": "r20261012a-openai-large-n20000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.05922223020090673,
+          -0.025009362754188653
+        ],
+        "difference": -0.0422039242891149,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d256",
+      "b": "r20261012a-bge-n20000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.03717850860323596,
+          -0.01918603924958257
+        ],
+        "difference": -0.02806351356700186,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d256",
+      "b": "r20261012a-openai-large-n20000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.022998916262246122,
+          0.004343255850570903
+        ],
+        "difference": -0.008847962071982985,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d512",
+      "b": "r20261012a-bge-n20000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.011929536267225292,
+          0.0025911845663880405
+        ],
+        "difference": -0.004449964936960104,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c256-d512",
+      "b": "r20261012a-openai-large-n20000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.007734576343136823,
+          0.017529523339563015
+        ],
+        "difference": 0.004869989630632065,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d1024",
+      "b": "r20261012a-openai-large-n20000-c512-d3072",
+      "bootstrap": {
+        "ci95": [
+          -0.010882324229251193,
+          0.012524138652898364
+        ],
+        "difference": 0.0010393697311228622,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-native-minus-openai-large-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d1024",
+      "b": "r20261012a-bge-n20000-c256-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.004743384670953211,
+          0.0029084719363916206
+        ],
+        "difference": -0.0005566180972210258,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d128",
+      "b": "r20261012a-bge-n20000-c512-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.09951470156890138,
+          -0.07276725495697413
+        ],
+        "difference": -0.0860622620921625,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d128",
+      "b": "r20261012a-openai-large-n20000-c512-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.05937186203147159,
+          -0.024771933445470788
+        ],
+        "difference": -0.04212954746402608,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d128",
+      "b": "r20261012a-bge-n20000-c256-d128",
+      "bootstrap": {
+        "ci95": [
+          -0.002350387227502069,
+          0.0007027837582600482
+        ],
+        "difference": -0.0007718447442654535,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d256",
+      "b": "r20261012a-bge-n20000-c512-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.03708514073263561,
+          -0.018599823300632312
+        ],
+        "difference": -0.02751233785518102,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d256",
+      "b": "r20261012a-openai-large-n20000-c512-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.0225366423020817,
+          0.00518645895549761
+        ],
+        "difference": -0.00813694048777849,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d256",
+      "b": "r20261012a-bge-n20000-c256-d256",
+      "bootstrap": {
+        "ci95": [
+          -0.0011942558712845048,
+          0.0010897623358524036
+        ],
+        "difference": -0.000005442385400213539,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d512",
+      "b": "r20261012a-bge-n20000-c512-d1024",
+      "bootstrap": {
+        "ci95": [
+          -0.01187404102943943,
+          0.0030378818411869917
+        ],
+        "difference": -0.004269951564611778,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "dimension-minus-native"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d512",
+      "b": "r20261012a-openai-large-n20000-c512-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.00743547385058359,
+          0.017455433116783697
+        ],
+        "difference": 0.005016574238945438,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "model-minus-openai-large-same-dimension"
+    },
+    {
+      "a": "r20261012a-bge-n20000-c512-d512",
+      "b": "r20261012a-bge-n20000-c256-d512",
+      "bootstrap": {
+        "ci95": [
+          -0.001292168461559594,
+          0.000424919700273954
+        ],
+        "difference": -0.0003766047248727016,
+        "metric": "ndcg10",
+        "queries": 799,
+        "samples": 2000,
+        "seed": 20261012
+      },
+      "kind": "chunk-minus-256-same-20k-corpus"
+    },
     {
       "a": "r20261012a-gemini2-n100000-c256-d128",
       "b": "r20261012a-gemini2-n100000-c256-d3072",

@@ -1,0 +1,57 @@
+{
+  "id": "r20261012a-bge-n20000-c128-d1024",
+  "run": "r20261012a",
+  "model": "bge",
+  "dimension_mode": "exploratory-prefix",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 128,
+  "chunks": 24762,
+  "dimension": 1024,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-bge-n20000-c128-d1024",
+  "started": "2026-10-12T22:23:56.95570314Z",
+  "finished": "2026-10-12T22:24:39.308984262Z",
+  "embedding_seconds_including_cache": 0.0876009,
+  "ingest_seconds": 33.577922634,
+  "metrics": {
+    "micro_recall100": 0.9944110060189166,
+    "mrr10": 0.8420709418519179,
+    "ndcg10": 0.8194626638020366,
+    "query_seconds": 0.07906926939549429,
+    "recall10": 0.9475651382409827,
+    "recall100": 0.9955564043799338,
+    "recall5": 0.7844415006492602
+  },
+  "metadata": {
+    "approx_logical_bytes": 94713686,
+    "approx_row_count": 23000,
+    "created_at": "2026-10-12T22:23:58.446264964Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "updating",
+      "unindexed_bytes": 102659072,
+      "unindexed_rows": 24762
+    },
+    "last_write_at": "2026-10-12T22:24:30.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[1024]f32"
+      }
+    },
+    "updated_at": "2026-10-12T22:24:30.000000000Z"
+  },
+  "verified_row_count": 24762
+}
