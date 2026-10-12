@@ -51,3 +51,13 @@ go run ./cmd/verify for the independent audit. Query logs may be compressed usin
 gzip -n after completion; both audit implementations transparently read .gz.
 Primary full run local precision: bfloat16, batch8, threads8; benchmark scripts
 must not be run concurrently with the final local run if isolated timing matters.
+
+Primary evaluation amendment: run
+.local/study requery-settled --model MODEL after that model's16 initial cells
+finish. This is read-only with respect to vectors and turbopuffer data. It
+archives the fresh-ingest observations under results/fresh-ingest and replaces
+primary metrics only after recording index metadata/readiness probes. The
+provider may retain exhaustive-search fallback even with up-to-date metadata.
+Per-query counters expose that behavior; do not describe all ANN-operator
+requests as pure approximate search. configs/embedding-study-settled@.service
+waits up to4hours for the initial model lane and runs this second pass once.
