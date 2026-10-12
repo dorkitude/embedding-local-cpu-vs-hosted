@@ -1,7 +1,7 @@
 ---
 title: Execution ledger
 type: research-ledger
-status: active
+status: complete
 created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
@@ -90,3 +90,19 @@ related: ["[[STUDY_PLAN]]", "[[RUNBOOK]]"]
   confirmation after the full CPU lane ends, without changing retrieval inputs.
 - 2026-10-12: Cost accounting now applies per-request batch-write discounts;
   API billable bytes exclude that discount. Retain gross write ceilings as well.
+- 2026-10-12T23:35Z: All96 settled primary cells passed. All six models completed
+  the primary100k and secondary20k treatments, with799queries per cell. The local
+  model processed110,922 distinct inputs at13.02 inputs/s over embedding/cache
+  phases. Hosted observations remain API timings, with no controlled GPU lane.
+- 2026-10-12T23:42Z: Final persistent audit service exited0. Tests, vet, real
+  turbopuffer integration, six-model sentinel, metadata refresh, explicit-FP32
+  CPU benchmark confirmation, and independent verification passed. Independently
+  recomputed96cell aggregates, all per-query metrics,296 bootstrap intervals,
+  and768 expanded exact-audit query/configuration records. Full-source sampling
+  audit had already passed. Sentinel cosines all>=0.99986 (two queries/model),
+  which checks gross drift but does not make hosted weight revisions immutable.
+- 2026-10-12: Final usage estimate $23.84 excluding retention/account minimums;
+  undiscounted-write estimate $36.01, both below the$150 study cap. All96 primary
+  namespaces retain3,993,648 rows and report12.698GB logical storage, about
+  $4.19/month at list price. Final artifacts are compressed with writers stopped;
+  idle sidecar stopped. No raw corpus, weights or vectors are committed.

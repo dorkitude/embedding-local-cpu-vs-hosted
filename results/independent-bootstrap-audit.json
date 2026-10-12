@@ -1,0 +1,10 @@
+{
+  "absolute_intervals": 96,
+  "intervals_independently_recomputed": 296,
+  "method": "independent rank-to-nDCG calculation, bootstrap multiplicity weights; tolerance1e-9",
+  "paired_intervals": 200,
+  "queries": 799,
+  "samples": 2000,
+  "seed": 20261012,
+  "status": "passed"
+}

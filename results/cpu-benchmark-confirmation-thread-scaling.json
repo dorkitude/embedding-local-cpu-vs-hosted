@@ -1,0 +1,114 @@
+[
+  {
+    "threads": 1,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 3.888186608965043,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 3.8942978249979205,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 18.652004575007595,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 1,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 18.628705843002535,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 2.0901812099618837,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 2.3255008749547414,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 10.311506192025263,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 2,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 10.402424998988863,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 1.1464572660042904,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 1.229149108985439,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 6.411297508981079,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 4,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 6.286643247993197,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 8,
+    "repetition": 0,
+    "seconds": 0.8272041519521736,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 8,
+    "repetition": 1,
+    "seconds": 0.6972099039703608,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 32,
+    "repetition": 0,
+    "seconds": 3.7503303110133857,
+    "dtype": "bfloat16"
+  },
+  {
+    "threads": 8,
+    "batch": 32,
+    "repetition": 1,
+    "seconds": 3.862449510022998,
+    "dtype": "bfloat16"
+  }
+]

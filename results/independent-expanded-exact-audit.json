@@ -1,0 +1,7 @@
+{
+  "checks": "independent deterministic query selection; exact and ANN rank-based metrics; top10 overlap; passage IDs and uniqueness; primary corpus",
+  "configurations": 12,
+  "queries_per_configuration": 64,
+  "query_configurations_checked": 768,
+  "status": "passed"
+}

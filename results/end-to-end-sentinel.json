@@ -1,0 +1,122 @@
+[
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "363e2a9119cd2373127490973c4e6fadd52a05a50d04b36f7bdbc67709c9f488",
+        "cosine_to_cached_run": 0.9999999972262014,
+        "dimension": 768,
+        "fresh_vector_sha256": "363e2a9119cd2373127490973c4e6fadd52a05a50d04b36f7bdbc67709c9f488",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "984d80db7c47f391348ae03a3288ee0ebd3bc5d498758076228f880db336f605",
+        "cosine_to_cached_run": 0.999999992595279,
+        "dimension": 768,
+        "fresh_vector_sha256": "984d80db7c47f391348ae03a3288ee0ebd3bc5d498758076228f880db336f605",
+        "qid": "3050"
+      }
+    ],
+    "model": "gemma2",
+    "utc": "2026-10-12T23:39:15.825576125Z"
+  },
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "b8d03a9297910a7472217123724f21756fd51b24973078bdcfe23f14c1eb99b3",
+        "cosine_to_cached_run": 0.9999995056783211,
+        "dimension": 3072,
+        "fresh_vector_sha256": "81cf8fe9759568cf5c07ecfee5500ee771f69a072e8dbae3d4d2dd80a52d1325",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "c22b8013e11eb28da5a670662608b405d1e41972b73ea2db89e0d92ec5737a1e",
+        "cosine_to_cached_run": 0.9999887431350435,
+        "dimension": 3072,
+        "fresh_vector_sha256": "2e4896957ba8532a85241b074608672098386a0009daaf20e514a1c419bc08e2",
+        "qid": "3050"
+      }
+    ],
+    "model": "openai-large",
+    "utc": "2026-10-12T23:39:19.214055289Z"
+  },
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "f629679e01305310e0d3d3964cca181dd194fe8cc510130c6995f99a11a69590",
+        "cosine_to_cached_run": 0.9998642934836384,
+        "dimension": 4096,
+        "fresh_vector_sha256": "6e0e59c21814940a2f3bb96cf0398657cdab27fa2ad7d47179c62e3f9d2c47ba",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "78812ccb5db63cec083f0fb617317d75c5331a669644718d7ff08ad53e1ce8bd",
+        "cosine_to_cached_run": 0.9999018309139349,
+        "dimension": 4096,
+        "fresh_vector_sha256": "7e880ceced3a228eecd6ee3b88a92b0538a2c3432143eef4eff06b63444debbf",
+        "qid": "3050"
+      }
+    ],
+    "model": "qwen8b",
+    "utc": "2026-10-12T23:39:21.710193021Z"
+  },
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "8363c21ab613e901d1e5180fc0e95a6d601b743d915921738b09567665ba4e94",
+        "cosine_to_cached_run": 0.9999995666245796,
+        "dimension": 1536,
+        "fresh_vector_sha256": "7d47e7d793f6f3218d74ac526bc607a9a331b2212436e20c8c3f37b21da4420b",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "4a960fd98ef1834a3e6abe187a3c465ab134816451a82e09217915e152e5e1ee",
+        "cosine_to_cached_run": 0.999999624953475,
+        "dimension": 1536,
+        "fresh_vector_sha256": "84b36031169e65807f96ead40af45b1632e33340f2298e87f18e284dcd58883d",
+        "qid": "3050"
+      }
+    ],
+    "model": "openai-small",
+    "utc": "2026-10-12T23:39:23.223679215Z"
+  },
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "4c405ea600cdfddb3c1847294f3b6e323ad7a82098588c969541d8d69e57f9e2",
+        "cosine_to_cached_run": 1.0000000308169914,
+        "dimension": 3072,
+        "fresh_vector_sha256": "4c405ea600cdfddb3c1847294f3b6e323ad7a82098588c969541d8d69e57f9e2",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "c2bf8a923fc101d6fe48d717429af7e6d747cbf35a43d21293b8218868067a9c",
+        "cosine_to_cached_run": 1.0000000046767663,
+        "dimension": 3072,
+        "fresh_vector_sha256": "c2bf8a923fc101d6fe48d717429af7e6d747cbf35a43d21293b8218868067a9c",
+        "qid": "3050"
+      }
+    ],
+    "model": "gemini2",
+    "utc": "2026-10-12T23:39:25.382982298Z"
+  },
+  {
+    "comparisons": [
+      {
+        "cached_vector_sha256": "5b0f3b7abd1689c3b3012c3a2b9543a18fce500d2b79c4ebba73e98ef310f67c",
+        "cosine_to_cached_run": 0.9999991130421979,
+        "dimension": 1024,
+        "fresh_vector_sha256": "07f36157d7445aefc862efda2ee61a3f72c6a842769a04327fb92062a49bf85f",
+        "qid": "0"
+      },
+      {
+        "cached_vector_sha256": "74bb97cdfa846c993ac21965c6588f95c9ac6267b537e94739696bbb1febe135",
+        "cosine_to_cached_run": 0.9999988320920501,
+        "dimension": 1024,
+        "fresh_vector_sha256": "1eaa0b154282edfd4c43ded68b1a1df9548911eebd326a7585ae73068bcf608c",
+        "qid": "3050"
+      }
+    ],
+    "model": "bge",
+    "utc": "2026-10-12T23:39:26.33486291Z"
+  }
+]

@@ -7,13 +7,13 @@
       "billable_logical_bytes_returned": 30
     },
     "performance": {
-      "approx_namespace_size": 4,
+      "approx_namespace_size": 6,
       "cache_hit_ratio": 1,
       "cache_temperature": "hot",
-      "exhaustive_search_count": 4,
-      "last_included_write_at": "2026-10-12T22:09:07.000000000Z",
-      "query_execution_ms": 21,
-      "server_total_ms": 21
+      "exhaustive_search_count": 6,
+      "last_included_write_at": "2026-10-12T23:39:39.000000000Z",
+      "query_execution_ms": 18,
+      "server_total_ms": 19
     },
     "rows": [
       {
@@ -37,5 +37,5 @@
     ]
   },
   "status": "passed",
-  "utc": "2026-10-12T22:09:08.045776864Z"
+  "utc": "2026-10-12T23:39:39.759890753Z"
 }

@@ -1,0 +1,8 @@
+{
+  "namespaces": 96,
+  "exact_indexed_rows": 3993648,
+  "service_reported_logical_bytes": 12697846736,
+  "raw_vector_bytes": 12609277952,
+  "estimated_monthly_storage_usd": 4.19028942288,
+  "note": "Provider metadata is approximate; primary96namespaces only; excludes pilots, account minimums and taxes."
+}

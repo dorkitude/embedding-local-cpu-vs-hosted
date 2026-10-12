@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "utc": "2026-10-12T23:42:26Z",
+  "run_id": "r20261012a",
+  "commands": [
+    "go test ./...",
+    "go vet ./...",
+    "LIVE_INTEGRATION=1 go test ./internal/study -run TestIntegrationLive -count=1",
+    "study exact-expanded",
+    "study sentinel",
+    "study refresh-metadata",
+    "uv run --frozen --project sidecar sidecar/benchmark.py",
+    "study audit",
+    "study report",
+    "go run ./cmd/verify"
+  ],
+  "sampling_audit": "results/independent-sampling-audit.json"
+}

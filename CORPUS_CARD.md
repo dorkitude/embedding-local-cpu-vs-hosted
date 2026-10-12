@@ -1,7 +1,7 @@
 ---
 title: MIRACL English licensed sampling protocol
 type: corpus-card
-status: preregistered
+status: verified
 created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[RESULTS]]"]

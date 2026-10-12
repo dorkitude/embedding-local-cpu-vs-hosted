@@ -1,7 +1,7 @@
 ---
 title: Model access, prompts, dimensions and runtime
 type: model-card
-status: active
+status: verified
 created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[RESULTS]]"]

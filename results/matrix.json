@@ -3136,11 +3136,54 @@
     "verified_row_count": 20027
   },
   {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 54064202,
+        "approx_row_count": 101192,
+        "created_at": "2026-10-12T23:01:49.022772066Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:03:31.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[128]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:03:52.415550881Z"
+      },
+      "performance": {
+        "approx_namespace_size": 101192,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 32192,
+        "last_included_write_at": "2026-10-12T23:03:31.000000000Z",
+        "query_execution_ms": 22,
+        "server_total_ms": 22
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:30:47.366782641Z"
+    },
     "id": "r20261012a-gemma2-n100000-c256-d128",
     "run": "r20261012a",
     "model": "gemma2",
     "dimension_mode": "mrl",
-    "status": "running",
+    "status": "passed",
     "documents": 100000,
     "chunk_size": 256,
     "chunks": 101192,
@@ -3148,10 +3191,1517 @@
     "queries": 799,
     "namespace": "egvl-r20261012a-gemma2-n100000-c256-d128",
     "started": "2026-10-12T20:53:08.227535277Z",
-    "finished": "0001-01-01T00:00:00Z",
-    "embedding_seconds_including_cache": 0,
-    "ingest_seconds": 0,
-    "verified_row_count": 0
+    "finished": "2026-10-12T23:30:56.518380495Z",
+    "embedding_seconds_including_cache": 7719.91093966,
+    "ingest_seconds": 103.534843683,
+    "metrics": {
+      "micro_recall100": 0.9011177987962167,
+      "mrr10": 0.7828684665355504,
+      "ndcg10": 0.7389400654550181,
+      "query_seconds": 0.07984656519649562,
+      "recall10": 0.844263843512905,
+      "recall100": 0.9045280265555609,
+      "recall5": 0.7248808936856505
+    },
+    "metadata": {
+      "approx_logical_bytes": 54064202,
+      "approx_row_count": 101192,
+      "created_at": "2026-10-12T23:01:49.022772066Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:03:31.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:03:52.415550881Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 105874506,
+        "approx_row_count": 101192,
+        "created_at": "2026-10-12T23:18:30.332103976Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:21:08.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[256]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:21:36.378998237Z"
+      },
+      "performance": {
+        "approx_namespace_size": 101192,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 22192,
+        "last_included_write_at": "2026-10-12T23:21:08.000000000Z",
+        "query_execution_ms": 18,
+        "server_total_ms": 18
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:32:03.457933739Z"
+    },
+    "id": "r20261012a-gemma2-n100000-c256-d256",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n100000-c256-d256",
+    "started": "2026-10-12T23:18:29.20226037Z",
+    "finished": "2026-10-12T23:32:12.239053239Z",
+    "embedding_seconds_including_cache": 0.315531207,
+    "ingest_seconds": 158.883315374,
+    "metrics": {
+      "micro_recall100": 0.9600171969045572,
+      "mrr10": 0.8203453721914304,
+      "ndcg10": 0.7924571994937912,
+      "query_seconds": 0.07564398637171464,
+      "recall10": 0.9034538573649967,
+      "recall100": 0.9591298737418885,
+      "recall5": 0.7613446281155918
+    },
+    "metadata": {
+      "approx_logical_bytes": 105874506,
+      "approx_row_count": 101192,
+      "created_at": "2026-10-12T23:18:30.332103976Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:21:08.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:21:36.378998237Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 209495114,
+        "approx_row_count": 101192,
+        "created_at": "2026-10-12T23:22:56.287762728Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:24:42.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[512]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:24:54.063382731Z"
+      },
+      "performance": {
+        "approx_namespace_size": 101192,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 0,
+        "last_included_write_at": "2026-10-12T23:24:42.000000000Z",
+        "query_execution_ms": 9,
+        "server_total_ms": 9
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 1,
+      "utc": "2026-10-12T23:33:10.189368703Z"
+    },
+    "id": "r20261012a-gemma2-n100000-c256-d512",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 512,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n100000-c256-d512",
+    "started": "2026-10-12T23:22:54.870026524Z",
+    "finished": "2026-10-12T23:33:18.471077627Z",
+    "embedding_seconds_including_cache": 0.305857421,
+    "ingest_seconds": 107.249411033,
+    "metrics": {
+      "micro_recall100": 0.9582975064488392,
+      "mrr10": 0.8251410493275326,
+      "ndcg10": 0.7963372107771984,
+      "query_seconds": 0.06822603048560692,
+      "recall10": 0.9120597626542561,
+      "recall100": 0.9554680092539916,
+      "recall5": 0.7668743577379377
+    },
+    "metadata": {
+      "approx_logical_bytes": 209495114,
+      "approx_row_count": 101192,
+      "created_at": "2026-10-12T23:22:56.287762728Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:24:42.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[512]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:24:54.063382731Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 313115722,
+        "approx_row_count": 101192,
+        "created_at": "2026-10-12T23:26:37.080183442Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:28:44.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[768]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:29:12.514677320Z"
+      },
+      "performance": {
+        "approx_namespace_size": 101192,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 12192,
+        "last_included_write_at": "2026-10-12T23:28:44.000000000Z",
+        "query_execution_ms": 16,
+        "server_total_ms": 16
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:34:27.86036289Z"
+    },
+    "id": "r20261012a-gemma2-n100000-c256-d768",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 100000,
+    "chunk_size": 256,
+    "chunks": 101192,
+    "dimension": 768,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n100000-c256-d768",
+    "started": "2026-10-12T23:26:28.576996601Z",
+    "finished": "2026-10-12T23:34:37.157505736Z",
+    "embedding_seconds_including_cache": 0.344677382,
+    "ingest_seconds": 135.833542231,
+    "metrics": {
+      "micro_recall100": 0.9578675838349097,
+      "mrr10": 0.8320246538331648,
+      "ndcg10": 0.8002430352526038,
+      "query_seconds": 0.07403097042302877,
+      "recall10": 0.9133584188027242,
+      "recall100": 0.9566946959312413,
+      "recall5": 0.7666235481942617
+    },
+    "metadata": {
+      "approx_logical_bytes": 313115722,
+      "approx_row_count": 101192,
+      "created_at": "2026-10-12T23:26:37.080183442Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:28:44.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[768]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:29:12.514677320Z"
+    },
+    "verified_row_count": 101192
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 13223144,
+        "approx_row_count": 24762,
+        "created_at": "2026-10-12T23:14:57.575791961Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:15:21.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[128]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:15:27.764640231Z"
+      },
+      "performance": {
+        "approx_namespace_size": 24762,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 24762,
+        "last_included_write_at": "2026-10-12T23:15:21.000000000Z",
+        "query_execution_ms": 20,
+        "server_total_ms": 20
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:31:07.285100011Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c128-d128",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c128-d128",
+    "started": "2026-10-12T23:03:41.167864126Z",
+    "finished": "2026-10-12T23:31:15.32131025Z",
+    "embedding_seconds_including_cache": 675.717448968,
+    "ingest_seconds": 24.972521521,
+    "metrics": {
+      "micro_recall100": 0.9866723989681857,
+      "mrr10": 0.8095769513479152,
+      "ndcg10": 0.7882463319576533,
+      "query_seconds": 0.07835559895994997,
+      "recall10": 0.9184804869723524,
+      "recall100": 0.9892156862745096,
+      "recall5": 0.7553619062067126
+    },
+    "metadata": {
+      "approx_logical_bytes": 13223144,
+      "approx_row_count": 24762,
+      "created_at": "2026-10-12T23:14:57.575791961Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:15:21.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:15:27.764640231Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 25901288,
+        "approx_row_count": 24762,
+        "created_at": "2026-10-12T23:21:18.565653229Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:21:42.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[256]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:21:48.789189526Z"
+      },
+      "performance": {
+        "approx_namespace_size": 24762,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 24762,
+        "last_included_write_at": "2026-10-12T23:21:42.000000000Z",
+        "query_execution_ms": 31,
+        "server_total_ms": 31
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:32:22.984783991Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c128-d256",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c128-d256",
+    "started": "2026-10-12T23:21:17.812161218Z",
+    "finished": "2026-10-12T23:32:31.686108824Z",
+    "embedding_seconds_including_cache": 0.073954693,
+    "ingest_seconds": 24.883154672,
+    "metrics": {
+      "micro_recall100": 0.9969905417024936,
+      "mrr10": 0.8312255398613351,
+      "ndcg10": 0.8170213659420628,
+      "query_seconds": 0.08424844270588222,
+      "recall10": 0.950267921481939,
+      "recall100": 0.9980809345014601,
+      "recall5": 0.7817109048648475
+    },
+    "metadata": {
+      "approx_logical_bytes": 25901288,
+      "approx_row_count": 24762,
+      "created_at": "2026-10-12T23:21:18.565653229Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:21:42.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:21:48.789189526Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 51257576,
+        "approx_row_count": 24762,
+        "created_at": "2026-10-12T23:24:55.727237419Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:25:19.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[512]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:25:25.900673930Z"
+      },
+      "performance": {
+        "approx_namespace_size": 24762,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 24762,
+        "last_included_write_at": "2026-10-12T23:25:19.000000000Z",
+        "query_execution_ms": 25,
+        "server_total_ms": 25
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:33:29.211294577Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c128-d512",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 512,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c128-d512",
+    "started": "2026-10-12T23:24:54.846590239Z",
+    "finished": "2026-10-12T23:33:37.570073907Z",
+    "embedding_seconds_including_cache": 0.070049736,
+    "ingest_seconds": 25.027855579,
+    "metrics": {
+      "micro_recall100": 0.9969905417024936,
+      "mrr10": 0.8333800186741362,
+      "ndcg10": 0.819271106850903,
+      "query_seconds": 0.08056825690112637,
+      "recall10": 0.9539316822796176,
+      "recall100": 0.9976637463496036,
+      "recall5": 0.784735518965807
+    },
+    "metadata": {
+      "approx_logical_bytes": 51257576,
+      "approx_row_count": 24762,
+      "created_at": "2026-10-12T23:24:55.727237419Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:25:19.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[512]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:25:25.900673930Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 76613864,
+        "approx_row_count": 24762,
+        "created_at": "2026-10-12T23:28:55.925915996Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:29:20.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[768]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:29:25.690334903Z"
+      },
+      "performance": {
+        "approx_namespace_size": 24762,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 0,
+        "last_included_write_at": "2026-10-12T23:29:20.000000000Z",
+        "query_execution_ms": 15,
+        "server_total_ms": 15
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 1,
+      "utc": "2026-10-12T23:34:37.615971968Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c128-d768",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 128,
+    "chunks": 24762,
+    "dimension": 768,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c128-d768",
+    "started": "2026-10-12T23:28:54.791319623Z",
+    "finished": "2026-10-12T23:34:44.83035534Z",
+    "embedding_seconds_including_cache": 0.069304122,
+    "ingest_seconds": 25.496129076,
+    "metrics": {
+      "micro_recall100": 0.9888220120378332,
+      "mrr10": 0.8371933170431293,
+      "ndcg10": 0.8186368824750242,
+      "query_seconds": 0.06820571322152692,
+      "recall10": 0.944832555846323,
+      "recall100": 0.9859288396209547,
+      "recall5": 0.7846073826048797
+    },
+    "metadata": {
+      "approx_logical_bytes": 76613864,
+      "approx_row_count": 24762,
+      "created_at": "2026-10-12T23:28:55.925915996Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:29:20.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[768]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:29:25.690334903Z"
+    },
+    "verified_row_count": 24762
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 10905641,
+        "approx_row_count": 20421,
+        "created_at": "2026-10-12T23:15:30.491695254Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:15:50.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[128]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:16:00.709191611Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20421,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20421,
+        "last_included_write_at": "2026-10-12T23:15:50.000000000Z",
+        "query_execution_ms": 16,
+        "server_total_ms": 16
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:31:26.025826485Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c256-d128",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c256-d128",
+    "started": "2026-10-12T23:15:29.905839376Z",
+    "finished": "2026-10-12T23:31:33.724448987Z",
+    "embedding_seconds_including_cache": 0.073992591,
+    "ingest_seconds": 20.724270988,
+    "metrics": {
+      "micro_recall100": 0.9888220120378332,
+      "mrr10": 0.8052128652879593,
+      "ndcg10": 0.7880349352590793,
+      "query_seconds": 0.07450510079849813,
+      "recall10": 0.9225118609661795,
+      "recall100": 0.9907175636211929,
+      "recall5": 0.7623448863749244
+    },
+    "metadata": {
+      "approx_logical_bytes": 10905641,
+      "approx_row_count": 20421,
+      "created_at": "2026-10-12T23:15:30.491695254Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:15:50.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:16:00.709191611Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 21361193,
+        "approx_row_count": 20421,
+        "created_at": "2026-10-12T23:21:54.064603857Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:22:16.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[256]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:22:24.229336017Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20421,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20421,
+        "last_included_write_at": "2026-10-12T23:22:16.000000000Z",
+        "query_execution_ms": 20,
+        "server_total_ms": 20
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:32:42.433509107Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c256-d256",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c256-d256",
+    "started": "2026-10-12T23:21:51.205264954Z",
+    "finished": "2026-10-12T23:32:50.170279557Z",
+    "embedding_seconds_including_cache": 0.065336381,
+    "ingest_seconds": 26.006522364,
+    "metrics": {
+      "micro_recall100": 0.9969905417024936,
+      "mrr10": 0.833409817827841,
+      "ndcg10": 0.8215456967675456,
+      "query_seconds": 0.07483033209887362,
+      "recall10": 0.9526603420220442,
+      "recall100": 0.9981435127242386,
+      "recall5": 0.7832490378485374
+    },
+    "metadata": {
+      "approx_logical_bytes": 21361193,
+      "approx_row_count": 20421,
+      "created_at": "2026-10-12T23:21:54.064603857Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:22:16.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:22:24.229336017Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 42272297,
+        "approx_row_count": 20421,
+        "created_at": "2026-10-12T23:25:28.985333423Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:25:48.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[512]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:25:59.159937220Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20421,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20421,
+        "last_included_write_at": "2026-10-12T23:25:48.000000000Z",
+        "query_execution_ms": 21,
+        "server_total_ms": 21
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:33:48.295415925Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c256-d512",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 512,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c256-d512",
+    "started": "2026-10-12T23:25:28.12341484Z",
+    "finished": "2026-10-12T23:33:56.720149803Z",
+    "embedding_seconds_including_cache": 0.063636354,
+    "ingest_seconds": 21.036225441,
+    "metrics": {
+      "micro_recall100": 0.9978503869303526,
+      "mrr10": 0.8349534139897096,
+      "ndcg10": 0.8232815239488207,
+      "query_seconds": 0.08051231886983733,
+      "recall10": 0.9586111878665069,
+      "recall100": 0.9986024196912807,
+      "recall5": 0.7914592013465607
+    },
+    "metadata": {
+      "approx_logical_bytes": 42272297,
+      "approx_row_count": 20421,
+      "created_at": "2026-10-12T23:25:28.985333423Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:25:48.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[512]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:25:59.159937220Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 63183401,
+        "approx_row_count": 20421,
+        "created_at": "2026-10-12T23:29:29.568178717Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:29:50.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[768]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:29:59.730708574Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20421,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20421,
+        "last_included_write_at": "2026-10-12T23:29:50.000000000Z",
+        "query_execution_ms": 30,
+        "server_total_ms": 30
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:34:55.5661691Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c256-d768",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 256,
+    "chunks": 20421,
+    "dimension": 768,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c256-d768",
+    "started": "2026-10-12T23:29:28.458320368Z",
+    "finished": "2026-10-12T23:35:04.135798427Z",
+    "embedding_seconds_including_cache": 0.0645239,
+    "ingest_seconds": 22.073479758,
+    "metrics": {
+      "micro_recall100": 0.9974204643164231,
+      "mrr10": 0.8405576414963151,
+      "ndcg10": 0.8280054240510051,
+      "query_seconds": 0.0809892466908636,
+      "recall10": 0.9601915363179443,
+      "recall100": 0.9982895285773884,
+      "recall5": 0.793035576577504
+    },
+    "metadata": {
+      "approx_logical_bytes": 63183401,
+      "approx_row_count": 20421,
+      "created_at": "2026-10-12T23:29:29.568178717Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:29:50.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[768]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:29:59.730708574Z"
+    },
+    "verified_row_count": 20421
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 10695203,
+        "approx_row_count": 20027,
+        "created_at": "2026-10-12T23:18:01.116110991Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:18:21.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[128]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:18:31.276542910Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20027,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20027,
+        "last_included_write_at": "2026-10-12T23:18:21.000000000Z",
+        "query_execution_ms": 28,
+        "server_total_ms": 28
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:31:44.482167Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c512-d128",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 128,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c512-d128",
+    "started": "2026-10-12T23:15:58.5653631Z",
+    "finished": "2026-10-12T23:31:52.280238739Z",
+    "embedding_seconds_including_cache": 121.86079249,
+    "ingest_seconds": 20.875022789,
+    "metrics": {
+      "micro_recall100": 0.9888220120378332,
+      "mrr10": 0.8048756381985421,
+      "ndcg10": 0.7882148428794986,
+      "query_seconds": 0.07577503921652065,
+      "recall10": 0.9212707262144064,
+      "recall100": 0.9907175636211929,
+      "recall5": 0.7628633916493746
+    },
+    "metadata": {
+      "approx_logical_bytes": 10695203,
+      "approx_row_count": 20027,
+      "created_at": "2026-10-12T23:18:01.116110991Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:18:21.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:18:31.276542910Z"
+    },
+    "verified_row_count": 20027
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 20949027,
+        "approx_row_count": 20027,
+        "created_at": "2026-10-12T23:22:25.855997397Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:22:45.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[256]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:22:56.030597711Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20027,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20027,
+        "last_included_write_at": "2026-10-12T23:22:45.000000000Z",
+        "query_execution_ms": 27,
+        "server_total_ms": 28
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:33:00.950842044Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c512-d256",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 256,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c512-d256",
+    "started": "2026-10-12T23:22:25.120232567Z",
+    "finished": "2026-10-12T23:33:09.237013914Z",
+    "embedding_seconds_including_cache": 0.076152681,
+    "ingest_seconds": 20.91351805,
+    "metrics": {
+      "micro_recall100": 0.9965606190885641,
+      "mrr10": 0.8335766930885833,
+      "ndcg10": 0.8217526444262544,
+      "query_seconds": 0.08060846107259079,
+      "recall10": 0.953745031216871,
+      "recall100": 0.9978306216103463,
+      "recall5": 0.7837079448155797
+    },
+    "metadata": {
+      "approx_logical_bytes": 20949027,
+      "approx_row_count": 20027,
+      "created_at": "2026-10-12T23:22:25.855997397Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:22:45.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[256]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:22:56.030597711Z"
+    },
+    "verified_row_count": 20027
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 41456675,
+        "approx_row_count": 20027,
+        "created_at": "2026-10-12T23:25:58.542842268Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:26:19.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[512]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:26:28.716467132Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20027,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20027,
+        "last_included_write_at": "2026-10-12T23:26:19.000000000Z",
+        "query_execution_ms": 47,
+        "server_total_ms": 47
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:34:07.502375101Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c512-d512",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 512,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c512-d512",
+    "started": "2026-10-12T23:25:57.711938249Z",
+    "finished": "2026-10-12T23:34:16.536185707Z",
+    "embedding_seconds_including_cache": 0.060036972,
+    "ingest_seconds": 21.569141293,
+    "metrics": {
+      "micro_recall100": 0.9974204643164231,
+      "mrr10": 0.8363718537060216,
+      "ndcg10": 0.8244989541868082,
+      "query_seconds": 0.08766477090863578,
+      "recall10": 0.9589657977955851,
+      "recall100": 0.9982895285773884,
+      "recall5": 0.7918540401331391
+    },
+    "metadata": {
+      "approx_logical_bytes": 41456675,
+      "approx_row_count": 20027,
+      "created_at": "2026-10-12T23:25:58.542842268Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:26:19.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[512]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:26:28.716467132Z"
+    },
+    "verified_row_count": 20027
+  },
+  {
+    "evaluation_phase": "settled-v1",
+    "index_probe": {
+      "metadata": {
+        "approx_logical_bytes": 61964323,
+        "approx_row_count": 20027,
+        "created_at": "2026-10-12T23:29:59.835502770Z",
+        "encryption": {
+          "sse": true
+        },
+        "index": {
+          "status": "up-to-date"
+        },
+        "last_write_at": "2026-10-12T23:30:21.000000000Z",
+        "schema": {
+          "docid": {
+            "filterable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "vector": {
+            "ann": {
+              "distance_metric": "cosine_distance"
+            },
+            "type": "[768]f32"
+          }
+        },
+        "updated_at": "2026-10-12T23:30:29.991308156Z"
+      },
+      "performance": {
+        "approx_namespace_size": 20027,
+        "cache_hit_ratio": 1,
+        "cache_temperature": "hot",
+        "exhaustive_search_count": 20027,
+        "last_included_write_at": "2026-10-12T23:30:21.000000000Z",
+        "query_execution_ms": 32,
+        "server_total_ms": 32
+      },
+      "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+      "stable_samples": 3,
+      "utc": "2026-10-12T23:35:14.955214882Z"
+    },
+    "id": "r20261012a-gemma2-n20000-c512-d768",
+    "run": "r20261012a",
+    "model": "gemma2",
+    "dimension_mode": "mrl",
+    "status": "passed",
+    "documents": 20000,
+    "chunk_size": 512,
+    "chunks": 20027,
+    "dimension": 768,
+    "queries": 799,
+    "namespace": "egvl-r20261012a-gemma2-n20000-c512-d768",
+    "started": "2026-10-12T23:29:58.725281229Z",
+    "finished": "2026-10-12T23:35:23.863327038Z",
+    "embedding_seconds_including_cache": 0.06912336,
+    "ingest_seconds": 22.58746131,
+    "metrics": {
+      "micro_recall100": 0.9969905417024936,
+      "mrr10": 0.8428193972624514,
+      "ndcg10": 0.8298766852130439,
+      "query_seconds": 0.08523912160951193,
+      "recall10": 0.9607547403229506,
+      "recall100": 0.9979766374634961,
+      "recall5": 0.7961421383511497
+    },
+    "metadata": {
+      "approx_logical_bytes": 61964323,
+      "approx_row_count": 20027,
+      "created_at": "2026-10-12T23:29:59.835502770Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:30:21.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[768]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:30:29.991308156Z"
+    },
+    "verified_row_count": 20027
   },
   {
     "evaluation_phase": "settled-v1",

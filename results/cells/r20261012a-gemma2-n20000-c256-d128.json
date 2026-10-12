@@ -1,0 +1,98 @@
+{
+  "evaluation_phase": "settled-v1",
+  "index_probe": {
+    "metadata": {
+      "approx_logical_bytes": 10905641,
+      "approx_row_count": 20421,
+      "created_at": "2026-10-12T23:15:30.491695254Z",
+      "encryption": {
+        "sse": true
+      },
+      "index": {
+        "status": "up-to-date"
+      },
+      "last_write_at": "2026-10-12T23:15:50.000000000Z",
+      "schema": {
+        "docid": {
+          "filterable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "vector": {
+          "ann": {
+            "distance_metric": "cosine_distance"
+          },
+          "type": "[128]f32"
+        }
+      },
+      "updated_at": "2026-10-12T23:16:00.709191611Z"
+    },
+    "performance": {
+      "approx_namespace_size": 20421,
+      "cache_hit_ratio": 1,
+      "cache_temperature": "hot",
+      "exhaustive_search_count": 20421,
+      "last_included_write_at": "2026-10-12T23:15:50.000000000Z",
+      "query_execution_ms": 16,
+      "server_total_ms": 16
+    },
+    "policy": "metadata up-to-date; write age \u003e=60s; zero or 3 stable exhaustive-search counts spaced 5s; bounded150s; persistent fallback is recorded, not relabeled as pure ANN",
+    "stable_samples": 3,
+    "utc": "2026-10-12T23:31:26.025826485Z"
+  },
+  "id": "r20261012a-gemma2-n20000-c256-d128",
+  "run": "r20261012a",
+  "model": "gemma2",
+  "dimension_mode": "mrl",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 256,
+  "chunks": 20421,
+  "dimension": 128,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-gemma2-n20000-c256-d128",
+  "started": "2026-10-12T23:15:29.905839376Z",
+  "finished": "2026-10-12T23:31:33.724448987Z",
+  "embedding_seconds_including_cache": 0.073992591,
+  "ingest_seconds": 20.724270988,
+  "metrics": {
+    "micro_recall100": 0.9888220120378332,
+    "mrr10": 0.8052128652879593,
+    "ndcg10": 0.7880349352590793,
+    "query_seconds": 0.07450510079849813,
+    "recall10": 0.9225118609661795,
+    "recall100": 0.9907175636211929,
+    "recall5": 0.7623448863749244
+  },
+  "metadata": {
+    "approx_logical_bytes": 10905641,
+    "approx_row_count": 20421,
+    "created_at": "2026-10-12T23:15:30.491695254Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "up-to-date"
+    },
+    "last_write_at": "2026-10-12T23:15:50.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[128]f32"
+      }
+    },
+    "updated_at": "2026-10-12T23:16:00.709191611Z"
+  },
+  "verified_row_count": 20421
+}

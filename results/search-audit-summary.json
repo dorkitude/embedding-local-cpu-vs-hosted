@@ -8,6 +8,13 @@
       "mean_top10_overlap": 0.95,
       "queries": 8
     },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.038357391930827656,
+      "mean_ann_ndcg10": 0.7730511376503957,
+      "mean_exact_ndcg10": 0.8114085295812233,
+      "mean_top10_overlap": 0.9453124999999997,
+      "queries": 64
+    },
     "settled_minus_fresh_ndcg10": -0.012445500726321335
   },
   {
@@ -18,6 +25,13 @@
       "mean_exact_ndcg10": 0.6559790840300243,
       "mean_top10_overlap": 0.8375,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.09175658168258927,
+      "mean_ann_ndcg10": 0.6503855152626843,
+      "mean_exact_ndcg10": 0.7421420969452736,
+      "mean_top10_overlap": 0.8406249999999996,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": 0
   },
@@ -184,6 +198,13 @@
       "mean_top10_overlap": 0.8374999999999999,
       "queries": 8
     },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.038495640057897074,
+      "mean_ann_ndcg10": 0.7489260408965345,
+      "mean_exact_ndcg10": 0.7874216809544315,
+      "mean_top10_overlap": 0.8749999999999998,
+      "queries": 64
+    },
     "settled_minus_fresh_ndcg10": 0
   },
   {
@@ -205,6 +226,13 @@
       "mean_exact_ndcg10": 0.8496606234152116,
       "mean_top10_overlap": 0.975,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.006298817220052655,
+      "mean_ann_ndcg10": 0.8391966893054316,
+      "mean_exact_ndcg10": 0.8454955065254842,
+      "mean_top10_overlap": 0.9499999999999998,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": -0.004191488402501831
   },
@@ -352,6 +380,196 @@
     "settled_minus_fresh_ndcg10": 0
   },
   {
+    "cell": "r20261012a-gemma2-n100000-c256-d128",
+    "exact": {
+      "ann_minus_exact_ndcg10": -0.033008515321573784,
+      "mean_ann_ndcg10": 0.7690281458018208,
+      "mean_exact_ndcg10": 0.8020366611233946,
+      "mean_top10_overlap": 0.9249999999999999,
+      "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.034854807663628806,
+      "mean_ann_ndcg10": 0.7193698664902843,
+      "mean_exact_ndcg10": 0.7542246741539131,
+      "mean_top10_overlap": 0.8953124999999997,
+      "queries": 64
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n100000-c256-d256",
+    "exact": {
+      "ann_minus_exact_ndcg10": -0.03702397114152611,
+      "mean_ann_ndcg10": 0.7504228764467747,
+      "mean_exact_ndcg10": 0.7874468475883009,
+      "mean_top10_overlap": 0.9124999999999999,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n100000-c256-d512",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0.0005838704259365501,
+      "mean_ann_ndcg10": 0.7838629043024559,
+      "mean_exact_ndcg10": 0.7832790338765193,
+      "mean_top10_overlap": 0.9125000000000001,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": -0.004892309793903649
+  },
+  {
+    "cell": "r20261012a-gemma2-n100000-c256-d768",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8337993043759319,
+      "mean_exact_ndcg10": 0.8337993043759319,
+      "mean_top10_overlap": 0.9375000000000001,
+      "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.029113183108323337,
+      "mean_ann_ndcg10": 0.768198645943445,
+      "mean_exact_ndcg10": 0.7973118290517683,
+      "mean_top10_overlap": 0.9078124999999999,
+      "queries": 64
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c128-d128",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7986778598979828,
+      "mean_exact_ndcg10": 0.7986778598979828,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c128-d256",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8121952165429042,
+      "mean_exact_ndcg10": 0.8121952165429042,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c128-d512",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8112963478395576,
+      "mean_exact_ndcg10": 0.8112963478395576,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c128-d768",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8134408122256189,
+      "mean_exact_ndcg10": 0.8134408122256189,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": -0.004827293948931
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c256-d128",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8020366611233946,
+      "mean_exact_ndcg10": 0.8020366611233946,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c256-d256",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7874468475883009,
+      "mean_exact_ndcg10": 0.7874468475883009,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c256-d512",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7838629043024559,
+      "mean_exact_ndcg10": 0.7838629043024559,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c256-d768",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8337993043759319,
+      "mean_exact_ndcg10": 0.8337993043759319,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c512-d128",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7970131103109814,
+      "mean_exact_ndcg10": 0.7970131103109814,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c512-d256",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7833703893522599,
+      "mean_exact_ndcg10": 0.7833703893522599,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c512-d512",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.7797864460664148,
+      "mean_exact_ndcg10": 0.7797864460664148,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
+    "cell": "r20261012a-gemma2-n20000-c512-d768",
+    "exact": {
+      "ann_minus_exact_ndcg10": 0,
+      "mean_ann_ndcg10": 0.8312286101305325,
+      "mean_exact_ndcg10": 0.8312286101305325,
+      "mean_top10_overlap": 1,
+      "queries": 8
+    },
+    "settled_minus_fresh_ndcg10": 0
+  },
+  {
     "cell": "r20261012a-openai-large-n100000-c256-d128",
     "exact": {
       "ann_minus_exact_ndcg10": -0.016036125080364116,
@@ -359,6 +577,13 @@
       "mean_exact_ndcg10": 0.7241095919343709,
       "mean_top10_overlap": 0.9125,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.03688413999110296,
+      "mean_ann_ndcg10": 0.6923946507707978,
+      "mean_exact_ndcg10": 0.7292787907619007,
+      "mean_top10_overlap": 0.9078124999999997,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": -0.011409234480882602
   },
@@ -381,6 +606,13 @@
       "mean_exact_ndcg10": 0.7877895392375246,
       "mean_top10_overlap": 0.9875,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.0021839196477975165,
+      "mean_ann_ndcg10": 0.8204379284757067,
+      "mean_exact_ndcg10": 0.8226218481235043,
+      "mean_top10_overlap": 0.9859374999999999,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": -0.0007935024578351602
   },
@@ -536,6 +768,13 @@
       "mean_top10_overlap": 0.85,
       "queries": 8
     },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.025221047501355343,
+      "mean_ann_ndcg10": 0.6825760994095414,
+      "mean_exact_ndcg10": 0.7077971469108968,
+      "mean_top10_overlap": 0.9031249999999995,
+      "queries": 64
+    },
     "settled_minus_fresh_ndcg10": 0
   },
   {
@@ -546,6 +785,13 @@
       "mean_exact_ndcg10": 0.7835315863483083,
       "mean_top10_overlap": 0.9625,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.0056533591181814336,
+      "mean_ann_ndcg10": 0.7478516048223371,
+      "mean_exact_ndcg10": 0.7535049639405186,
+      "mean_top10_overlap": 0.9921875,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": -0.0010713632842549448
   },
@@ -712,6 +958,13 @@
       "mean_top10_overlap": 1,
       "queries": 8
     },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": -0.027638485434196225,
+      "mean_ann_ndcg10": 0.7375693869404925,
+      "mean_exact_ndcg10": 0.7652078723746887,
+      "mean_top10_overlap": 0.9640624999999998,
+      "queries": 64
+    },
     "settled_minus_fresh_ndcg10": 0
   },
   {
@@ -733,6 +986,13 @@
       "mean_exact_ndcg10": 0.8463378593161884,
       "mean_top10_overlap": 0.975,
       "queries": 8
+    },
+    "exact-expanded": {
+      "ann_minus_exact_ndcg10": 0.004818225088429773,
+      "mean_ann_ndcg10": 0.8371077423750792,
+      "mean_exact_ndcg10": 0.8322895172866495,
+      "mean_top10_overlap": 0.9796874999999999,
+      "queries": 64
     },
     "settled_minus_fresh_ndcg10": -0.00017514205950464046
   },

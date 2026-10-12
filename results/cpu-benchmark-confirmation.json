@@ -1,0 +1,207 @@
+{
+  "rows": [
+    {
+      "dtype": "float32",
+      "batch": 1,
+      "repetition": 0,
+      "seconds": 0.3012349210330285,
+      "documents_per_second": 3.319668239560965,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 1,
+      "repetition": 1,
+      "seconds": 0.2560994219966233,
+      "documents_per_second": 3.9047335296726486,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 1,
+      "repetition": 2,
+      "seconds": 0.2575413939775899,
+      "documents_per_second": 3.882870961267747,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 8,
+      "repetition": 0,
+      "seconds": 1.5687811099924147,
+      "documents_per_second": 5.099500465070415,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 8,
+      "repetition": 1,
+      "seconds": 1.343175357033033,
+      "documents_per_second": 5.956035418689754,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 8,
+      "repetition": 2,
+      "seconds": 1.4218571240198798,
+      "documents_per_second": 5.6264443626954375,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 32,
+      "repetition": 0,
+      "seconds": 6.309463046025485,
+      "documents_per_second": 5.071746956368615,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 32,
+      "repetition": 1,
+      "seconds": 6.38346870301757,
+      "documents_per_second": 5.012948521996055,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "float32",
+      "batch": 32,
+      "repetition": 2,
+      "seconds": 6.229640798002947,
+      "documents_per_second": 5.136732764794131,
+      "minimum_cosine_to_fp32": 1.0000001192092896,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 1,
+      "repetition": 0,
+      "seconds": 0.1423463219543919,
+      "documents_per_second": 7.025120047150937,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 1,
+      "repetition": 1,
+      "seconds": 0.12922740197973326,
+      "documents_per_second": 7.7382968680035065,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 1,
+      "repetition": 2,
+      "seconds": 0.13515897700563073,
+      "documents_per_second": 7.398694649474447,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 8,
+      "repetition": 0,
+      "seconds": 0.7831911669927649,
+      "documents_per_second": 10.21461979802168,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 8,
+      "repetition": 1,
+      "seconds": 0.7524405409931205,
+      "documents_per_second": 10.632069331938274,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 8,
+      "repetition": 2,
+      "seconds": 0.7969766970491037,
+      "documents_per_second": 10.037934646798211,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 32,
+      "repetition": 0,
+      "seconds": 3.7703137249918655,
+      "documents_per_second": 8.48735737503357,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 32,
+      "repetition": 1,
+      "seconds": 3.7591186159988865,
+      "documents_per_second": 8.512633749785744,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    },
+    {
+      "dtype": "bfloat16",
+      "batch": 32,
+      "repetition": 2,
+      "seconds": 4.147105870011728,
+      "documents_per_second": 7.716224519705715,
+      "minimum_cosine_to_fp32": 0.999951958656311,
+      "finite": true,
+      "model_load_seconds": 3.080698144971393,
+      "model_tokens_per_document": 225
+    }
+  ],
+  "threads": 8,
+  "cuda": false,
+  "input": "title: Aurora | text: Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. Charged particles from the sun interact with Earth's magnetic field to produce polar auroras. ",
+  "fp32_reference": "checkpoint loaded directly as float32 before BF16 conversion",
+  "load_scope": "process/model initialization from cached files; not cold physical disk"
+}

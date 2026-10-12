@@ -1,0 +1,15 @@
+{
+  "distinct_document_inputs": 110123,
+  "distinct_inputs": 110922,
+  "distinct_inputs_per_embedding_cache_second": 13.020326267612061,
+  "embedding_and_cache_seconds": 8519.141357917999,
+  "finish": "2026-10-12T23:30:29.796113893Z",
+  "initial_lane_wall_seconds": 9441.568578616,
+  "method": "Frozen distinct formatted document input count plus799queries divided by sum of initial16cells embedding/cache timers. Includes cache/dedup/I/O overhead and reused-view cache checks; excludes ingestion, querying, exact audits. Original run BF16 cache started empty, separate from FP32 pilot. Not a per-request input-count reconstruction.",
+  "model": "gemma2",
+  "model_tokens_in_initial_lane": 11901779,
+  "query_inputs": 799,
+  "run": "r20261012a",
+  "start": "2026-10-12T20:53:08.227535277Z",
+  "successful_requests_in_initial_lane": 3468
+}

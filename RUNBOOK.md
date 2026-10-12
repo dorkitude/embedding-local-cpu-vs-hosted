@@ -1,7 +1,7 @@
 ---
 title: Reproduction and recovery
 type: runbook
-status: active
+status: verified
 created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[RESULTS]]"]

@@ -1,0 +1,55 @@
+{
+  "id": "r20261012a-gemma2-n20000-c512-d256",
+  "run": "r20261012a",
+  "model": "gemma2",
+  "dimension_mode": "mrl",
+  "status": "passed",
+  "documents": 20000,
+  "chunk_size": 512,
+  "chunks": 20027,
+  "dimension": 256,
+  "queries": 799,
+  "namespace": "egvl-r20261012a-gemma2-n20000-c512-d256",
+  "started": "2026-10-12T23:22:25.120232567Z",
+  "finished": "2026-10-12T23:22:54.510997655Z",
+  "embedding_seconds_including_cache": 0.076152681,
+  "ingest_seconds": 20.91351805,
+  "metrics": {
+    "micro_recall100": 0.9965606190885641,
+    "mrr10": 0.8335766930885833,
+    "ndcg10": 0.8217526444262544,
+    "query_seconds": 0.0815603581239049,
+    "recall10": 0.953745031216871,
+    "recall100": 0.9978306216103463,
+    "recall5": 0.7837079448155797
+  },
+  "metadata": {
+    "approx_logical_bytes": 0,
+    "approx_row_count": 0,
+    "created_at": "2026-10-12T23:22:25.855997397Z",
+    "encryption": {
+      "sse": true
+    },
+    "index": {
+      "status": "up-to-date"
+    },
+    "last_write_at": "2026-10-12T23:22:45.000000000Z",
+    "schema": {
+      "docid": {
+        "filterable": true,
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "vector": {
+        "ann": {
+          "distance_metric": "cosine_distance"
+        },
+        "type": "[256]f32"
+      }
+    },
+    "updated_at": "2026-10-12T23:22:45.000000000Z"
+  },
+  "verified_row_count": 20027
+}
