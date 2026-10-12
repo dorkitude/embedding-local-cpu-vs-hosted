@@ -1,0 +1,5 @@
+/data/
+/.local/
+/sidecar/.venv/
+__pycache__/
+*.log

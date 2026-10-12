@@ -1,0 +1,5066 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google AI for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1967d2"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/googledevai/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card" /><link rel="alternate" hreflang="ar"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=vi" /><link rel="alternate" hreflang="sq"
+          href="https://ai.google.dev/gemma/docs/embeddinggemma/model_card?hl=sq" /><title>EmbeddingGemma model card &nbsp;|&nbsp; Google AI for Developers</title>
+
+<meta property="og:title" content="EmbeddingGemma model card &nbsp;|&nbsp; Google AI for Developers"><meta property="og:url" content="https://ai.google.dev/gemma/docs/embeddinggemma/model_card"><meta property="og:image" content="https://ai.google.dev/static/site-assets/images/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "EmbeddingGemma model card"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Gemma",
+      "item": "https://ai.google.dev/gemma"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "EmbeddingGemma model card",
+      "item": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="googledevai-theme"
+        type="article"
+        
+        appearance
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner" keep-tabs-visible>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="googleAIForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/lockup-dark-theme-new.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/lockup-new.svg" class="devsite-site-logo" alt="Google AI for Developers">
+  </picture>
+  
+</a>
+
+
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://deepmind.google/models/gemma"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://deepmind.google/models/gemma"
+    
+       track-type="nav"
+       track-metadata-position="nav - models"
+       track-metadata-module="primary nav"
+       aria-label="Models, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Models"
+         
+           track-name="models"
+         
+       >
+    Models
+  
+    </a>
+    
+      <button
+         aria-haspopup="menu"
+         aria-expanded="false"
+         aria-label="Dropdown menu for Models"
+         track-type="nav"
+         track-metadata-eventdetail="https://deepmind.google/models/gemma"
+         track-metadata-position="nav - models"
+         track-metadata-module="primary nav"
+         
+          
+            data-category="Site-Wide Custom Events"
+          
+            data-label="Tab: Models"
+          
+            track-name="models"
+          
+        
+         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
+    
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Gemini</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://deepmind.google/gemini"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://deepmind.google/gemini"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      About
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemini-api/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Docs
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/api"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/api"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      API reference
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/pricing"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/pricing"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Pricing
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Imagen</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://deepmind.google/technologies/imagen/"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://deepmind.google/technologies/imagen/"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="imagen"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      About
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemini-api/docs/imagen"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs/imagen"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="imagen"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Docs
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/pricing"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/pricing"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="imagen"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Pricing
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Veo</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://deepmind.google/technologies/veo/veo-2/"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://deepmind.google/technologies/veo/veo-2/"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="veo"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      About
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemini-api/docs/video"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs/video"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="veo"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Docs
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/pricing"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/pricing"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="veo"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Pricing
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Gemma</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://deepmind.google/models/gemma"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://deepmind.google/models/gemma"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemma"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      About
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemma/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemma/docs"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemma"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Docs
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemma/gemmaverse"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemma/gemmaverse"
+                     track-metadata-position="nav - models"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="gemma"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemmaverse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - solutions"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Solutions"
+         
+           track-name="solutions"
+         
+       >
+    Solutions
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Gemini</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemini-api/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemini API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://aistudio.google.com"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://aistudio.google.com"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with gemini"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google AI Studio
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Customize Gemma open models</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemma"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemma"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="customize gemma open models"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemma open models
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://keras.io/keras_3/"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://keras.io/keras_3/"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="customize gemma open models"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Multi-framework with Keras
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://colab.sandbox.google.com/github/google/generative-ai-docs/blob/main/site/en/gemma/docs/lora_tuning.ipynb"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://colab.sandbox.google.com/github/google/generative-ai-docs/blob/main/site/en/gemma/docs/lora_tuning.ipynb"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="customize gemma open models"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Fine-tune in Colab
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Run on-device</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/edge"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/edge"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="run on-device"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google AI Edge
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.com/ai/gemini-nano"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.android.com/ai/gemini-nano"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="run on-device"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemini Nano on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/ai/built-in"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/ai/built-in"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="run on-device"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome built-in web APIs
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build responsibly</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/responsible"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/responsible"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build responsibly"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Responsible GenAI Toolkit
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://saif.google"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://saif.google"
+                     track-metadata-position="nav - solutions"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build responsibly"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Secure AI Framework
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - code assistance"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Code assistance"
+         
+           track-name="code assistance"
+         
+       >
+    Code assistance
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.com/gemini-in-android"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.android.com/gemini-in-android"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Android Studio
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools/console/understand-messages"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools/console/understand-messages"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://colab.google"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://colab.google"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Colab
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/products/generative-ai"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://firebase.google.com/products/generative-ai"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Firebase
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://cloud.google.com/products/gemini/code-assist"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://cloud.google.com/products/gemini/code-assist"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Cloud
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://plugins.jetbrains.com/plugin/8079-google-cloud-code"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://plugins.jetbrains.com/plugin/8079-google-cloud-code"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      JetBrains
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://labs.google.com/jules/home"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://labs.google.com/jules/home"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Jules
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode"
+                     track-metadata-position="nav - code assistance"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      VS Code
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - community"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Community"
+         
+           track-name="community"
+         
+       >
+    Community
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://discuss.ai.google.dev"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://discuss.ai.google.dev"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google AI Forum
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://ai.google.dev/gemini-api/docs/gemini-for-research"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs/gemini-for-research"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemini for Research
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Gemma"
+    tenant-name="Google AI for Developers"
+    project-scope="/gemma"
+    url-scoped="https://ai.google.dev/s/results/gemma"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://ai.google.dev/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          <devsite-appearance-selector></devsite-appearance-selector>
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="sq"
+        >Shqip</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/gemma"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Gemma"
+      
+    >
+    
+          Gemma
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://deepmind.google/models/gemma"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://deepmind.google/models/gemma"
+    
+       track-type="nav"
+       track-metadata-position="nav - gemma"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Gemma"
+         
+           track-name="gemma"
+         
+       >
+    Gemma
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://ai.google.dev/gemma/docs"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://ai.google.dev/gemma/docs"
+    
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="googleAIForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/lockup-dark-theme-new.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/lockup-new.svg" class="devsite-site-logo" alt="Google AI for Developers">
+  </picture>
+  
+</a>
+
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://deepmind.google/models/gemma"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Models"
+      
+        track-name="models"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Models"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Models
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Models"
+      
+        track-name="models"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Models">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Models">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="https://deepmind.google/models/gemma"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Gemma"
+      
+        track-name="gemma"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemma"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemma
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/gemma/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Solutions"
+      
+        track-name="solutions"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Solutions
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Solutions"
+      
+        track-name="solutions"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Solutions">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Solutions">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Code assistance"
+      
+        track-name="code assistance"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Code assistance
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Code assistance"
+      
+        track-name="code assistance"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Code assistance">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Code assistance">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Community"
+      
+        track-name="community"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Community
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Community"
+      
+        track-name="community"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Community">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Community">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/gemma/docs"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/get_started"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Get started</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/releases"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Releases</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Models</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Core Gemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/core"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-new"><a href="/gemma/docs/core/model_card_4"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma 4 model card</span><span class="devsite-nav-icon material-icons"
+        data-icon="new"
+        data-title="New!"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/model_card_3"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma 3 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/model_card_2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma 2 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma 1 model card</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Core Variants</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Gemma 3n</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/gemma-3n"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/gemma-3n/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model card</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>DiffusionGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/diffusiongemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/diffusiongemma/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/diffusiongemma/explained"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Diffusion Explained</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/diffusiongemma/inference-diffusiongemma-with-hf"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Generate Output</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>FunctionGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma/formatting-and-best-practices"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Formatting and best practices</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma/function-calling-with-hf"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Function calling with Hugging Face Transformers</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma/full-function-calling-sequence-with-functiongemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Full function calling sequence with FunctionGemma</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/functiongemma/finetuning-with-functiongemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Fine-tune FunctionGemma</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>EmbeddingGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/model_card_2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>v2 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>v1 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/inference-embeddinggemma-with-sentence-transformers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Multimodal Embeddings</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/fine-tuning-embeddinggemma-with-sentence-transformers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Fine-tuning</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/embeddinggemma/fine-tuning-multimodal-embeddinggemma-with-sentence-transformers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Vision Tune</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>PaliGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/paligemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/paligemma/model-card-2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>v2 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/paligemma/model-card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>v1 model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/paligemma/inference-with-keras"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Generate output with Keras</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/paligemma/fine-tuning-paligemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Fine-tune with JAX and Flax</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/paligemma/prompt-system-instructions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Prompt and system instructions</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ShieldGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/shieldgemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/shieldgemma/model_card_2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ShieldGemma 2 Model card</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/shieldgemma/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ShieldGemma 1 Model card</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Run Gemma</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Fundamentals</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/run"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-new"><a href="/gemma/docs/core/prompt-formatting-gemma4"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Prompt Formatting</span><span class="devsite-nav-icon material-icons"
+        data-icon="new"
+        data-title="New!"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/setup"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Legacy Gemma setup [Gemma 1, 2, and 3]</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/prompt-structure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Legacy Prompt and system instructions [Gemma 1, 2, and 3]</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Run locally with a Chat UI or integrate via API</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/integrations/lmstudio"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>LM Studio</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/integrations/ollama"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Ollama</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Run efficiently on Edge</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/edge/litert-lm/overview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>LiteRT-LM</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/integrations/llamacpp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Llama.cpp</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/integrations/mlx"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>MLX</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Build/Train in Python</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://tunix.readthedocs.io"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Tunix (Tune-in-JAX)</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/huggingface_inference"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Hugging Face Transformers</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/keras_inference"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Keras</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://unsloth.ai/docs/models/gemma-4/train"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Unsloth</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Deploy to Production / Enterprise</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/core/gemma_on_gemini_api"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemini API</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/integrations/google-cloud"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google Cloud</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/core/gke"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Cloud GKE</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Multi-Token Prediction (MTP)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/mtp/overview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/mtp/mtp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Hugging Face Transformers</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Core Capabilities</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Text</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/capabilities/text/basic"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Basic and multi-turn chat</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/capabilities/text/function-calling-gemma4"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Function calling</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Visual data</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/capabilities/vision"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/capabilities/vision/image"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Image understanding</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/capabilities/vision/video"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/capabilities/audio"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Audio data</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-new"><a href="/gemma/docs/capabilities/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="new"
+        data-title="New!"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Tuning guides</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/tune"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/core/huggingface_text_finetune_qlora"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Tune using Hugging Face Transformers and QLoRA</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/core/huggingface_vision_finetune_qlora"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Vision Tune using Hugging Face Transformers and QLoRA</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/core/huggingface_text_full_finetune"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Full model fine-tune using Hugging Face Transformers</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://gemma-llm.readthedocs.io/en/latest/colab_finetuning.html"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Tune using Gemma library</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Research and tools</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>RecurrentGemma</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemma/docs/recurrentgemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/recurrentgemma/recurrentgemma_jax_inference"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Inference using JAX and Flax</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/recurrentgemma/recurrentgemma_jax_finetune"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Fine-tune using JAX and Flax</span></a></li><li class="devsite-nav-item"><a href="/gemma/docs/recurrentgemma/model_card"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model card</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/datagemma"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>DataGemma</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/gemma_scope"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma Scope</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/gemma-aps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma-APS</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Community</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="https://deepmind.google/models/gemma/gemmaverse/"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemmaverse</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/docs/discord"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Discord</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Legal</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/terms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Terms of use</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/apache_2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemma 4 license</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/prohibited_use_policy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Prohibited use</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemma/intended_use_statement"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Intended use statement</span></a></li>
+          </ul>
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="Models"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://deepmind.google/gemini"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: About"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      About
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini-api/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/api"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API reference"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      API reference
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/pricing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pricing"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pricing
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Imagen
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://deepmind.google/technologies/imagen/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: About"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      About
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini-api/docs/imagen"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/pricing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pricing"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pricing
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Veo
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://deepmind.google/technologies/veo/veo-2/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: About"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      About
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini-api/docs/video"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/pricing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pricing"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pricing
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemma
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://deepmind.google/models/gemma"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: About"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      About
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemma/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemma/gemmaverse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemmaverse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemmaverse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Solutions"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Gemini
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini-api/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://aistudio.google.com"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google AI Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google AI Studio
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Customize Gemma open models
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemma"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemma open models"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemma open models
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://keras.io/keras_3/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Multi-framework with Keras"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Multi-framework with Keras
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://colab.sandbox.google.com/github/google/generative-ai-docs/blob/main/site/en/gemma/docs/lora_tuning.ipynb"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Fine-tune in Colab"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Fine-tune in Colab
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Run on-device
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/edge"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google AI Edge"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google AI Edge
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/ai/gemini-nano"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini Nano on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini Nano on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/docs/ai/built-in"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome built-in web APIs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome built-in web APIs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build responsibly
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/responsible"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Responsible GenAI Toolkit"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Responsible GenAI Toolkit
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://saif.google"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Secure AI Framework"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Secure AI Framework
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Code assistance"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/gemini-in-android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/docs/devtools/console/understand-messages"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://colab.google"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Colab"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Colab
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://firebase.google.com/products/generative-ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Firebase"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Firebase
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://cloud.google.com/products/gemini/code-assist"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Cloud"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Cloud
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://plugins.jetbrains.com/plugin/8079-google-cloud-code"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: JetBrains"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      JetBrains
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://labs.google.com/jules/home"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jules"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Jules
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: VS Code"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      VS Code
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Community"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://discuss.ai.google.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google AI Forum"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google AI Forum
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini-api/docs/gemini-for-research"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini for Research"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini for Research
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /site-assets/css/style.css */
+body[theme="googledevai-theme"] {
+  --devsite-background-0: var(--devsite-background-1);
+  --devsite-button-border: 1px solid #747775;
+  --devsite-button-border-radius: 20rem;
+  --devsite-button-font: 500 14px/36px 'Google Sans Text', Roboto, sans-serif;
+  --devsite-code-font-family: 'Google Sans Mono', Roboto Mono, monospace;
+  --devsite-primary-font-family: 'Google Sans Text', Roboto, sans-serif;
+  --devsite-table-heading-font: 500 14px/20px 'Google Sans Text', Roboto, sans-serif;
+  --googledevai-border-color: #c4c7c5;
+  --googledevai-blue-light: #d7e6ff;
+  --googledevai-blue-dark: #2e64de;
+  --googledevai-cyan-light: #c7e4ff;
+  --googledevai-cyan-dark: #3c8fe3;
+  --googledevai-purple-light: #dce2ff;
+  --googledevai-purple-dark: #987be9;
+  --googledevai-purple: #ac87eb;
+  --googledevai-red: #ee4d5d;
+  --googledevai-secondary-text: #001d35;
+  --googledevai-button-gradient-light: linear-gradient(90deg, var(--googledevai-blue-light), var(--googledevai-cyan-light), var(--googledevai-purple-light));
+  --googledevai-button-gradient-dark: linear-gradient(90deg, var(--googledevai-blue), var(--googledevai-cyan), var(--googledevai-purple));
+}
+
+body[theme="googledevai-theme"]:not([type="reference"]){
+  --googledevai-page-width: 1100px;
+}
+
+body[layout=docs][theme="googledevai-theme"]:not([type="reference"]) .devsite-main-content,
+body[layout=docs][theme="googledevai-theme"]:not([type="reference"]) .devsite-main-content[has-book-nav][has-sidebar] {
+  grid-template-columns: minmax(269px, 1fr) minmax(752px, var(--googledevai-page-width)) minmax(160px, 1fr);
+  grid-gap: 3rem;
+}
+
+body[layout=docs][theme="googledevai-theme"] devsite-content {
+  max-width: var(--googledevai-page-width);
+}
+
+body[layout=docs][theme="googledevai-theme"] .devsite-article {
+  box-shadow: unset;
+}
+
+body[theme="googledevai-theme"] {
+  --googledevai-header-gradient: linear-gradient(90deg, var(--googledevai-blue) 50%, var(--googledevai-cyan), var(--googledevai-purple), var(--googledevai-red));
+}
+
+body[theme="googledevai-theme"].color-scheme--dark {
+  --googledevai-header-gradient: linear-gradient(90deg, var(--googledevai-blue) 75%, var(--googledevai-cyan), var(--googledevai-purple));
+  --googledevai-border-color: #444746;
+}
+
+/* Ensure that full-bleed pages get the full width. */
+body[theme="googledevai-theme"][layout="full"] .devsite-main-content {
+  max-width: none;
+  padding: 0;
+}
+
+/* And ensure that any site banners/ACL warnings/etc don't get hidden on
+ * full-bleed pages. */
+body[theme="googledevai-theme"][layout="full"] .devsite-banner {
+  margin: 0;
+}
+
+tab:has(> a.hidden-tab) {
+  display: none;
+}
+
+body[theme="googledevai-theme"] devsite-toc > .devsite-nav-list {
+  border-inline-start: unset;
+}
+
+/* Banner notice */
+[layout=docs] .devsite-banner:first-of-type {
+  background: var(--googledevai-cyan-light);
+  border-radius: 10px;
+  color: var(--googledevai-secondary-text);
+  margin: -2.5rem -0.25rem 2.5rem;
+  display: flex;
+}
+
+/* Banner notice smaller screens */
+@media (max-width: 840px) {
+  [layout=docs] .devsite-banner:first-of-type {
+    margin: -0.25rem -0.25rem 2.5rem;
+  }
+}
+
+/* Asides */
+.devsite-article-body>aside:not([class*=attempt])  {
+  border-radius: 2px;
+}
+
+/* Tables */
+table:not(.tfo-notebook-buttons) {
+  border: 1px solid var(--googledevai-border-color);
+  border-collapse: unset;
+  border-radius: 9px;
+  margin: auto;
+  width: 100%;
+}
+
+.gemini-api-model-table tr:not(:last-child) td:not(:first-child),
+.gemini-api-model-table tr:not(:last-child) th,
+th,
+table:not(.gemini-api-model-table):not(.tfo-notebook-buttons) tr:not(:last-child) td {
+  border-bottom: 1px solid var(--googledevai-border-color);
+}
+
+th,
+td {
+  background: transparent;
+  padding: 1rem;
+}
+
+/* Notebooks */
+devsite-code .tfo-notebook-code-cell-output {
+  max-height: 300px;
+  overflow: auto;
+  background: rgba(237, 247, 255, 1);  /* blue bg to distinguish from input code cells */
+}
+
+devsite-code .tfo-notebook-code-cell-output + .devsite-code-buttons-container button {
+  background: rgba(237, 247, 255, .7);  /* blue bg to distinguish from input code cells */
+}
+
+.color-scheme--dark devsite-code .tfo-notebook-code-cell-output {
+  background: rgba(var(--devsite-background-2), 1);
+}
+
+.color-scheme--dark devsite-code .tfo-notebook-code-cell-output + .devsite-code-buttons-container button {
+  background: rgba(var(--devsite-background-2), .7);
+}
+
+devsite-code[dark-code] .tfo-notebook-code-cell-output {
+  background: rgba(64, 78, 103, 1);  /* medium slate */
+}
+
+devsite-code[dark-code] .tfo-notebook-code-cell-output + .devsite-code-buttons-container button {
+  background: rgba(64, 78, 103, .7);  /* medium slate */
+}
+
+.devsite-article-body>devsite-code {
+  --devsite-code-buttons-container-right: 0;
+  --devsite-code-margin: 0 0;
+  --devsite-code-padding-block: 14px;
+  border-radius: 8px;
+}
+
+.devsite-article-body>.beta:not([class*=attempt]),
+.devsite-article-body>.caution:not([class*=attempt]),
+.devsite-article-body>.deprecated:not([class*=attempt]),
+.devsite-article-body>.dogfood:not([class*=attempt]),
+.devsite-article-body>.experimental:not([class*=attempt]),
+.devsite-article-body>.key-point:not([class*=attempt]),
+.devsite-article-body>.key-term:not([class*=attempt]),
+.devsite-article-body>.note:not([class*=attempt]),
+.devsite-article-body>.objective:not([class*=attempt]),
+.devsite-article-body>.preview:not([class*=attempt]),
+.devsite-article-body>.special:not([class*=attempt]),
+.devsite-article-body>.success:not([class*=attempt]),
+.devsite-article-body>.tip:not([class*=attempt]),
+.devsite-article-body>.warning:not([class*=attempt]),
+.devsite-article-body>aside:not([class*=attempt]) {
+  --devsite-notice-margin: 0 0;
+  border-radius: 8px;
+}
+
+/* override default table styles for notebook buttons */
+.devsite-table-wrapper .tfo-notebook-buttons {
+  display: block;
+  width: auto;
+}
+
+.tfo-notebook-buttons td {
+  display: inline-block;
+  padding: 0 16px 16px 0;
+}
+
+/* from DevSite's buttons.scss */
+.tfo-notebook-buttons a,
+.tfo-notebook-buttons :link,
+.tfo-notebook-buttons :visited {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-self: var(--devsite-button-align-self);
+  background: var(--devsite-button-background, var(--devsite-background-1));
+  border: var(--devsite-button-border, 0);
+  border-radius: var(--devsite-button-border-radius, 2px);
+  box-sizing: border-box;
+  color: var(--devsite-button-color);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: var(--devsite-button-font, 500 14px/36px var(--devsite-primary-font-family));
+  height: var(--devsite-button-height, 36px);
+  letter-spacing: var(--devsite-button-letter-spacing, 0);
+  line-height: var(--devsite-button-line-height, 36px);
+  margin: var(--devsite-button-margin, 0);
+  margin-inline-end: var(--devsite-button-margin-x-end);
+  max-width: var(--devsite-button-max-width, none);
+  min-width: 36px;
+  outline: 0;
+  overflow: hidden;
+  padding: var(--devsite-button-with-icon-padding, 0 16px);
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: var(--devsite-button-text-transform, uppercase);
+  transition:
+    background-color .2s,
+    border .2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: var(--devsite-button-width, auto);
+}
+
+.tfo-notebook-buttons a:hover,
+.tfo-notebook-buttons a:focus {
+  background: var(--devsite-button-background-hover);
+  border: var(--devsite-button-border-hover, 0);
+  color: var(--devsite-button-color-hover, var(--devsite-button-color));
+  text-decoration: var(--devsite-button-text-decoration-hover, none);
+}
+
+.tfo-notebook-buttons a:active {
+  background: var(--devsite-button-background-active);
+  border: var(--devsite-button-border-active, 0);
+  transform: var(--devsite-button-transform-active, none);
+}
+
+.tfo-notebook-buttons tr {
+  background: 0;
+  border: 0;
+}
+
+/* on rendered notebook page,
+   remove link to webpage since we're already here */
+.tfo-notebook-buttons:not(.tfo-api) td:first-child {
+  display: none;
+}
+
+.tfo-notebook-buttons td > a > img {
+  margin: 0 8px 0 -4px;
+  height: 20px;
+}
+
+[appearance='dark'] .tfo-notebook-buttons td > a > img {
+  filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  [appearance='device'] .tfo-notebook-buttons td > a > img {
+    filter: invert(1);
+  }
+  .sub-heading {
+    background-color: #333;
+    color: #bdbdbd;
+  }
+}
+
+[appearance='dark'] .sub-heading {
+  background-color: #333;
+  color: #bdbdbd;
+}
+
+.sub-heading {
+  background-color: #f2f2f2;
+  color: #5f6368;
+}
+
+@media screen and (max-width: 600px) {
+  .tfo-notebook-buttons td {
+    display: block;
+  }
+}
+
+devsite-nav-buttons button {
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+code {
+  border-radius: 6px
+}
+
+devsite-book-nav .devsite-nav-list>.devsite-nav-heading:not(.devsite-nav-divider) {
+  border-top: 0;
+  padding-bottom: 0.9rem;
+  font-size: 1rem;
+}
+
+/*
+ * TODO(b/439059414): Remove this workaround in favor of a project-level
+ * body_class when possible.
+ */
+.ais-theme-marker {
+  display: none;
+}
+
+/*
+ * Gemini API body class.
+ * https://source.corp.google.com/piper///depot/google3/third_party/devsite/googledevai/en/gemini-api/_project.yaml;l=7
+ */
+.gemini-api devsite-thumb-rating[position="header"],
+.gemini-api devsite-feedback[position="header"] {
+  /* Hide the thumb rating and feedback widgets at the top of the page. */
+  display: none;
+}
+
+/*
+ * Shaded table styles look like a .pricing-table but are more flexible around
+ * content sizes in each column.
+ */
+.shaded-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shaded-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+/* These should use theme colours for light too, so we don't
+ * need an override. */
+.color-scheme--dark .shaded-table th {
+  background-color: var(--devsite-ref-palette--grey800);
+}
+
+.shaded-table td {
+    padding: 8px;
+}
+
+.shaded-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.shaded-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.shaded-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.shaded-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.devsite-nav {
+    font-size: var(--devsite-nav-font-size, 14px);
+}
+
+.devsite-nav-item {
+    line-height: var(--devsite-nav-item-line-height, 20px);
+}
+
+.devsite-book-nav-bg, devsite-book-nav {
+    width: 210px;
+    scrollbar-width: thin;
+}
+
+/* Hide the old toggle button immediately */
+.devsite-expandable-nav > .devsite-nav-toggle {
+    display: none !important;
+}
+
+/* Ion setup: Default State (Chevron Right) */
+.devsite-expandable-nav > .devsite-nav-title::after {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    color: #888;
+    /* Default: Chevron Right */
+    content: "\e5cc";
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+/* Down state logic */
+.devsite-expandable-nav.expanded > .devsite-nav-title::after,
+.devsite-expandable-nav:has(.devsite-nav-active) > .devsite-nav-title::after,
+.devsite-expandable-nav > .devsite-nav-title[aria-expanded="true"]::after {
+    content: "\e313";
+}
+
+/* Close state logic */
+.devsite-expandable-nav > .devsite-nav-title[aria-expanded="false"]::after {
+    content: "\e5cc" !important;
+}
+
+/* Hovercard styling */
+.gemini-api .heading:has(devsite-gemini-api-hovercard-button) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gemini-api .heading:has(devsite-gemini-api-hovercard-button) h1 {
+  margin-bottom: 0;
+}
+
+devsite-gemini-api-hovercard,
+devsite-gemini-api-hovercard-button {
+  /* Render above any code blocks on the page */
+  z-index: 1;
+}
+
+.devsite-nav-icon[data-icon="beta"], .devsite-nav-icon[data-icon="preview"],
+.devsite-nav-icon[data-icon="experimental"] {
+  margin: -5px 0 -1px 4px;
+}
+      </style><style>
+      /* Styles inlined from /site-assets/css/gemma.css */
+body[theme="googledevai-theme"] {
+  --googledevai-header-gradient: linear-gradient(90deg, var(--googledevai-blue) 75%, var(--googledevai-cyan), #acb7ff) !important;
+}
+
+      </style>
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <b>Gemma 4</b> released with text, audio and image input and long up to 256K context window! <a href="/gemma/docs/core"><b>Learn more</b></a>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/gemma"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Gemma"
+      
+    >
+    
+          Gemma
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://deepmind.google/models/gemma"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Models
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/gemma/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Docs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+    <devsite-gemini-api-switcher class="nocontent"></devsite-gemini-api-switcher>
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Gemma"
+  product-id="5292923"
+  bucket="documentation"
+  context=""
+  version="t-devsite-webserver-20261006-r00-rc02.480918341592349554"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/touchicon-180-new.png"
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      EmbeddingGemma model card<devsite-actions hidden data-nosnippet>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+<p>
+
+</p>
+
+
+
+<p><strong>Model Page</strong>: <a href="https://ai.google.dev/gemma/docs/embeddinggemma">EmbeddingGemma</a></p>
+
+<p><strong>Resources and Technical Documentation</strong>:</p>
+
+<ul>
+<li><a href="https://ai.google.dev/responsible">Responsible Generative AI Toolkit</a></li>
+<li><a href="https://www.kaggle.com/models/google/embeddinggemma/">EmbeddingGemma on Kaggle</a></li>
+<li><a href="https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/embeddinggemma">EmbeddingGemma on Vertex Model Garden</a></li>
+</ul>
+
+<p><strong>Terms of Use</strong>: <a href="https://ai.google.dev/gemma/terms">Terms</a></p>
+
+<p><strong>Authors</strong>: Google DeepMind</p>
+
+<h2 id="model-information" data-text="Model Information" tabindex="-1">Model Information</h2>
+
+<p>Summary description and brief definition of inputs and outputs.</p>
+
+<h3 id="description" data-text="Description" tabindex="-1">Description</h3>
+
+<p>EmbeddingGemma is a 300M parameter, state-of-the-art for its size, open
+embedding model from Google, built from Gemma 3 (with T5Gemma initialization)
+and the same research and technology used to create Gemini models.
+EmbeddingGemma produces vector representations of text, making it well-suited
+for search and retrieval tasks, including classification, clustering, and
+semantic similarity search. This model was trained with data in 100+ spoken
+languages.</p>
+
+<p>The small size and on-device focus makes it possible to deploy in environments
+with limited resources such as mobile phones, laptops, or desktops,
+democratizing access to state of the art AI models and helping foster innovation
+for everyone.</p>
+
+<p>For more technical details, refer to our paper:
+<a href="https://arxiv.org/abs/2509.20354">EmbeddingGemma: Powerful and Lightweight Text Representations</a>.</p>
+
+<h3 id="inputs-outputs" data-text="Inputs and outputs" tabindex="-1">Inputs and outputs</h3>
+
+<ul>
+<li><p><strong>Input:</strong></p>
+
+<ul>
+<li>Text string, such as a question, a prompt, or a document to be embedded</li>
+<li>Maximum input context length of 2K</li>
+</ul></li>
+<li><p><strong>Output:</strong></p>
+
+<ul>
+<li>Numerical vector representations of input text data</li>
+<li>Output embedding dimension size of 768, with smaller options available
+(512, 256, or 128) via Matryoshka Representation Learning (MRL). MRL
+allows users to truncate the output embedding of size 768 to their
+desired size and then re-normalize for efficient and accurate
+representation.</li>
+</ul></li>
+</ul>
+
+<h3 id="citation" data-text="Citation" tabindex="-1">Citation</h3>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded><code translate="no" dir="ltr">@article{embedding_gemma_2025,
+    title={EmbeddingGemma: Powerful and Lightweight Text Representations},
+    publisher={Google DeepMind},
+    author={Schechter Vera, Henrique and Dua, Sahil and Team, EmbeddingGemma},
+    year={2025},
+    url={https://arxiv.org/abs/2509.20354}
+}
+</code></pre></devsite-code>
+<h2 id="model-data" data-text="Model Data" tabindex="-1">Model Data</h2>
+
+<h3 id="training-dataset" data-text="Training Dataset" tabindex="-1">Training Dataset</h3>
+
+<p>This model was trained on a dataset of text data that includes a wide variety of
+sources totaling approximately 320 billion tokens. Here are the key components:</p>
+
+<ul>
+<li><strong>Web Documents</strong>: A diverse collection of web text ensures the model is
+exposed to a broad range of linguistic styles, topics, and vocabulary. The
+training dataset includes content in over 100 languages.</li>
+<li><strong>Code and Technical Documents</strong>: Exposing the model to code and technical
+documentation helps it learn the structure and patterns of programming
+languages and specialized scientific content, which improves its
+understanding of code and technical questions.</li>
+<li><strong>Synthetic and Task-Specific Data</strong>: Synthetically training data helps to
+teach the model specific skills. This includes curated data for tasks like
+information retrieval, classification, and sentiment analysis, which helps
+to fine-tune its performance for common embedding applications.</li>
+</ul>
+
+<p>The combination of these diverse data sources is crucial for training a powerful
+multilingual embedding model that can handle a wide variety of different tasks
+and data formats.</p>
+
+<h3 id="data-preprocessing" data-text="Data Preprocessing" tabindex="-1">Data Preprocessing</h3>
+
+<p>Here are the key data cleaning and filtering methods applied to the training
+data:</p>
+
+<ul>
+<li>CSAM Filtering: Rigorous CSAM (Child Sexual Abuse Material) filtering was
+applied at multiple stages in the data preparation process to ensure the
+exclusion of harmful and illegal content.</li>
+<li>Sensitive Data Filtering: As part of making Gemma pre-trained models safe
+and reliable, automated techniques were used to filter out certain personal
+information and other sensitive data from training sets.</li>
+<li>Additional methods: Filtering based on content quality and safety in line
+with <a href="https://ai.google/static/documents/ai-responsibility-update-published-february-2025.pdf">our policies</a>.</li>
+</ul>
+
+<h2 id="model-development" data-text="Model Development" tabindex="-1">Model Development</h2>
+
+<h3 id="hardware" data-text="Hardware" tabindex="-1">Hardware</h3>
+
+<p>EmbeddingGemma was trained using the latest generation of
+<a href="https://cloud.google.com/tpu/docs/intro-to-tpu">Tensor Processing Unit (TPU)</a> hardware (TPUv5e), for more details refer to
+the <a href="https://ai.google.dev/gemma/docs/core/model_card_3">Gemma 3 model card</a>.</p>
+
+<h3 id="software" data-text="Software" tabindex="-1">Software</h3>
+
+<p>Training was done using <a href="https://github.com/jax-ml/jax">JAX</a> and <a href="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/">ML Pathways</a>. For more details refer
+to the <a href="https://ai.google.dev/gemma/docs/core/model_card_3">Gemma 3 model card</a>.</p>
+
+<h2 id="evaluation" data-text="Evaluation" tabindex="-1">Evaluation</h2>
+
+<h3 id="benchmark-results" data-text="Benchmark Results" tabindex="-1">Benchmark Results</h3>
+
+<p>The model was evaluated against a large collection of different datasets and
+metrics to cover different aspects of text understanding.</p>
+
+<h4 id="full-precision-checkpoint" data-text="Full Precision Checkpoint" tabindex="-1">Full Precision Checkpoint</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (Multilingual, v2)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dimensionality</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>768d</td>
+      <td>61.15</td>
+      <td>54.31</td>
+    </tr>
+    <tr>
+      <td>512d</td>
+      <td>60.71</td>
+      <td>53.89</td>
+    </tr>
+    <tr>
+      <td>256d</td>
+      <td>59.68</td>
+      <td>53.01</td>
+    </tr>
+    <tr>
+      <td>128d</td>
+      <td>58.23</td>
+      <td>51.77</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (English, v2)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dimensionality</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>768d</td>
+      <td>69.67</td>
+      <td>65.11</td>
+    </tr>
+    <tr>
+      <td>512d</td>
+      <td>69.18</td>
+      <td>64.59</td>
+    </tr>
+    <tr>
+      <td>256d</td>
+      <td>68.37</td>
+      <td>64.02</td>
+    </tr>
+    <tr>
+      <td>128d</td>
+      <td>66.66</td>
+      <td>62.70</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (Code, v1)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dimensionality</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>768d</td>
+      <td>68.76</td>
+      <td>68.76</td>
+    </tr>
+    <tr>
+      <td>512d</td>
+      <td>68.48</td>
+      <td>68.48</td>
+    </tr>
+    <tr>
+      <td>256d</td>
+      <td>66.74</td>
+      <td>66.74</td>
+    </tr>
+    <tr>
+      <td>128d</td>
+      <td>62.96</td>
+      <td>62.96</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="qat-checkpoints" data-text="QAT Checkpoints" tabindex="-1">QAT Checkpoints</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (Multilingual, v2)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Quant config (dimensionality)</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>Mixed Precision* (768d)</td>
+      <td>60.69</td>
+      <td>53.82</td>
+    </tr>
+    <tr>
+      <td>Q8_0 (768d)</td>
+      <td>60.93</td>
+      <td>53.95</td>
+    </tr>
+    <tr>
+      <td>Q4_0 (768d)</td>
+      <td>60.62</td>
+      <td>53.61</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (English, v2)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Quant config (dimensionality)</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>Mixed Precision* (768d)</td>
+      <td>69.32</td>
+      <td>64.82</td>
+    </tr>
+    <tr>
+      <td>Q8_0 (768d)</td>
+      <td>69.49</td>
+      <td>64.84</td>
+    </tr>
+    <tr>
+      <td>Q4_0 (768d)</td>
+      <td>69.31</td>
+      <td>64.65</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"><strong>MTEB (Code, v1)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Quant config (dimensionality)</strong></td>
+      <td><strong>Mean (Task)</strong></td>
+      <td><strong>Mean (TaskType)</strong></td>
+    </tr>
+    <tr>
+      <td>Mixed Precision* (768d)</td>
+      <td>68.03</td>
+      <td>68.03</td>
+    </tr>
+    <tr>
+      <td>Q8_0 (768d)</td>
+      <td>68.70</td>
+      <td>68.70</td>
+    </tr>
+    <tr>
+      <td>Q4_0 (768d)</td>
+      <td>67.99</td>
+      <td>67.99</td>
+    </tr>
+  </tbody>
+</table>
+<aside class="note"><strong>Note:</strong><span> QAT models are evaluated after quantization</span></aside>
+<p>* Mixed Precision refers to per-channel quantization with int4 for embeddings,
+feedforward, and projection layers, and int8 for attention (e4_a8_f4_p4).</p>
+
+<h3 id="prompt-instructions" data-text="Prompt Instructions" tabindex="-1">Prompt Instructions</h3>
+
+<p>EmbeddingGemma can generate optimized embeddings for various use cases—such as
+document retrieval, question answering, and fact verification—or for specific
+input types—either a query or a document—using prompts that are prepended to the
+input strings.</p>
+
+<p>Query prompts follow the form <code translate="no" dir="ltr">task: {task description} | query:</code> where the
+task description varies by the use case, with the default task description being
+<code translate="no" dir="ltr">search result</code>. Document-style prompts follow the form
+<code translate="no" dir="ltr">title: {title | &quot;none&quot;} | text:</code> where the title is either <code translate="no" dir="ltr">none</code> (the
+default) or the actual title of the document. Note that providing a title, if
+available, will improve model performance for document prompts but may require
+manual formatting.</p>
+
+<p>Use the following prompts based on your use case and input data type. These may
+already be available in the EmbeddingGemma configuration in your modeling
+framework of choice.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><br>
+<strong>Use Case (task type enum)</strong></th>
+      <th><br>
+<strong>Descriptions</strong></th>
+      <th><br>
+<strong>Recommended Prompt</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><br>
+Retrieval (Query)</td>
+      <td rowspan="4"><br>
+Used to generate embeddings that are optimized for document search or information retrieval</td>
+      <td><br>
+task: search result | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Retrieval (Document)</td>
+      <td><br>
+title: {title | "none"} | text: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Question Answering</td>
+      <td><br>
+task: question answering | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Fact Verification</td>
+      <td><br>
+task: fact checking | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Classification</td>
+      <td><br>
+Used to generate embeddings that are optimized to classify texts according to preset labels</td>
+      <td><br>
+task: classification | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Clustering</td>
+      <td><br>
+Used to generate embeddings that are optimized to cluster texts based on their similarities</td>
+      <td><br>
+task: clustering | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Semantic Similarity</td>
+      <td><br>
+Used to generate embeddings that are optimized to assess text similarity. This is not intended for retrieval use cases.</td>
+      <td><br>
+task: sentence similarity | query: {content}</td>
+    </tr>
+    <tr>
+      <td><br>
+Code Retrieval</td>
+      <td><br>
+Used to retrieve a code block based on a natural language query, such as <em>sort an array</em> or <em>reverse a linked list</em>. Embeddings of the code blocks are computed using retrieval_document.</td>
+      <td><br>
+task: code retrieval | query: {content}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="usage-limitations" data-text="Usage and Limitations" tabindex="-1">Usage and Limitations</h2>
+
+<p>These models have certain limitations that users should be aware of.</p>
+
+<h3 id="intended-usage" data-text="Intended Usage" tabindex="-1">Intended Usage</h3>
+
+<p>Open embedding models have a wide range of applications across various
+industries and domains. The following list of potential uses is not
+comprehensive. The purpose of this list is to provide contextual information
+about the possible use-cases that the model creators considered as part of model
+training and development.</p>
+
+<ul>
+<li><strong>Semantic Similarity</strong>: Embeddings optimized to assess text similarity,
+such as recommendation systems and duplicate detection</li>
+<li><strong>Classification</strong>: Embeddings optimized to classify texts according to
+preset labels, such as sentiment analysis and spam detection</li>
+<li><strong>Clustering</strong>: Embeddings optimized to cluster texts based on their
+similarities, such as document organization, market research, and anomaly
+detection</li>
+<li><p><strong>Retrieval</strong></p>
+
+<ul>
+<li><strong>Document</strong>: Embeddings optimized for document search, such as indexing
+articles, books, or web pages for search</li>
+<li><strong>Query</strong>: Embeddings optimized for general search queries, such as
+custom search</li>
+<li><strong>Code Query</strong>: Embeddings optimized for retrieval of code blocks based
+on natural language queries, such as code suggestions and search</li>
+</ul></li>
+<li><p><strong>Question Answering</strong>: Embeddings for questions in a question-answering
+system, optimized for finding documents that answer the question, such as
+chatbox.</p></li>
+<li><p><strong>Fact Verification</strong>: Embeddings for statements that need to be verified,
+optimized for retrieving documents that contain evidence supporting or
+refuting the statement, such as automated fact-checking systems.</p></li>
+</ul>
+
+<h3 id="limitations" data-text="Limitations" tabindex="-1">Limitations</h3>
+
+<ul>
+<li><p>Training Data</p>
+
+<ul>
+<li>The quality and diversity of the training data significantly influence
+the model&#39;s capabilities. Biases or gaps in the training data can lead
+to limitations in the model&#39;s responses.</li>
+<li>The scope of the training dataset determines the subject areas the model
+can handle effectively.</li>
+</ul></li>
+<li><p>Language Ambiguity and Nuance</p>
+
+<ul>
+<li>Natural language is inherently complex. Models might struggle to grasp
+subtle nuances, sarcasm, or figurative language.</li>
+</ul></li>
+</ul>
+
+<h3 id="ethical-considerations" data-text="Ethical Considerations and Risks" tabindex="-1">Ethical Considerations and Risks</h3>
+
+<p>Risks identified and mitigations:</p>
+
+<ul>
+<li><strong>Perpetuation of biases</strong>: It&#39;s encouraged to perform continuous monitoring
+(using evaluation metrics, human review) and the exploration of de-biasing
+techniques during model training, fine-tuning, and other use cases.</li>
+<li><strong>Misuse for malicious purposes</strong>: Technical limitations and developer and
+end-user education can help mitigate against malicious applications of
+embeddings. Educational resources and reporting mechanisms for users to flag
+misuse are provided. Prohibited uses of Gemma models are outlined in the
+<a href="https://ai.google.dev/gemma/prohibited_use_policy">Gemma Prohibited Use Policy</a>.</li>
+<li><strong>Privacy violations</strong>: Models were trained on data filtered for removal of
+certain personal information and other sensitive data. Developers are
+encouraged to adhere to privacy regulations with privacy-preserving
+techniques.</li>
+</ul>
+
+<h3 id="benefits" data-text="Benefits" tabindex="-1">Benefits</h3>
+
+<p>At the time of release, this family of models provides high-performance open
+embedding model implementations designed from the ground up for responsible AI
+development compared to similarly sized models. Using the benchmark evaluation
+metrics described in this document, these models have shown superior performance
+to other, comparably-sized open model alternatives.</p>
+<link href="https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" data-page-link>
+  
+
+  
+</div>
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Gemma"
+  product-id="5292923"
+  bucket="documentation"
+  context=""
+  version="t-devsite-webserver-20261006-r00-rc02.480918341592349554"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/touchicon-180-new.png"
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2025-09-25 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Gemma"
+  product-id="5292923"
+  bucket="documentation"
+  context=""
+  version="t-devsite-webserver-20261006-r00-rc02.480918341592349554"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/touchicon-180-new.png"
+  
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-09-25 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="sq"
+        >Shqip</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-TC2MQKS8&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Gemma&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;googledevai&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="0GBBSw/AIZ3/cNzNs/PDhNx8pH5LZ2">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/js/app_loader.js', '[59,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31","https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai","https://googledevai-dot-devsite-v2-prod-3p.appspot.com",null,null,["/_pwa/googledevai/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/favicon-new.png","https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/googledevai/images/lockup-new.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","ai.google.dev","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["SignIn__enable_l1_signup_flow","DevPro__enable_embed_profile_creation","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__enable_explicit_template_dependencies","Profiles__enable_profile_collections","CloudShell__cloud_shell_button","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__remove_cross_domain_tracking_params","MiscFeatureFlags__fix_lower_breadcrumbs","DevPro__enable_google_payments_buyflow","TpcFeatures__enable_unmirrored_page_left_nav","Analytics__enable_devpro_interaction_logging","CloudShell__cloud_code_overflow_menu","OnSwitch__enable","Profiles__enable_completecodelab_endpoint","Profiles__enable_developer_profile_benefits_ui_redesign","BookNav__enable_tenant_cache_key","Search__enable_dynamic_content_confidential_banner","Experiments__reqs_query_experiments","Profiles__enable_auto_apply_credits","Profiles__enable_join_program_group_endpoint","Profiles__enable_public_developer_profiles","MiscFeatureFlags__developers_footer_image","DevPro__enable_google_payments","Cloud__enable_legacy_calculator_redirect","Cloud__cache_serialized_dynamic_content","DevPro__enable_g1_integration","Profiles__enable_playlist_community_acl","Profiles__enable_developer_profile_pages_as_content","Profiles__enable_release_notes_notifications","Concierge__enable_actions_menu","Concierge__enable_remove_info_panel_tags","DevPro__enable_firebase_workspaces_card","DevPro__enable_code_assist","DevPro__enable_devpro_offers","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_purchase_prompts","Cloud__fast_free_trial","AIStudioInteractionsToggle__interactions_are_default","MiscFeatureFlags__enable_view_transitions","DevPro__enable_g1_ineligible_redirect","Profiles__enable_stripe_subscription_management","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Profiles__require_profile_eligibility_for_signin","Analytics__enable_clearcut_logging","Cloud__enable_cloudx_experiment_ids","Cloud__enable_cloud_shell","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_user_type","MiscFeatureFlags__enable_llms_txt","Search__enable_page_map","Concierge__enable_devsite_llm_tools","MiscFeatureFlags__enable_framebox_badge_methods","Search__enable_ai_eligibility_checks","MiscFeatureFlags__enable_variable_operator_index_yaml","Profiles__enable_targeted_hero","DevPro__remove_eu_tax_intake_form","Search__enable_suggestions_from_borg","DevPro__enable_credits_banner","TpcFeatures__proxy_prod_host","MiscFeatureFlags__enable_appearance_cookies","DevPro__enable_nvidia_credits_card","Cloud__enable_cloud_dlp_service","Profiles__enable_page_saving","Profiles__enable_recognition_badges","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_awarding_url","DevPro__enable_enterprise","DevPro__enable_vertex_credit_card","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_complete_playlist_endpoint","DevPro__enable_google_one_card","Search__enable_ai_search_summaries_for_all","Profiles__enable_callout_notifications","Profiles__enable_developer_profiles_callout","Cloud__enable_free_trial_server_call","DevPro__enable_devsite_captcha","DevPro__enable_developer_subscriptions","MiscFeatureFlags__enable_variable_operator","MiscFeatureFlags__developers_footer_dark_image","DevPro__enable_cloud_innovators_plus","Concierge__enable_pushui","DevPro__enable_free_benefits","Profiles__enable_completequiz_endpoint"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4,null,"https://developerprofiles-pa.googleapis.com",[59,"googledevai","Google AI for Developers","ai.google.dev",null,"googledevai-dot-devsite-v2-prod-3p.appspot.com",null,null,[null,1,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1],[1,1,null,1,1],null,null,null,null,null,[1]],null,[73,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,1,null,null,null,null,null,null,null,2,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[44,2,4,6,7,12,14,15,17,18,20,21,22,23,28,29,32,37,39,40,43],null,[[],[1,1],null,1],[[null,null,null,null,null,["GTM-TC2MQKS8"],null,null,null,null,null,[["GTM-TC2MQKS8",1]],1]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[]],null,null,1,1,"https://developerscontentinsights-pa.googleapis.com","AIzaSyC11xEGtFhkmSh_iF6l_itbxnFz2GrIBOg","AIzaSyAXJ10nRF73mmdSDINgkCNX5bbd2KPcWm8","https://developers.googleapis.com",["https://aistudio.google.com"],null,"AIzaSyCjP0KOnHfv8mwe38sfzZJMOnqE3HvrD4A",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
