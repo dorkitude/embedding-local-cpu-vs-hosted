@@ -1,10 +1,5 @@
 ---
 title: Embedding Local CPU vs Hosted
-type: research-study
-status: complete
-created: 2026-10-12
-updated: 2026-10-12
-related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[RESULTS]]"]
 ---
 Research study comparing local CPU versus hosted embedding retrieval; GPU hardware is not controlled or measured.
 
