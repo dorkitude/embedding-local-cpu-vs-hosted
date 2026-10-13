@@ -6,8 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[RESULTS]]"]
 ---
-Research study owned by Kyle Wild comparing local CPU versus hosted embedding
-retrieval; GPU hardware is not controlled or measured.
+Research study comparing local CPU versus hosted embedding retrieval; GPU hardware is not controlled or measured.
 
 Execution issue: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
@@ -17,6 +16,10 @@ query evaluations.** Independent code recomputed all reported metrics and
 exact-search audit, and the isolated CPU confirmation passed.
 
 ## Summary results
+
+I did this on a variety of chunk sizes and dimension sizes.
+
+The following is a summary / rollup table that just highlights a few key runs.
 
 Central rollup: 100,000 MIRACL English passages, all 799 native dev queries,
 256-word chunks, native dimensions, turbopuffer settled-state search. Sorted by
