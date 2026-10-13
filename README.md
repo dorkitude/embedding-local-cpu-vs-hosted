@@ -18,17 +18,26 @@ exact-search audit, and the isolated CPU confirmation passed.
 
 ## Summary results
 
-Primary comparison: 100,000 MIRACL English passages, all 799 native dev
-queries, 256-word chunks, native dimensions, turbopuffer settled-state search.
+Central rollup: 100,000 MIRACL English passages, all 799 native dev queries,
+256-word chunks, native dimensions, turbopuffer settled-state search. Sorted by
+nDCG@10.
 
-| Model | Native dims | nDCG@10 (95% bootstrap CI) | MRR@10 | Recall@100 |
-|---|---:|---:|---:|---:|
-| Qwen3-Embedding-8B (Fireworks) | 4096 | **0.8474** [0.8332, 0.8606] | 0.8622 | 0.9911 |
-| Gemini Embedding 2 (OpenRouter) | 3072 | 0.8424 [0.8270, 0.8578] | 0.8680 | 0.9728 |
-| OpenAI text-embedding-3-large | 3072 | 0.8059 [0.7905, 0.8209] | 0.8270 | 0.9908 |
-| Local EmbeddingGemma 2 (8 vCPU, no GPU) | 768 | 0.8002 [0.7836, 0.8160] | 0.8320 | 0.9567 |
-| BGE-M3 (OpenRouter) | 1024 | 0.7975 [0.7816, 0.8137] | 0.8318 | 0.9642 |
-| OpenAI text-embedding-3-small | 1536 | 0.7719 [0.7555, 0.7879] | 0.7886 | 0.9860 |
+| Model | Native dims | nDCG@10 (95% bootstrap CI) | MRR@10 | Recall@10 | Recall@100 | Request p50 (s) | p95 (s) | Embedding usage |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Qwen3-Embedding-8B (Fireworks) | 4096 | **0.8474** [0.8332, 0.8606] | 0.8622 | 0.9598 | 0.9911 | 0.586 | 3.412 | $1.18 |
+| Gemini Embedding 2 (OpenRouter) | 3072 | 0.8424 [0.8270, 0.8578] | 0.8680 | 0.9367 | 0.9728 | 1.153 | 1.420 | $2.32 |
+| OpenAI text-embedding-3-large | 3072 | 0.8059 [0.7905, 0.8209] | 0.8270 | 0.9389 | 0.9908 | 0.455 | 1.132 | $5.79 |
+| Local EmbeddingGemma 2 (8 vCPU, no GPU) | 768 | 0.8002 [0.7836, 0.8160] | 0.8320 | 0.9134 | 0.9567 | 2.214 | 5.229 | $0 API* |
+| BGE-M3 (OpenRouter) | 1024 | 0.7975 [0.7816, 0.8137] | 0.8318 | 0.9124 | 0.9642 | 0.971 | 1.754 | $0.12 |
+| OpenAI text-embedding-3-small | 1536 | 0.7719 [0.7555, 0.7879] | 0.7886 | 0.9210 | 0.9860 | 0.367 | 0.730 | $0.89 |
+
+\*Local EmbeddingGemma 2 paid no API token fees but consumed VM CPU time
+(unpriced): 13.02 distinct inputs/s end-to-end, 1,389 model tokens/s warm
+inference, 157.4 minutes for its full 16-treatment matrix. Request latencies
+are observed end-to-end values including network, batching, queues and
+differing batch sizes — not a controlled latency ranking. Usage figures are
+study totals at list prices; OpenAI models ran four paid dimension passes.
+Dimension, chunk, exact-search and cost detail: [RESULTS.md](RESULTS.md).
 
 Headline findings:
 
