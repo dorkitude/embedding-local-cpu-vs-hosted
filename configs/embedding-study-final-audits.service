@@ -1,9 +1,9 @@
 [Unit]
 Description=Embedding study final diagnostics and independent audits
 [Service]
-WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted
 Environment=PATH=/home/exedev/.local/bin:/usr/local/go/bin:/home/exedev/go/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=/bin/bash configs/run-final-audits.sh
 Restart=no
-StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/final-audits.log
-StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/final-audits.log
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/final-audits.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/final-audits.log

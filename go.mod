@@ -1,4 +1,4 @@
-module github.com/dorkitude/embedding-gpu-vs-local
+module github.com/dorkitude/embedding-local-cpu-vs-hosted
 
 go 1.27.1
 

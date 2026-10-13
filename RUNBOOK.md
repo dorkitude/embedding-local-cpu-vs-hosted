@@ -6,7 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[RESULTS]]"]
 ---
-Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-gpu-vs-local/issues/1
+Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
 Read CORPUS_CARD.md before redistributing source text. No raw corpus or vectors
 are committed. Attribution manifest and checksums are in results/manifests.

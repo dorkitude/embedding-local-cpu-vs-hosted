@@ -1,8 +1,8 @@
 [Unit]
 Description=Licensed embedding study openrouter matrix
 [Service]
-WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted
 ExecStart=/bin/bash configs/run-openrouter.sh
 Restart=no
-StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/openrouter.log
-StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/openrouter.log
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/openrouter.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/openrouter.log

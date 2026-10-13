@@ -1,6 +1,6 @@
-# Embedding GPU vs Local
+# Embedding Local CPU vs Hosted
 
-Owner: Kyle Wild (dorkitude). Private research study requested 2026-10-12.
+Owner: Kyle Wild (dorkitude). Public research study requested 2026-10-12.
 
 Read /home/exedev/a/AGENTS.md and /home/exedev/a/dev/phd/AGENTS.md and README.md. Never read or print secrets. Use exe.dev integrations with injected auth; direct-provider env overrides for portability. Python only via uv. Primary harness is Go/Cobra; local inference sidecars may use Python.
 

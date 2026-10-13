@@ -3,9 +3,9 @@ Description=Licensed embedding study local CPU matrix
 After=embedding-study-sidecar.service
 Requires=embedding-study-sidecar.service
 [Service]
-WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted
 ExecStartPre=/bin/sleep 10
-ExecStart=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/study matrix --model gemma2 --run r20261012a
+ExecStart=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/study matrix --model gemma2 --run r20261012a
 Restart=no
-StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/local.log
-StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/local.log
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/local.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/local.log

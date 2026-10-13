@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	s "github.com/dorkitude/embedding-gpu-vs-local/internal/study"
+	s "github.com/dorkitude/embedding-local-cpu-vs-hosted/internal/study"
 	"github.com/spf13/cobra"
 	"os"
 )

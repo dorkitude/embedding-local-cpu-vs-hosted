@@ -6,7 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[RESULTS]]"]
 ---
-Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-gpu-vs-local/issues/1
+Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
 | Model | Runtime | Native d | Reduced dimensions | Retrieval formatting |
 |---|---|---:|---|---|

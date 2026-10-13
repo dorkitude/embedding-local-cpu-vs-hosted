@@ -6,7 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[MODEL_CARD]]", "[[STUDY_PLAN]]", "[[RESULTS]]"]
 ---
-Owner: Kyle Wild. [Execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).
+Owner: Kyle Wild. [Execution issue](https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1).
 
 Catalog membership and actual access are different. The harness snapshots
 catalogs with study discover and performs real two-input requests with study

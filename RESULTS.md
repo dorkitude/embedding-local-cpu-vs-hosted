@@ -7,7 +7,7 @@ updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[MODEL_CARD]]"]
 ---
 
-Owner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-gpu-vs-local), [execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).
+Owner: Kyle Wild. [Repository](https://github.com/dorkitude/embedding-local-cpu-vs-hosted), [execution issue](https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1).
 
 96 of 96 settled-state primary evaluations passed. Run ID: r20261012a. Original fresh-ingest observations are retained separately under results/fresh-ingest. All reported cells use 799 native MIRACL English dev queries and the turbopuffer ANN operator with service-reported exhaustive fallback. Primary corpus: 100,000 passages; chunk sweep: a nested 20,000-passage corpus. No GPU hardware was measured.
 

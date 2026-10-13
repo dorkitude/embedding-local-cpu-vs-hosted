@@ -1,15 +1,15 @@
 ---
-title: Embedding GPU vs Local
+title: Embedding Local CPU vs Hosted
 type: research-study
 status: complete
 created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[CORPUS_CARD]]", "[[RESULTS]]"]
 ---
-Private research study owned by Kyle Wild. Actual comparison: local CPU versus
-hosted embedding retrieval; GPU hardware is not controlled or measured.
+Research study owned by Kyle Wild comparing local CPU versus hosted embedding
+retrieval; GPU hardware is not controlled or measured.
 
-Execution issue: https://github.com/dorkitude/embedding-gpu-vs-local/issues/1
+Execution issue: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
 **Completed and audited: 96/96 configurations, six models, 76,704 primary
 query evaluations.** Independent code recomputed all reported metrics and
@@ -92,6 +92,14 @@ attribution/share-alike requirements, alongside Apache-2.0 MIRACL contributions.
 The repository includes all selected passage IDs, attribution, license receipts,
 checksums, and the deterministic acquisition recipe. Raw text, weights, caches,
 and vectors stay outside Git. See [NOTICE](NOTICE).
+
+## License
+
+Original code, configurations, and documentation: [CC0 1.0 Universal](LICENSE)
+(public domain dedication; no rights reserved). Incorporated third-party
+materials keep their original licenses: MIRACL contributions under Apache-2.0
+and Wikipedia-derived corpus selections under CC BY-SA 3.0. See [NOTICE](NOTICE)
+and [receipts/](receipts/) for attribution and license receipts.
 
 Reproduction and recovery commands are in [RUNBOOK.md](RUNBOOK.md). The primary
 harness uses Go/Cobra; Python via uv is confined to local inference/benchmarking.

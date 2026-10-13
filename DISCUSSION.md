@@ -8,7 +8,7 @@ related: ["[[RESULTS]]", "[[CORPUS_CARD]]", "[[MODEL_CARD]]"]
 ---
 
 Owner: Kyle Wild. Run: r20261012a, settled-v1.
-[Execution issue](https://github.com/dorkitude/embedding-gpu-vs-local/issues/1).
+[Execution issue](https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1).
 
 All 96 configurations completed on turbopuffer, with 799 judged queries each.
 The primary comparison uses 100,000 passages; chunk comparisons use the same

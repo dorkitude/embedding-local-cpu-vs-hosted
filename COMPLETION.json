@@ -1,6 +1,6 @@
 {
   "status": "complete",
-  "repo_url": "https://github.com/dorkitude/embedding-gpu-vs-local",
+  "repo_url": "https://github.com/dorkitude/embedding-local-cpu-vs-hosted",
   "private": true,
   "owner": "Kyle Wild",
   "commit": "9fe34fc44a0345a187337ff51bab46e015321235",

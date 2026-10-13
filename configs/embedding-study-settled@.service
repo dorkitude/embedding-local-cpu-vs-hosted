@@ -1,8 +1,8 @@
 [Unit]
 Description=Embedding study settled-index primary query pass for %i
 [Service]
-WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local
+WorkingDirectory=/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted
 ExecStart=/bin/bash configs/run-settled.sh %i
 Restart=no
-StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/settled-%i.log
-StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-gpu-vs-local/.local/settled-%i.log
+StandardOutput=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/settled-%i.log
+StandardError=append:/home/exedev/a/dev/phd/research-projects/2026-10-12-embedding-local-cpu-vs-hosted/.local/settled-%i.log

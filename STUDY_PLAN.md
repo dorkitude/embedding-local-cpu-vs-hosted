@@ -6,7 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[CORPUS_CARD]]", "[[LEDGER]]", "[[RESULTS]]"]
 ---
-Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-gpu-vs-local/issues/1
+Owner: Kyle Wild. Issue: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
 Primary 100,000 MIRACL English passages; all 799 dev queries. Secondary 20,000
 nested passages for chunk sweeps. Use 256 whitespace-delimited token-equivalents

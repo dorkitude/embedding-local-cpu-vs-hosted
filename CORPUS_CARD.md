@@ -6,7 +6,7 @@ created: 2026-10-12
 updated: 2026-10-12
 related: ["[[STUDY_PLAN]]", "[[RESULTS]]"]
 ---
-Owner: Kyle Wild. Operational truth: https://github.com/dorkitude/embedding-gpu-vs-local/issues/1
+Owner: Kyle Wild. Operational truth: https://github.com/dorkitude/embedding-local-cpu-vs-hosted/issues/1
 
 License review completed before acquisition, 2026-10-12 UTC. MIRACL's official
 repository and Hugging Face cards identify English as the 2019-02-01 Wikipedia
